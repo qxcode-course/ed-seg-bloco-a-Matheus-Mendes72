@@ -1,0 +1,12 @@
+2026-03-15 09:21:43, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-15 09:22:27, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-15 09:22:55, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:5
+2026-03-15 09:25:00, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-15 09:25:04, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-15 09:25:28, MOVE, v:1, k:ed@casais, mode:BACK
+2026-03-15 09:25:32, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-15 09:25:34, EXEC, v:1, k:ed@baruel, mode:FULL, size:7, fail:COMP
+2026-03-15 09:30:24, EXEC, v:1, k:ed@baruel, mode:FULL, size:15, fail:COMP
+2026-03-15 09:30:57, EXEC, v:1, k:ed@baruel, mode:FULL, size:15, fail:COMP
+2026-03-15 09:32:09, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:15
+2026-03-15 09:38:18, MOVE, v:1, k:ed@baruel, mode:BACK

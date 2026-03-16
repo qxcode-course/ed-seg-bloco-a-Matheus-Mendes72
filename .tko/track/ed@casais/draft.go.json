@@ -1,0 +1,94 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_07-51-02",
+            "content": "@@ -41,349 +41,28 @@\n     \n-var qtd, casais int%0A    vetor := %5B%5Dint%7B%7D%0A    fmt.Scan(&qtd)%0A%0A    for (i := range qtd) %7B%0A        var animal int%0A        fmt.Scan(&animal)%0A%0A        vetor = append(vetor, animal)%0A        for (j := 0; j %3C len(vetor); j++) %7B%0A            if (descasados%5Bj%5D == -animal) %7B%0A                casais++%0A            %7D%0A        %7D%0A    %7D%0A    fmt.Println(casais\n+fmt.Println(%22qxcode%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-14_08-09-10",
+            "content": "@@ -106,16 +106,17 @@\n     for \n+(\n i := ran\n@@ -121,16 +121,17 @@\n ange qtd\n+)\n  %7B%0A     \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-14_08-09-28",
+            "content": "@@ -223,16 +223,17 @@\n     for \n+(\n j := 0; \n@@ -251,16 +251,17 @@\n or); j++\n+)\n  %7B%0A     \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-14_08-09-35",
+            "content": "@@ -105,16 +105,21 @@\n %0A    for\n+ i :=\n  range q\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-14_08-10-09",
+            "content": "@@ -264,21 +264,26 @@\n     if (\n-vetor\n+descasados\n %5Bj%5D == -\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-14_08-10-25",
+            "content": "@@ -291,37 +291,8 @@\n ) %7B%0A\n-                vetor%5Bj%5D = 0%0A\n     \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-14_08-13-46",
+            "content": "@@ -110,28 +110,17 @@\n for \n-i := 0; i %3C qtd; i++\n+range qtd\n  %7B%0A \n@@ -345,30 +345,8 @@\n s++%0A\n-                break%0A\n     \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-14_08-15-40",
+            "content": "@@ -179,16 +179,54 @@\n nimal)%0A%0A\n+        vetor = append(vetor, animal)%0A\n         \n@@ -392,50 +392,8 @@\n   %7D%0A\n-            vetor = append(vetor, animal)%0A\n     \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-14_08-18-03",
+            "content": "@@ -236,16 +236,17 @@\n      if \n+(\n vetor%5Bj%5D\n@@ -256,16 +256,17 @@\n  -animal\n+)\n  %7B%0A     \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-14_08-18-27",
+            "content": "@@ -183,35 +183,8 @@\n l)%0A%0A\n-        encontrou := false%0A\n     \n@@ -217,24 +217,24 @@\n tor); j++ %7B%0A\n+\n             \n@@ -316,41 +316,8 @@\n s++%0A\n-                encontrou = true%0A\n     \n@@ -352,41 +352,8 @@\n   %7D%0A\n-            if !encontrou %7B%7D%0A    \n     \n@@ -390,20 +390,16 @@\n animal)%0A\n-    \n         \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-14_08-19-52",
+            "content": "@@ -392,16 +392,13 @@\n     \n-continue\n+break\n %0A   \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-14_08-20-31",
+            "content": "@@ -1,109 +1,36 @@\n-package main%0Aimport %22fmt%22%0Afunc main() %7B%0A    var qtd, casais int%0A    vetor := %5B%5Dint%7B%7D%0A    fmt.Scan(&qtd)%0A%0A\n+@@ -102,39 +102,8 @@%0A d)%250A%250A%0A-\n     \n@@ -50,106 +50,60 @@\n (map\n-%5Bint%5D\n+%255Bint%255D\n int)\n+%250A\n %0A    \n-for i := 0; i %3C qtd; i++ %7B%0A        var animal int%0A        fmt.Scan(&animal)%0A%0A       \n+ %0A@@ -190,139 +190,8 @@%0A     %0A-\n  if \n@@ -111,24 +111,34 @@\n lice\n-%5B\n+%255B\n -animal\n-%5D %3E 0 %7B%0A\n+%255D %253E 0 %257B%250A\n     \n@@ -154,20 +154,21 @@\n lice\n-%5B-animal%5D--%0A\n+%255B-a%255D--%250A\n     \n@@ -183,25 +183,27 @@\n casais++\n-%0A\n+%250A\n         \n %7D else %7B\n@@ -198,17 +198,23 @@\n     \n-%7D\n+%257D\n  else \n-%7B%0A\n+%257B%250A\n     \n@@ -230,30 +230,37 @@\n lice\n-%5Banimal%5D++%0A        %7D%0A%0A\n+%255Ba%255D++%250A        %257D%250A%250A\n     \n@@ -269,46 +269,63 @@\n   //\n+%0A \n  enc\n-ontrou := false%0A\n+%0A@@ -213,19 +213,16 @@%0A %250A\n        \n+%0A-\n  //\n+%0A \n  for j :\n = 0;\n@@ -324,45 +324,59 @@\n  j :\n-= 0; j %3C len(vetor\n+%0A@@ -247,35 +247,32 @@%0A \n ); j++ \n-%7B%0A\n+%257B%250A\n        \n+%0A-\n  //\n+%0A \n     \n@@ -388,35 +388,66 @@\n etor\n-%5Bj%5D == -\n+%255Bj%255D%0A@@ -284,35 +284,32 @@%0A \n animal \n-%7B%0A\n+%257B%250A\n        \n+%0A-\n  //\n+%0A \n     \n@@ -460,26 +460,65 @@\n etor\n-%5Bj%5D\n+%255Bj%0A@@ -313,35 +313,32 @@%0A r%255Bj%255D\n  = 0\n-%0A\n+%250A\n        \n+%0A-\n  //\n+%0A \n     \n@@ -533,45 +533,105 @@\n ais+\n-+%0A        //         encontro\n+%0A@@ -338,35 +338,32 @@%0A casais++%250A       %0A- //%0A          encontr%0A@@ -371,35 +371,32 @@%0A \n u = true\n %0A   \n@@ -626,27 +626,33 @@\n u = true\n-%0A\n+%250A\n        \n+%0A-\n  //\n+%0A \n         \n@@ -663,69 +663,185 @@\n tinu\n-e%0A        //     %7D%0A        //     if !encontrou %7B%7D%0A  \n+%0A@@ -396,35 +396,32 @@%0A continue%250A       %0A- //%0A      %257D%250A        /%0A@@ -414,27 +414,24 @@%0A    %257D%250A       %0A- //%0A      if !enc%0A@@ -443,27 +443,24 @@%0A u %257B%257D%250A\n      \n+  %0A-\n  //\n+%0A \n     \n@@ -852,80 +852,43 @@\n  vet\n-or = append(vetor, animal)%0A \n+%0A@@ -497,11 +497,8 @@%0A\n      \n- \n+%0A-\n  //\n+%0A\n      \n-%7D%0A    %7D%0A    fmt.Println(casais)%0A%7D\n %0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-16_10-18-00",
+            "content": "@@ -61,18 +61,16 @@\n int%0A    \n-//\n vetor :=\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-16_10-18-17",
+            "content": "@@ -126,18 +126,16 @@\n map%5Bint%5D\n-, \n int)%0A   \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-16_10-23-16",
+            "content": "@@ -126,16 +126,18 @@\n map%5Bint%5D\n+, \n int)%0A   \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-16_10-23-39",
+            "content": "@@ -256,18 +256,16 @@\n         \n-//\n slice%5B-a\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-16_10-34-05",
+            "content": "@@ -252,24 +252,26 @@\n             \n+//\n slice%5B-anima\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-16_10-34-19",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtd, casais int\n    //vetor := []int{}\n    fmt.Scan(&qtd)\n\n    slice := make(map[int]int)\n    for i := 0; i < qtd; i++ {\n        var animal int\n        fmt.Scan(&animal)\n\n        if slice[-animal] > 0 {\n            slice[-animal]--\n            casais++\n        } else {\n            slice[animal]++\n        }\n\n        // encontrou := false\n        // for j := 0; j < len(vetor); j++ {\n        //     if vetor[j] == -animal {\n        //         vetor[j] = 0\n        //         casais++\n        //         encontrou = true\n        //         continue\n        //     }\n        //     if !encontrou {}\n        //         vetor = append(vetor, animal)\n        //     }\n    }\n    fmt.Println(casais)\n}\n",
+            "lines": "33"
+        }
+    ]
+}

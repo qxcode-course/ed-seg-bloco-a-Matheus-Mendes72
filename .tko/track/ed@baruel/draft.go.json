@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_09-22-55",
+            "content": "@@ -41,30 +41,28 @@\n     \n-var qtd_total int%0A    %0A\n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-15_09-25-34",
+            "content": "@@ -63,189 +63,8 @@\n     \n-fmt.Scan(&qtd_total)%0A%0A    figurinhas := %5Bqtd_total%5Dint%7B%7D%0A    for i := 0; i %3C qtd_total; i++ %7B%0A        var baruel int %0A        fmt.Scan(&baruel)%0A%0A        figurinhas%5Bi%5D = baruel%0A    %7D\n %0A%0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-03-15_09-30-24",
+            "content": "@@ -85,20 +85,16 @@\n l)%0A%0A    \n-var \n figurinh\n@@ -95,16 +95,20 @@\n gurinhas\n+ := \n %5Bqtd_tot\n@@ -113,16 +113,18 @@\n otal%5Dint\n+%7B%7D\n %0A    for\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-15_09-30-57",
+            "content": "@@ -81,24 +81,28 @@\n total)%0A%0A    \n+var \n figurinhas :\n@@ -103,24 +103,9 @@\n nhas\n- := make(%5B%5Dint, \n+%5B\n qtd_\n@@ -109,17 +109,20 @@\n td_total\n-)\n+%5Dint\n %0A    for\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-15_09-32-08",
+            "content": "@@ -84,19 +84,16 @@\n al)%0A%0A   \n- //\n  figurin\n@@ -125,19 +125,16 @@\n tal)%0A   \n- //\n  for i :\n@@ -158,27 +158,24 @@\n l; i++ %7B%0A   \n- //\n      var bar\n@@ -182,27 +182,24 @@\n uel int %0A   \n- //\n      fmt.Sca\n@@ -218,15 +218,12 @@\n     \n-//\n     \n- \n figu\n@@ -248,11 +248,8 @@\n %0A   \n- //\n  %7D%0A%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-16_10-33-30",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtd_total int\n    fmt.Scan(&qtd_total)\n\n    // figurinhas := make([]int, qtd_total)\n    // for i := 0; i < qtd_total; i++ {\n    //     var baruel int \n    //     fmt.Scan(&baruel)\n\n    //     figurinhas[i] = baruel\n    // }\n\n}\n",
+            "lines": "15"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_07-26-07",
+            "content": "@@ -23,22 +23,8 @@\n mt%22%0A\n-import %22math%22%0A\n func\n@@ -41,446 +41,28 @@\n     \n-var n, p1, p2, indice = -1, ganhador = 1000 int%0A    fmt.Scan(&n)%0A%0A    for i := range n %7B%0A        fmt.Scan(&p1, &p2)%0A%0A        if (p1 %3C 10 %7C%7C p2 %3C 10) %7B%0A            continue%0A        %7D%0A        int diferenca = math.abs(p1 - p2)%0A        if (diferenca %3C ganhador) %7B%0A            ganhador = diferenca%0A            indice = i%0A        %7D%0A    %7D%0A%0A    if (indice == -1) %7B%0A        fmt.Println(%22sem ganhador%22)%0A    %7D else %7B%0A        fmt.Println(indice)%0A    %7D\n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-14_07-39-11",
+            "content": "@@ -68,42 +68,17 @@\n , p2\n- int%0A    fmt.Scan(&n)%0A%0A   \n+,\n  indice \n := -\n@@ -77,17 +77,13 @@\n ice \n-:\n = -1\n-%0A   \n+,\n  gan\n@@ -92,15 +92,35 @@\n dor \n-:\n = 1000\n+ int%0A    fmt.Scan(&n)\n %0A%0A  \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-14_07-39-53",
+            "content": "@@ -250,16 +250,20 @@\n         \n+int \n diferenc\n@@ -264,17 +264,16 @@\n ferenca \n-:\n = math.a\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-14_07-40-34",
+            "content": "@@ -272,9 +272,9 @@\n ath.\n-A\n+a\n bs(p\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-14_07-40-45",
+            "content": "@@ -276,24 +276,16 @@\n Abs(\n-float64(\n p1 - p2)\n )%0A  \n@@ -280,17 +280,16 @@\n p1 - p2)\n-)\n %0A       \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-14_07-41-07",
+            "content": "@@ -267,12 +267,8 @@\n  := \n-int(\n math\n@@ -289,17 +289,16 @@\n 1 - p2))\n-)\n %0A       \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-14_07-41-48",
+            "content": "package main\nimport \"fmt\"\nimport \"math\"\nfunc main() {\n    var n, p1, p2 int\n    fmt.Scan(&n)\n\n    indice := -1\n    ganhador := 1000\n\n    for i := range n {\n        fmt.Scan(&p1, &p2)\n\n        if (p1 < 10 || p2 < 10) {\n            continue\n        }\n        diferenca := int(math.Abs(float64(p1 - p2)))\n        if (diferenca < ganhador) {\n            ganhador = diferenca\n            indice = i\n        }\n    }\n\n    if (indice == -1) {\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(indice)\n    }\n}\n",
+            "lines": "29"
+        }
+    ]
+}

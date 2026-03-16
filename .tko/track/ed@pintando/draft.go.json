@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-11_13-27-23",
+            "content": "@@ -23,22 +23,8 @@\n mt%22%0A\n-import %22math%22%0A\n func\n@@ -42,161 +42,22 @@\n    f\n-loat l1, l2, l3%0A    fmt.scan(%22%25f %25f %25f%22, &l1, &l2, &l3)%0A%0A    float p = (a+b+c) / 2%0A    float area = sqrt(p * (p-a) * (p-b) * (p-c))%0A%0A    fmt.p\n+mt.P\n rintln(\n-area\n+%225%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-13_22-39-30",
+            "content": "@@ -55,11 +55,13 @@\n     \n-var\n+float\n  l1,\n@@ -67,22 +67,16 @@\n , l2, l3\n- float\n %0A    fmt\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-40-16",
+            "content": "@@ -121,20 +121,16 @@\n     \n-var p \n float \n+p \n = (a\n@@ -142,28 +142,23 @@\n  / 2\n- \n %0A    \n-var area \n float\n+ area\n  = s\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-40-37",
+            "content": "@@ -71,18 +71,16 @@\n l3 float\n-32\n %0A    fmt\n@@ -84,13 +84,12 @@\n fmt.\n-S\n+s\n can\n-f\n (%22%25f\n@@ -128,18 +128,16 @@\n  p float\n-32\n  = (a+b+\n@@ -166,10 +166,8 @@\n loat\n-32\n  = s\n@@ -210,9 +210,9 @@\n fmt.\n-P\n+p\n rint\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-42-23",
+            "content": "@@ -176,13 +176,8 @@\n 2 = \n-math.\n sqrt\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-42-34",
+            "content": "@@ -141,16 +141,13 @@\n  = (\n-l1+l2+l3\n+a+b+c\n ) / \n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-43-02",
+            "content": "@@ -196,28 +196,25 @@\n  (p-\n-l1\n+a\n ) * (p-\n-l2\n+b\n ) * (p-\n-l3\n+c\n ))%0A%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-43-14",
+            "content": "@@ -71,18 +71,18 @@\n l3 float\n-64\n+32\n %0A    fmt\n@@ -131,18 +131,18 @@\n  p float\n-64\n+32\n  = (l1+l\n@@ -174,10 +174,10 @@\n loat\n-64\n+32\n  = m\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-43-33",
+            "content": "@@ -180,17 +180,17 @@\n  = math.\n-S\n+s\n qrt(p * \n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-44-10",
+            "content": "@@ -124,11 +124,22 @@\n     \n-p :\n+var p float64 \n = (l\n@@ -160,14 +160,25 @@\n     \n+var \n area \n-:\n+float64 \n = ma\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-44-48",
+            "content": "@@ -211,20 +211,11 @@\n rint\n-f(%22%25.2f%5Cn%22, \n+ln(\n area\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-45-39",
+            "content": "@@ -75,10 +75,10 @@\n loat\n-32\n+64\n %0A   \n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-46-33",
+            "content": "@@ -71,16 +71,18 @@\n l3 float\n+32\n %0A    fmt\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-46-40",
+            "content": "@@ -75,10 +75,8 @@\n loat\n-64\n %0A   \n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-46-50",
+            "content": "@@ -120,60 +120,8 @@\n 3)%0A%0A\n-    if l1+l2 %3E l3 && l1+l3 %3E l2 && l2+l3 %3E l1 %7B%0A    \n     \n@@ -141,20 +141,16 @@\n 3) / 2 %0A\n-    \n     area\n@@ -198,20 +198,16 @@\n ))%0A%0A    \n-  \n-  \n fmt.Prin\n@@ -229,12 +229,6 @@\n ea)%0A\n-    %7D%0A\n %7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-55-51",
+            "content": "@@ -70,14 +70,15 @@\n  l3 \n-double\n+float64\n %0A   \n@@ -116,16 +116,68 @@\n , &l3)%0A%0A\n+    if l1+l2 %3E l3 && l1+l3 %3E l2 && l2+l3 %3E l1 %7B%0A    \n     p :=\n@@ -193,16 +193,20 @@\n 3) / 2 %0A\n+    \n     area\n@@ -250,24 +250,28 @@\n p-l3))%0A%0A    \n+  \n+  \n fmt.Printf(%22\n@@ -285,10 +285,16 @@\n , area)%0A\n+    %7D%0A\n %7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-13_22-59-01",
+            "content": "@@ -70,16 +70,14 @@\n  l3 \n-float128\n+double\n %0A   \n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_22-59-12",
+            "content": "@@ -75,10 +75,11 @@\n loat\n-64\n+128\n %0A   \n@@ -87,17 +87,30 @@\n fmt.Scan\n-(\n+f(%22%25f %25f %25f%22, \n &l1, &l2\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-13_23-00-25",
+            "content": "package main\nimport \"fmt\"\nimport \"math\"\nfunc main() {\n    var l1, l2, l3 float64\n    fmt.Scan(&l1, &l2, &l3)\n\n    p := (l1+l2+l3) / 2 \n    area := math.Sqrt(p * (p-l1) * (p-l2) * (p-l3))\n\n    fmt.Printf(\"%.2f\\n\", area)\n}\n",
+            "lines": "12"
+        }
+    ]
+}

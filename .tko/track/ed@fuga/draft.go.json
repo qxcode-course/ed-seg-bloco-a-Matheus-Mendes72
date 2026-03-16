@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-13_23-11-06",
+            "content": "@@ -41,379 +41,28 @@\n     \n-var h, p, f, d int%0A    fmt.Scan(&h, &p, &f, &d)%0A%0A    if (d == -1) %7B%0A        for (i := f; i %3E= 0; i--) %7B%0A            if (i == h) %7B%0A                fmt.Println(%22S%22)%0A                break%0A            %7D%0A            if (i == p) %7B%0A                fmt.Println(%22N%22)%0A                break%0A            %7D%0A            if (i == 0) %7B%0A                i = 15%0A            %7D%0A        %7D%0A    %7D\n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-13_23-18-29",
+            "content": "@@ -117,16 +117,17 @@\n     for \n+(\n i := f; \n@@ -137,16 +137,17 @@\n = 0; i--\n+)\n  %7B%0A     \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-13_23-19-08",
+            "content": "@@ -406,319 +406,8 @@\n   %7D%0A\n-    %7D else %7B%0A        for i := f; i %3C= 15; i++ %7B%0A            if (i == h) %7B%0A                fmt.Println(%22S%22)%0A                break%0A            %7D%0A            if (i == p) %7B%0A                fmt.Println(%22N%22)%0A                break%0A            %7D%0A            if (i == 15) %7B%0A                i = 0%0A            %7D%0A        %7D%0A\n     \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-13_23-20-02",
+            "content": "@@ -380,9 +380,9 @@\n  = 1\n-6\n+5\n %0A   \n@@ -687,18 +687,17 @@\n     i = \n--1\n+0\n %0A       \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-13_23-22-00",
+            "content": "@@ -94,55 +94,385 @@\n     \n-for %7B%0A        f += (d + 16) %25 16%0A%0A        if (f\n+if (d == -1) %7B%0A        for i := f; i %3E= 0; i-- %7B%0A            if (i == h) %7B%0A                fmt.Println(%22S%22)%0A                break%0A            %7D%0A            if (i == p) %7B%0A                fmt.Println(%22N%22)%0A                break%0A            %7D%0A            if (i == 0) %7B%0A                i = 16%0A            %7D%0A        %7D%0A    %7D else %7B%0A        for i := f; i %3C= 15; i++ %7B%0A            if (i\n  == \n@@ -468,32 +468,36 @@\n   if (i == h) %7B%0A\n+    \n             fmt.\n@@ -513,32 +513,36 @@\n S%22)%0A            \n+  \n+  \n break%0A        %7D%0A\n@@ -531,32 +531,36 @@\n   break%0A        \n+    \n %7D%0A        if (f \n@@ -557,13 +557,17 @@\n     \n+ \n+   \n if (\n-f\n+i\n  == \n@@ -575,32 +575,36 @@\n ) %7B%0A            \n+  \n+  \n fmt.Println(%22N%22)\n@@ -608,38 +608,120 @@\n N%22)%0A            \n+    \n break%0A\n+            %7D%0A            if (i == 15) %7B%0A                i = -1%0A            %7D%0A\n         %7D%0A    %7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-14_07-24-13",
+            "content": "@@ -110,15 +110,12 @@\n   f \n++\n = (\n-f + \n d + \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-14_07-24-43",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var h, p, f, d int\n    fmt.Scan(&h, &p, &f, &d)\n\n    for {\n        f = (f + d + 16) % 16\n\n        if (f == h) {\n            fmt.Println(\"S\")\n            break\n        }\n        if (f == p) {\n            fmt.Println(\"N\")\n            break\n        }\n    }\n}\n",
+            "lines": "19"
+        }
+    ]
+}
