@@ -10,7 +10,7 @@ sources:
   target: https://github.com/qxcodeed/arcade.git
   type: git
   writeable: false
-  cache_timestamp: '2026-03-16 13:42:09'
+  cache_timestamp: '2026-03-16 15:14:51'
   quests: null
   tasks: null
 expanded:
@@ -22,6 +22,7 @@ tasks:
   ed@fuga: '{self:1, rate:100, study:11, friend:nao}'
   ed@pedra: '{self:1, rate:100, study:16, friend:nao}'
   ed@casais: '{self:1, rate:100, study:35, friend:nao, concept:1}'
+  ed@baruel: '{self:1, rate:100, study:75, friend:nao, code:1}'
 flags:
   painel: 1
   quests: 0
@@ -30,5 +31,5 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@baruel
+selected: ed@gomos
 next_draft_id: 0
