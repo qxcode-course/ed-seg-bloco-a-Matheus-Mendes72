@@ -32,8 +32,93 @@
         },
         {
             "label": "2026-03-14_07-41-48",
-            "content": "package main\nimport \"fmt\"\nimport \"math\"\nfunc main() {\n    var n, p1, p2 int\n    fmt.Scan(&n)\n\n    indice := -1\n    ganhador := 1000\n\n    for i := range n {\n        fmt.Scan(&p1, &p2)\n\n        if (p1 < 10 || p2 < 10) {\n            continue\n        }\n        diferenca := int(math.Abs(float64(p1 - p2)))\n        if (diferenca < ganhador) {\n            ganhador = diferenca\n            indice = i\n        }\n    }\n\n    if (indice == -1) {\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(indice)\n    }\n}\n",
+            "content": "@@ -23,238 +23,75 @@\n mt%22%0A\n-%0Afunc valido(p1, p2 int) bool %7B%0A    return p1 %3E= 10 && p2 %3E= 10%0A%7D%0A%0Afunc diferenca(p1, p2 int) int %7B%0A    if p1 %3E p2 %7B%0A        return p1 - p2%0A    %7D else %7B%0A        return p2 - p1%0A    %7D%0A%7D%0A%0Afunc vencedor(n int) int %7B%0A    var p1, p2 int\n+import %22math%22%0Afunc main() %7B%0A    var n, p1, p2 int%0A    fmt.Scan(&n)%0A\n %0A   \n@@ -125,16 +125,17 @@\n := 1000%0A\n+%0A\n     for \n@@ -176,24 +176,25 @@\n 1, &p2)%0A\n+%0A\n         \n %0A       \n@@ -189,47 +189,117 @@\n     \n-%0A        pontuacao := diferenca(p1,\n+if (p1 %3C 10 %7C%7C p2 %3C 10) %7B%0A            continue%0A        %7D%0A        diferenca := int(math.Abs(float64(p1 -\n  p2)\n+))\n %0A   \n@@ -306,25 +306,26 @@\n      if \n-pontua\n+(diferen\n ca\n-o\n  %3C ganha\n@@ -327,16 +327,17 @@\n ganhador\n+)\n  %7B%0A     \n@@ -358,17 +358,17 @@\n r = \n-pontua\n+diferen\n ca\n-o\n %0A   \n@@ -407,104 +407,8 @@\n   %7D%0A\n-    return indice%0A%7D%0A%0Afunc main() %7B%0A    var n int%0A    fmt.Scan(&n)%0A    %0A    indice := vencedor(n)\n %0A   \n@@ -512,8 +512,9 @@\n %0A    %7D%0A%7D\n+%0A\n",
             "lines": "29"
+        },
+        {
+            "label": "2026-03-16_16-13-07",
+            "content": "@@ -23,75 +23,238 @@\n mt%22%0A\n-import %22math%22%0Afunc main()\n+%0Afunc valido(p1, p2 int) bool %7B%0A    return p1 %3E= 10 && p2 %3E= 10%0A%7D%0A%0Afunc diferenca(p1, p2 int) int\n  %7B%0A    \n-var n, p1, p2 int%0A    fmt.Scan(&n)%0A\n+if p1 %3E p2 %7B%0A        return p1 - p2%0A    %7D else %7B%0A        return p2 - p1%0A    %7D%0A%7D%0A%0Afunc vencedor(n int) int %7B%0A    var p1, p2 int\n %0A   \n@@ -288,17 +288,16 @@\n := 1000%0A\n-%0A\n     for \n@@ -338,25 +338,24 @@\n 1, &p2)%0A\n-%0A\n         \n if (p1 %3C\n@@ -350,117 +350,47 @@\n     \n-if (p1 %3C 10 %7C%7C p2 %3C 10) %7B%0A            continue%0A        %7D%0A        diferenca := int(math.Abs(float64(p1 -\n+%0A        pontuacao := diferenca(p1,\n  p2)\n-))\n %0A   \n@@ -401,18 +401,17 @@\n  if \n-(diferen\n+pontua\n ca\n+o\n  %3C g\n@@ -417,17 +417,16 @@\n ganhador\n-)\n  %7B%0A     \n@@ -443,25 +443,25 @@\n hador = \n-diferen\n+pontua\n ca\n+o\n %0A       \n@@ -492,16 +492,112 @@\n %7D%0A    %7D%0A\n+    return indice%0A%7D%0A%0Afunc main() %7B%0A    var n int%0A    fmt.Scan(&n)%0A    %0A    indice := vencedor(n)\n %0A    if \n@@ -689,17 +689,16 @@\n (indice)%0A    %7D%0A%7D\n-%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-16_16-13-56",
+            "content": "@@ -23,238 +23,75 @@\n mt%22%0A\n-%0Afunc valido(p1, p2 int) bool %7B%0A    return p1 %3E= 10 && p2 %3E= 10%0A%7D%0A%0Afunc diferenca(p1, p2 int) int %7B%0A    if p1 %3E p2 %7B%0A        return p1 - p2%0A    %7D else %7B%0A        return p2 - p1%0A    %7D%0A%7D%0A%0Afunc vencedor(n int) int %7B%0A    var p1, p2 int\n+import %22math%22%0Afunc main() %7B%0A    var n, p1, p2 int%0A    fmt.Scan(&n)%0A\n %0A   \n@@ -125,16 +125,17 @@\n := 1000%0A\n+%0A\n     for \n@@ -176,24 +176,16 @@\n 1, &p2)%0A\n-        \n %0A       \n@@ -189,45 +189,31 @@\n     \n-val := valido(p1, p2)%0A        if !val\n+if (p1 %3C 10 %7C%7C p2 %3C 10)\n  %7B%0A \n@@ -254,47 +254,52 @@\n     \n-%0A        pontua\n+diferen\n ca\n-o\n  := \n-diferenca(p1,\n+int(math.Abs(float64(p1 -\n  p2)\n+))\n %0A   \n@@ -306,25 +306,26 @@\n      if \n-pontua\n+(diferen\n ca\n-o\n  %3C ganha\n@@ -327,16 +327,17 @@\n ganhador\n+)\n  %7B%0A     \n@@ -358,17 +358,17 @@\n r = \n-pontua\n+diferen\n ca\n-o\n %0A   \n@@ -407,104 +407,8 @@\n   %7D%0A\n-    return indice%0A%7D%0A%0Afunc main() %7B%0A    var n int%0A    fmt.Scan(&n)%0A    %0A    indice := vencedor(n)\n %0A   \n@@ -512,8 +512,9 @@\n %0A    %7D%0A%7D\n+%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-16_16-21-38",
+            "content": "@@ -24,325 +24,8 @@\n t%22%0A%0A\n-type jogada struct %7B%0A    pa, pb int%0A%7D%0A%0Afunc main() %7B%0A    lista := make(%5B%5Djogada, 0)%0A    qtd := 0%0A    fmt.Scan(&qtd)%0A%0A    for range(qtd) %7B%0A        var a, b int%0A        fmt.Scan(&a, &b)%0A        jogadas = append(jogadas, jogada%7B%0A            pa: a,%0A            pb: b,%0A        %7D)%0A    %7D%0A%0A    fmt.Println(jogadas)%0A%7D%0A%0A%0A%0A%0A%0A// \n func\n@@ -47,27 +47,24 @@\n int) bool %7B%0A\n-// \n     return p\n@@ -83,25 +83,19 @@\n 2 %3E= 10%0A\n-// %7D%0A%0A// \n+%7D%0A%0A\n func dif\n@@ -119,23 +119,20 @@\n ) int %7B%0A\n-//\n     \n- \n if p1 %3E \n@@ -136,19 +136,16 @@\n  %3E p2 %7B%0A\n-// \n         \n@@ -159,19 +159,16 @@\n p1 - p2%0A\n-// \n     %7D el\n@@ -164,35 +164,32 @@\n p2%0A    %7D else %7B%0A\n-// \n         return p\n@@ -199,26 +199,17 @@\n  p1%0A\n-// \n     %7D%0A\n-// %7D%0A%0A// \n+%7D%0A%0A\n func\n@@ -231,19 +231,16 @@\n ) int %7B%0A\n-// \n     var \n@@ -250,23 +250,20 @@\n  p2 int%0A\n-//\n     \n- \n indice :\n@@ -267,23 +267,20 @@\n e := -1%0A\n-//\n     \n- \n ganhador\n@@ -288,19 +288,16 @@\n := 1000%0A\n-// \n     for \n@@ -311,19 +311,16 @@\n nge n %7B%0A\n-// \n         \n@@ -339,35 +339,32 @@\n , &p2)%0A        %0A\n-// \n         val := v\n@@ -369,35 +369,32 @@\n  valido(p1, p2)%0A\n-// \n         if !val \n@@ -395,19 +395,16 @@\n  !val %7B%0A\n-// \n         \n@@ -416,19 +416,16 @@\n ontinue%0A\n-// \n         \n@@ -431,27 +431,24 @@\n  %7D%0A        %0A\n-// \n         pont\n@@ -474,26 +474,24 @@\n p1, p2)%0A\n-//\n         \n  if pont\n@@ -482,17 +482,16 @@\n         \n- \n if pontu\n@@ -508,18 +508,16 @@\n hador %7B%0A\n-//\n         \n@@ -520,17 +520,16 @@\n         \n- \n ganhador\n@@ -541,19 +541,16 @@\n ntuacao%0A\n-// \n         \n@@ -564,19 +564,16 @@\n ice = i%0A\n-// \n         \n@@ -578,20 +578,14 @@\n   %7D%0A\n-// \n     %7D%0A\n-// \n     \n@@ -602,17 +602,11 @@\n ice%0A\n-// %7D%0A%0A// \n+%7D%0A%0A\n func\n@@ -611,27 +611,24 @@\n nc main() %7B%0A\n-// \n     var n in\n@@ -629,19 +629,16 @@\n r n int%0A\n-// \n     fmt.\n@@ -651,23 +651,20 @@\n n)%0A    %0A\n-//\n     \n- \n indice :\n@@ -677,23 +677,20 @@\n edor(n)%0A\n-//\n     \n- \n if (indi\n@@ -701,26 +701,24 @@\n = -1) %7B%0A\n-//\n         \n  fmt.Pri\n@@ -701,33 +701,32 @@\n = -1) %7B%0A        \n- \n fmt.Println(%22sem\n@@ -737,19 +737,16 @@\n hador%22)%0A\n-// \n     %7D el\n@@ -750,19 +750,16 @@\n  else %7B%0A\n-// \n         \n@@ -782,17 +782,11 @@\n ce)%0A\n-// \n     %7D%0A\n-//%7D \n+%7D\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-16_16-31-02",
+            "content": "@@ -77,23 +77,21 @@\n ) %7B%0A    \n-jogadas\n+lista\n  := make\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-16_16-31-29",
+            "content": "@@ -25,17 +25,17 @@\n %22%0A%0Atype \n-J\n+j\n ogada st\n@@ -99,19 +99,17 @@\n e(%5B%5D\n-J\n+j\n ogada, \n-qtd\n+0\n )%0A  \n@@ -151,31 +151,18 @@\n for \n-_, jog := range jogadas\n+range(qtd)\n  %7B%0A \n@@ -203,22 +203,12 @@\n an(&\n-jog.pa, &jog.p\n+a, &\n b)%0A \n@@ -244,9 +244,9 @@\n as, \n-J\n+j\n ogad\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-16_16-35-57",
+            "content": "@@ -81,66 +81,66 @@\n     \n-qtd := 0%0A    fmt.Scan(&qtd)%0A    jogadas := make(%5B%5DJogada, \n+jogadas := make(%5B%5DJogada, qtd)%0A    qtd := 0%0A    fmt.Scan(&\n qtd)\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-16_16-36-14",
+            "content": "@@ -22,22 +22,8 @@\n fmt%22\n-%0Aimport %22math%22\n %0A%0Aty\n@@ -239,270 +239,83 @@\n     \n-%7D%0A%0A\n     \n-ind_melhor := -1%0A    valor_melhor := math.MaxInt32%0A    for i, jog := range jogadas %7B%0A        if jog.pa %3C 10 %7C%7C jog.pb %3C 10 %7B%0A            continue%0A        %7D%0A%0A        pontuacao := jog.pa - jog.pb%0A        if pontuacao %3C 0 %7B%0A            pontuacao = -pontuacao\n+jogadas = append(jogadas, Jogada%7B%0A            pa: a,%0A            pb: b,\n %0A   \n@@ -324,148 +324,41 @@\n    %7D\n-%0A\n+)\n %0A    \n-    if ind_melhor == -1 %7B%0A            fmt.Println(%22sem ganhador%22)%0A        %7D else %7B%0A            fmt.Println(ind_melhor)%0A        %7D%0A    %7D\n+%7D%0A%0A    fmt.Println(jogadas)\n %0A%7D%0A%0A\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-16_16-46-52",
+            "content": "@@ -555,103 +555,49 @@\n  -1 \n-%7C%7C pontuacao %3C valor_melhor %7B%0A            ind_melhor = if%0A            valor_melhor == pontuacao\n+%7B%0A            fmt.Println(%22sem ganhador%22)\n %0A   \n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-03-16_16-47-53",
+            "content": "@@ -680,27 +680,8 @@\n     \n-%0A        %7D%0A        \n fmt.\n@@ -700,16 +700,26 @@\n melhor)%0A\n+        %7D%0A\n     %7D%0A%7D%0A\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-03-16_16-48-07",
+            "content": "@@ -607,16 +607,17 @@\n lhor = i\n+f\n %0A       \n@@ -631,24 +631,25 @@\n lor_melhor =\n+=\n  pontuacao%0A \n@@ -657,16 +657,45 @@\n       %7D \n+else %7B%0A            %0A        %7D\n %0A       \n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-03-16_16-48-23",
+            "content": "@@ -181,32 +181,53 @@\n range jogadas %7B%0A\n+        var a, b int%0A\n         fmt.Scan\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-03-16_16-49-32",
+            "content": "@@ -635,26 +635,24 @@\n      %7D %0A    \n-%7D%0A\n     fmt.Prin\n@@ -667,16 +667,22 @@\n melhor)%0A\n+    %7D%0A\n %7D%0A%0A%0A%0A%0A%0A/\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-03-16_16-53-04",
+            "content": "@@ -155,33 +155,38 @@\n , qtd)%0A%0A    for \n-i\n+_, jog\n  := range jogada\n@@ -193,35 +193,8 @@\n s %7B%0A\n-        jog := &jogadas%5Bi%5D%0A\n     \n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-03-16_17-00-37",
+            "content": "@@ -556,71 +556,10 @@\n  -1 \n-%7B%0A            fmt.Println(%22sem ganhador%22)%0A        %7D%0A%0A        if\n+%7C%7C\n  pon\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-03-16_17-01-34",
+            "content": "@@ -516,32 +516,113 @@\n acao%0A        %7D%0A%0A\n+        if ind_melhor == -1 %7B%0A            fmt.Println(%22sem ganhador%22)%0A        %7D%0A%0A\n         if pontu\n@@ -722,97 +722,8 @@\n  %7D %0A\n-        %0A        if ind_melhor == -1 %7B%0A            fmt.Println(%22sem ganhador%22)%0A        %7D%0A\n     \n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-03-16_17-01-54",
+            "content": "@@ -19,19 +19,16 @@\n t %22fmt%22%0A\n-// \n import %22\n@@ -34,19 +34,16 @@\n %22math%22%0A%0A\n-// \n type Jog\n@@ -55,19 +55,16 @@\n truct %7B%0A\n-// \n     pa, \n@@ -74,17 +74,11 @@\n int%0A\n-// %7D%0A%0A// \n+%7D%0A%0A\n func\n@@ -87,19 +87,16 @@\n ain() %7B%0A\n-// \n     qtd \n@@ -100,19 +100,16 @@\n td := 0%0A\n-// \n     fmt.\n@@ -119,19 +119,16 @@\n n(&qtd)%0A\n-// \n     joga\n@@ -155,19 +155,16 @@\n , qtd)%0A%0A\n-// \n     for \n@@ -176,35 +176,32 @@\n range jogadas %7B%0A\n-// \n         jog := &\n@@ -211,19 +211,16 @@\n adas%5Bi%5D%0A\n-// \n         \n@@ -250,21 +250,15 @@\n pb)%0A\n-// \n     %7D%0A%0A\n-// \n     \n@@ -274,19 +274,16 @@\n r := -1%0A\n-// \n     valo\n@@ -308,23 +308,20 @@\n axInt32%0A\n-//\n     \n- \n for i, j\n@@ -342,26 +342,24 @@\n gadas %7B%0A\n-//\n         \n  if jog.\n@@ -350,17 +350,16 @@\n         \n- \n if jog.p\n@@ -378,27 +378,24 @@\n g.pb %3C 10 %7B%0A\n-// \n             \n@@ -403,26 +403,24 @@\n ontinue%0A\n-//\n         \n  %7D%0A%0A//  \n@@ -403,39 +403,35 @@\n ontinue%0A        \n- \n %7D%0A%0A\n-// \n         pontuaca\n@@ -451,19 +451,16 @@\n  jog.pb%0A\n-// \n         \n@@ -478,19 +478,16 @@\n o %3C 0 %7B%0A\n-// \n         \n@@ -505,35 +505,32 @@\n ao = -pontuacao%0A\n-// \n         %7D%0A%0A//   \n@@ -524,19 +524,16 @@\n      %7D%0A%0A\n-// \n         \n@@ -562,19 +562,16 @@\n elhor %7B%0A\n-// \n         \n@@ -589,19 +589,16 @@\n hor = i%0A\n-// \n         \n@@ -626,19 +626,16 @@\n ntuacao%0A\n-// \n         \n@@ -649,13 +649,9 @@\n     \n- \n %0A\n-// \n     \n@@ -676,19 +676,16 @@\n == -1 %7B%0A\n-// \n         \n@@ -716,19 +716,16 @@\n hador%22)%0A\n-// \n         \n@@ -730,20 +730,14 @@\n   %7D%0A\n-// \n     %7D%0A\n-// \n     \n@@ -764,18 +764,18 @@\n or)%0A\n-// \n %7D%0A%0A%0A%0A%0A%0A\n+// \n func\n@@ -801,20 +801,23 @@\n  bool %7B%0A\n+//\n     \n+ \n return p\n@@ -836,19 +836,25 @@\n 2 %3E= 10%0A\n-%7D%0A%0A\n+// %7D%0A%0A// \n func dif\n@@ -874,24 +874,27 @@\n  int) int %7B%0A\n+// \n     if p1 %3E \n@@ -898,16 +898,19 @@\n  %3E p2 %7B%0A\n+// \n         \n@@ -924,16 +924,19 @@\n p1 - p2%0A\n+// \n     %7D el\n@@ -932,32 +932,35 @@\n //     %7D else %7B%0A\n+// \n         return p\n@@ -970,17 +970,26 @@\n  p1%0A\n+// \n     %7D%0A\n-%7D%0A%0A\n+// %7D%0A%0A// \n func\n@@ -1011,20 +1011,23 @@\n ) int %7B%0A\n+//\n     \n+ \n var p1, \n@@ -1029,24 +1029,27 @@\n  p1, p2 int%0A\n+// \n     indice :\n@@ -1049,24 +1049,27 @@\n ndice := -1%0A\n+// \n     ganhador\n@@ -1077,16 +1077,19 @@\n := 1000%0A\n+// \n     for \n@@ -1103,16 +1103,19 @@\n nge n %7B%0A\n+// \n         \n@@ -1134,32 +1134,35 @@\n , &p2)%0A        %0A\n+// \n         val := v\n@@ -1167,32 +1167,35 @@\n  valido(p1, p2)%0A\n+// \n         if !val \n@@ -1196,16 +1196,19 @@\n  !val %7B%0A\n+// \n         \n@@ -1212,32 +1212,35 @@\n        continue%0A\n+// \n         %7D%0A      \n@@ -1234,32 +1234,35 @@\n      %7D%0A        %0A\n+// \n         pontuaca\n@@ -1284,24 +1284,26 @@\n p1, p2)%0A\n+//\n         \n if pontu\n@@ -1286,32 +1286,33 @@\n , p2)%0A//        \n+ \n if pontuacao %3C g\n@@ -1317,24 +1317,26 @@\n  ganhador %7B%0A\n+//\n             \n@@ -1331,24 +1331,25 @@\n             \n+ \n ganhador = p\n@@ -1349,32 +1349,34 @@\n dor = pontuacao%0A\n+//\n             indi\n@@ -1367,24 +1367,25 @@\n             \n+ \n indice = i%0A \n@@ -1383,24 +1383,26 @@\n ice = i%0A\n+//\n         \n %7D%0A    %7D%0A\n@@ -1389,32 +1389,39 @@\n i%0A//        \n+ \n %7D%0A\n+// \n     %7D%0A\n+// \n     return i\n@@ -1426,19 +1426,25 @@\n  indice%0A\n-%7D%0A%0A\n+// %7D%0A%0A// \n func mai\n@@ -1445,24 +1445,27 @@\n nc main() %7B%0A\n+// \n     var n in\n@@ -1466,16 +1466,19 @@\n r n int%0A\n+// \n     fmt.\n@@ -1487,24 +1487,27 @@\n an(&n)%0A    %0A\n+// \n     indice :\n@@ -1520,16 +1520,19 @@\n edor(n)%0A\n+// \n     if (\n@@ -1543,24 +1543,27 @@\n ce == -1) %7B%0A\n+// \n         fmt.\n@@ -1582,24 +1582,27 @@\n  ganhador%22)%0A\n+// \n     %7D else %7B\n@@ -1602,24 +1602,26 @@\n  else %7B%0A\n+//\n         \n fmt.Prin\n@@ -1604,32 +1604,33 @@\n lse %7B%0A//        \n+ \n fmt.Println(indi\n@@ -1633,16 +1633,21 @@\n indice)%0A\n+// \n     %7D%0A\n+//\n %7D \n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-03-16_21-10-56",
+            "content": "package main\nimport \"fmt\"\n// import \"math\"\n\n// type Jogada struct {\n//     pa, pb int\n// }\n\n// func main() {\n//     qtd := 0\n//     fmt.Scan(&qtd)\n//     jogadas := make([]Jogada, qtd)\n\n//     for i := range jogadas {\n//         jog := &jogadas[i]\n//         fmt.Scan(&jog.pa, &jog.pb)\n//     }\n\n//     ind_melhor := -1\n//     valor_melhor := math.MaxInt32\n//     for i, jog := range jogadas {\n//         if jog.pa < 10 || jog.pb < 10 {\n//             continue\n//         }\n\n//         pontuacao := jog.pa - jog.pb\n//         if pontuacao < 0 {\n//             pontuacao = -pontuacao\n//         }\n\n//         if pontuacao < valor_melhor {\n//             ind_melhor = i\n//             valor_melhor = pontuacao\n//         } \n         \n//         if ind_melhor == -1 {\n//             fmt.Println(\"sem ganhador\")\n//         }\n//     }\n//     fmt.Println(ind_melhor)\n// }\n\n\n\n\n\nfunc valido(p1, p2 int) bool {\n    return p1 >= 10 && p2 >= 10\n}\n\nfunc diferenca(p1, p2 int) int {\n    if p1 > p2 {\n        return p1 - p2\n    } else {\n        return p2 - p1\n    }\n}\n\nfunc vencedor(n int) int {\n    var p1, p2 int\n    indice := -1\n    ganhador := 1000\n    for i := range n {\n        fmt.Scan(&p1, &p2)\n        \n        val := valido(p1, p2)\n        if !val {\n            continue\n        }\n        \n        pontuacao := diferenca(p1, p2)\n        if pontuacao < ganhador {\n            ganhador = pontuacao\n            indice = i\n        }\n    }\n    return indice\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    \n    indice := vencedor(n)\n    if (indice == -1) {\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(indice)\n    }\n} ",
+            "lines": "90"
         }
     ]
 }

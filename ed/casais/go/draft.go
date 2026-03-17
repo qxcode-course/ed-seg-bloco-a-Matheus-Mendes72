@@ -1,10 +1,7 @@
 package main
 import "fmt"
-func main() {
-    var qtd, casais int
-    //vetor := []int{}
-    fmt.Scan(&qtd)
-
+func casais(qtd int) int {
+    casais := 0
     slice := make(map[int]int)
     for i := 0; i < qtd; i++ {
         var animal int
@@ -16,18 +13,23 @@ func main() {
         } else {
             slice[animal]++
         }
-
-        // encontrou := false
-        // for j := 0; j < len(vetor); j++ {
-        //     if vetor[j] == -animal {
-        //         vetor[j] = 0
-        //         casais++
-        //         encontrou = true
-        //         continue
-        //     }
-        //     if !encontrou {}
-        //         vetor = append(vetor, animal)
-        //     }
     }
-    fmt.Println(casais)
+    return casais
 }
+func main() {
+    var qtd int
+    //vetor := []int{}
+    fmt.Scan(&qtd)
+
+    casais_formados := casais(qtd)
+    fmt.Println(casais_formados)
+}
+
+for _, val := range slice {
+        if slice[-i] > 0 {
+            slice[-i]--
+            casais++
+        } else {
+            slice[i]++
+        }
+    }

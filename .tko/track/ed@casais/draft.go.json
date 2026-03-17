@@ -87,8 +87,58 @@
         },
         {
             "label": "2026-03-16_10-34-19",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtd, casais int\n    //vetor := []int{}\n    fmt.Scan(&qtd)\n\n    slice := make(map[int]int)\n    for i := 0; i < qtd; i++ {\n        var animal int\n        fmt.Scan(&animal)\n\n        if slice[-animal] > 0 {\n            slice[-animal]--\n            casais++\n        } else {\n            slice[animal]++\n        }\n\n        // encontrou := false\n        // for j := 0; j < len(vetor); j++ {\n        //     if vetor[j] == -animal {\n        //         vetor[j] = 0\n        //         casais++\n        //         encontrou = true\n        //         continue\n        //     }\n        //     if !encontrou {}\n        //         vetor = append(vetor, animal)\n        //     }\n    }\n    fmt.Println(casais)\n}\n",
+            "content": "@@ -344,24 +344,379 @@\n ++%0A        %7D\n+%0A%0A        // encontrou := false%0A        // for j := 0; j %3C len(vetor); j++ %7B%0A        //     if vetor%5Bj%5D == -animal %7B%0A        //         vetor%5Bj%5D = 0%0A        //         casais++%0A        //         encontrou = true%0A        //         continue%0A        //     %7D%0A        //     if !encontrou %7B%7D%0A        //         vetor = append(vetor, animal)%0A        //     %7D\n %0A    %7D%0A    f\n",
             "lines": "33"
+        },
+        {
+            "label": "2026-03-16_21-20-55",
+            "content": "@@ -28,29 +28,83 @@\n unc \n-casais(qtd int) int %7B\n+main() %7B%0A    var qtd, casais int%0A    //vetor := %5B%5Dint%7B%7D%0A    fmt.Scan(&qtd)%0A\n %0A   \n@@ -383,175 +383,6 @@\n is)%0A\n-    return casais%0A%7D%0Afunc main() %7B%0A    var qtd, casais int%0A    //vetor := %5B%5Dint%7B%7D%0A    fmt.Scan(&qtd)%0A%0A    casais_formados := casais(qtd)%0A    fmt.Println(casais_formados)%0A\n %7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-16_21-24-42",
+            "content": "@@ -50,24 +50,8 @@\n t %7B%0A\n-    casais := 0%0A\n     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-16_21-25-20",
+            "content": "@@ -313,24 +313,48 @@\n     %7D%0A    %7D%0A\n+    fmt.Println(casais)%0A\n     return c\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-16_21-25-51",
+            "content": "@@ -362,16 +362,24 @@\n  var qtd\n+, casais\n  int%0A   \n@@ -475,17 +475,21 @@\n n(casais\n-(qtd)\n+_formados\n )%0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-16_21-26-38",
+            "content": "@@ -414,18 +414,16 @@\n d)%0A%0A    \n-//\n casais_f\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-16_21-26-45",
+            "content": "@@ -410,24 +410,26 @@\n (&qtd)%0A%0A    \n+//\n casais_forma\n@@ -469,21 +469,17 @@\n n(casais\n-_formados\n+(qtd)\n )%0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-16_21-27-10",
+            "content": "@@ -80,17 +80,23 @@\n := make(\n-%5B\n+map%5Bint\n %5Dint)%0A  \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-16_21-28-00",
+            "content": "@@ -89,13 +89,8 @@\n %5Dint\n-, qtd\n )%0A  \n@@ -126,18 +126,16 @@\n         \n-//\n var anim\n@@ -159,24 +159,22 @@\n t.Scan(&\n-slice%5Bi%5D\n+animal\n )%0A%0A     \n@@ -186,17 +186,22 @@\n  slice%5B-\n-i\n+animal\n %5D %3E 0 %7B%0A\n@@ -219,17 +219,22 @@\n  slice%5B-\n-i\n+animal\n %5D--%0A    \n@@ -285,17 +285,22 @@\n   slice%5B\n-i\n+animal\n %5D++%0A    \n@@ -331,17 +331,16 @@\n asais%0A%7D%0A\n-%0A\n func mai\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-16_21-34-21",
+            "content": "@@ -180,62 +180,29 @@\n i%5D)%0A\n+%0A\n     \n-%7D%0A%0A\n     \n-for _, val := range slice %7B%0A        if -val\n+if slice%5B-i%5D\n  %3E 0\n@@ -220,12 +220,17 @@\n     \n--val\n+slice%5B-i%5D\n --%0A \n@@ -282,11 +282,16 @@\n     \n-val\n+slice%5Bi%5D\n ++%0A \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-16_21-36-11",
+            "content": "package main\nimport \"fmt\"\nfunc casais(qtd int) int {\n    casais := 0\n    slice := make([]int, qtd)\n    for i := 0; i < qtd; i++ {\n        //var animal int\n        fmt.Scan(&slice[i])\n    }\n\n    for _, val := range slice {\n        if -val > 0 {\n            -val--\n            casais++\n        } else {\n            val++\n        }\n    }\n    return casais\n}\n\nfunc main() {\n    var qtd int\n    //vetor := []int{}\n    fmt.Scan(&qtd)\n\n    casais_formados := casais(qtd)\n    fmt.Println(casais_formados)\n}\n",
+            "lines": "29"
         }
     ]
 }

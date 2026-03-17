@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_21-11-08",
+            "content": "@@ -41,29 +41,28 @@\n     \n-var qtd_gomos int%0A    \n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-16_21-14-42",
+            "content": "@@ -22,156 +22,8 @@\n fmt%22\n-%0A%0Afunc direcao(d String, x, y int) int %7B%0A    if d == %22L%22 %7B%0A        return %0A    %7D else if d == %22R%22 %7B%0A%0A    %7D else if d == %22D%22 %7B%0A%0A    %7D else %7B%0A%0A    %7D%0A%7D\n %0Afun\n@@ -55,11 +55,15 @@\n mos int%0A\n+    \n %0A%7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-03-16_21-17-54",
+            "content": "@@ -35,17 +35,17 @@\n recao(d \n-s\n+S\n tring, x\n@@ -202,42 +202,12 @@\n omos\n-, x, y int%0A    fmt.Scan(&qtd_gomos)\n+ int%0A\n %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-16_21-18-45",
+            "content": "package main\nimport \"fmt\"\n\nfunc direcao(d string, x, y int) int {\n    if d == \"L\" {\n        return \n    } else if d == \"R\" {\n\n    } else if d == \"D\" {\n\n    } else {\n\n    }\n}\nfunc main() {\n    var qtd_gomos, x, y int\n    fmt.Scan(&qtd_gomos)\n}\n",
+            "lines": "18"
+        }
+    ]
+}
