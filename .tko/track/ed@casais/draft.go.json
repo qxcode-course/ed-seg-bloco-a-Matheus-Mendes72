@@ -137,8 +137,78 @@
         },
         {
             "label": "2026-03-16_21-36-11",
-            "content": "package main\nimport \"fmt\"\nfunc casais(qtd int) int {\n    casais := 0\n    slice := make([]int, qtd)\n    for i := 0; i < qtd; i++ {\n        //var animal int\n        fmt.Scan(&slice[i])\n    }\n\n    for _, val := range slice {\n        if -val > 0 {\n            -val--\n            casais++\n        } else {\n            val++\n        }\n    }\n    return casais\n}\n\nfunc main() {\n    var qtd int\n    //vetor := []int{}\n    fmt.Scan(&qtd)\n\n    casais_formados := casais(qtd)\n    fmt.Println(casais_formados)\n}\n",
+            "content": "@@ -84,19 +84,18 @@\n ake(\n-map%5Bint%5Dint\n+%5B%5Dint, qtd\n )%0A  \n@@ -127,24 +127,26 @@\n + %7B%0A        \n+//\n var animal i\n@@ -170,42 +170,72 @@\n an(&\n-animal\n+slice%5Bi%5D\n )%0A\n-%0A\n     \n+%7D%0A%0A\n     \n-if slice%5B-anim\n+for _, val := range slice %7B%0A        if -v\n al\n-%5D\n  %3E 0\n@@ -253,22 +253,12 @@\n     \n-slice%5B-anim\n+-v\n al\n-%5D\n --%0A \n@@ -310,21 +310,11 @@\n     \n-slice%5Banim\n+v\n al\n-%5D\n ++%0A \n@@ -348,16 +348,17 @@\n asais%0A%7D%0A\n+%0A\n func mai\n@@ -496,160 +496,4 @@\n )%0A%7D%0A\n-%0Afor _, val := range slice %7B%0A        if slice%5B-i%5D %3E 0 %7B%0A            slice%5B-i%5D--%0A            casais++%0A        %7D else %7B%0A            slice%5Bi%5D++%0A        %7D%0A    %7D\n",
             "lines": "29"
+        },
+        {
+            "label": "2026-03-17_15-50-14",
+            "content": "@@ -481,8 +481,163 @@\n dos)%0A%7D%0A%0A\n+for _, val := range slice %7B%0A        if slice%5B-i%5D %3E 0 %7B%0A            slice%5B-i%5D--%0A            casais++%0A        %7D else %7B%0A            slice%5Bi%5D++%0A        %7D%0A    %7D\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-17_15-50-42",
+            "content": "@@ -23,384 +23,8 @@\n mt%22%0A\n-%0Afunc main() %7B%0A    solteiros := make(map%5Bint%5Dint)%0A    qtd := 0%0A    fmt.Scan(&qtd)%0A    pares := 0%0A    for range qtd %7B%0A        animal := 0%0A        fmt.Scan(&animal) %0A        qtd, existe := solteiros%5B-animal%5D%0A        if existe && qtd %3E 0 %7B%0A            solteiros%5B-animal%5D = qtd - 1%0A            pares += 1%0A        %7D else %7B%0A            solteiros%5Banimal%5D += 1%0A        %7D%0A    %7D%0A%7D%0A%0A%0A// \n func\n@@ -46,19 +46,16 @@\n ) int %7B%0A\n-// \n     casa\n@@ -62,19 +62,16 @@\n is := 0%0A\n-// \n     slic\n@@ -93,19 +93,16 @@\n nt%5Dint)%0A\n-// \n     for \n@@ -124,19 +124,16 @@\n ; i++ %7B%0A\n-// \n         \n@@ -143,27 +143,24 @@\n  animal int%0A\n-// \n         fmt.\n@@ -174,19 +174,16 @@\n nimal)%0A%0A\n-// \n         \n@@ -206,18 +206,16 @@\n %5D %3E 0 %7B%0A\n-//\n         \n@@ -214,25 +214,24 @@\n             \n- \n slice%5B-anima\n@@ -235,18 +235,16 @@\n imal%5D--%0A\n-//\n         \n@@ -243,25 +243,24 @@\n             \n- \n casais++%0A// \n@@ -256,19 +256,16 @@\n asais++%0A\n-// \n         \n@@ -273,19 +273,16 @@\n  else %7B%0A\n-// \n         \n@@ -301,19 +301,16 @@\n imal%5D++%0A\n-// \n         \n@@ -315,20 +315,14 @@\n   %7D%0A\n-// \n     %7D%0A\n-// \n     \n@@ -339,16 +339,10 @@\n ais%0A\n-// %7D%0A// \n+%7D%0A\n func\n@@ -351,23 +351,20 @@\n ain() %7B%0A\n-//\n     \n- \n var qtd \n@@ -367,23 +367,20 @@\n qtd int%0A\n-//\n     \n- \n //vetor \n@@ -390,19 +390,16 @@\n %5B%5Dint%7B%7D%0A\n-// \n     fmt.\n@@ -410,19 +410,16 @@\n (&qtd)%0A%0A\n-// \n     casa\n@@ -445,19 +445,16 @@\n is(qtd)%0A\n-// \n     fmt.\n@@ -482,10 +482,7 @@\n os)%0A\n-// \n %7D%0A%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-17_16-08-32",
+            "content": "@@ -391,33 +391,8 @@\n    %7D\n-%0A%0A    fmt.Println(casais)\n %0A%7D%0A%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-17_16-09-38",
+            "content": "@@ -405,20 +405,21 @@\n Println(\n-pare\n+casai\n s)%0A%7D%0A%0A%0A/\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-17_16-09-50",
+            "content": "@@ -368,17 +368,19 @@\n nimal%5D +\n-+\n+= 1\n %0A       \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-17_16-09-54",
+            "content": "@@ -38,394 +38,8 @@\n ) %7B%0A\n-    var qtd int%0A    fmt.Scan(&qtd)%0A%0A    animal := make(%5B%5Dint, qtd)%0A    for i := 0; i %3C qtd; i++ %7B%0A        fmt.Scan(&animal%5Bi%5D)%0A    %7D%0A    fmt.Println(qtd, animal)%0A%0A    descasados := make(map%5Bint%5Dint) %0A    casais := 0%0A    for _, animal := range animal %7B%0A        if descasados%5B-animal%5D %7B%0A            casais++%0A        %7D%0A    %7D%0A    fmt.Println(descasados, casais)%0A%7D%0A%0A%0A%0A%0A%0A%0A// func main() %7B%0A// \n     \n@@ -65,27 +65,24 @@\n ap%5Bint%5Dint)%0A\n-// \n     qtd := 0\n@@ -82,23 +82,20 @@\n td := 0%0A\n-//\n     \n- \n fmt.Scan\n@@ -101,23 +101,20 @@\n n(&qtd)%0A\n-//\n     \n- \n pares :=\n@@ -112,27 +112,24 @@\n  pares := 0%0A\n-// \n     for rang\n@@ -136,19 +136,16 @@\n e qtd %7B%0A\n-// \n         \n@@ -152,27 +152,24 @@\n animal := 0%0A\n-// \n         fmt.\n@@ -183,19 +183,16 @@\n nimal) %0A\n-// \n         \n@@ -225,19 +225,16 @@\n animal%5D%0A\n-// \n         \n@@ -252,27 +252,24 @@\n & qtd %3E 0 %7B%0A\n-// \n             \n@@ -297,19 +297,16 @@\n qtd - 1%0A\n-// \n         \n@@ -320,26 +320,24 @@\n es += 1%0A\n-//\n         \n  %7D else \n@@ -320,33 +320,32 @@\n es += 1%0A        \n- \n %7D else %7B%0A//     \n@@ -329,34 +329,32 @@\n        %7D else %7B%0A\n-//\n              sol\n@@ -341,33 +341,32 @@\n e %7B%0A            \n- \n solteiros%5Banimal\n@@ -370,19 +370,16 @@\n mal%5D ++%0A\n-// \n         \n@@ -384,21 +384,15 @@\n   %7D%0A\n-// \n     %7D%0A%0A\n-// \n     \n@@ -410,19 +410,16 @@\n (pares)%0A\n-// \n %7D%0A%0A%0A// f\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-17_21-16-39",
+            "content": "@@ -316,20 +316,16 @@\n -animal%5D\n- %3E 0\n  %7B%0A     \n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-03-17_21-16-50",
+            "content": "@@ -348,58 +348,8 @@\n s++%0A\n-        %7D else %7B%0A            descasados%5Banimal%5D++%0A\n     \n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-03-17_21-18-33",
+            "content": "@@ -327,42 +327,8 @@\n 0 %7B%0A\n-            descasados%5B-animal%5D--%0A\n     \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-17_21-19-22",
+            "content": "@@ -166,16 +166,45 @@\n %5D)%0A    %7D\n+%0A    fmt.Println(qtd, animal)\n %0A%0A    de\n@@ -456,24 +456,36 @@\n fmt.Println(\n+descasados, \n casais)%0A%7D%0A%0A%0A\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-17_21-19-58",
+            "content": "@@ -168,31 +168,32 @@\n %0A    %7D%0A%0A    \n-solteir\n+descasad\n os := make(m\n@@ -269,66 +269,30 @@\n     \n-qtd, existe := solteiros%5B-animal%5D%0A        if existe && qtd\n+if descasados%5B-animal%5D\n  %3E 0\n@@ -298,39 +298,40 @@\n 0 %7B%0A            \n-solteir\n+descasad\n os%5B-animal%5D = qt\n@@ -325,26 +325,18 @@\n -animal%5D\n- = qtd - 1\n+--\n %0A       \n@@ -340,26 +340,24 @@\n         \n-pares += 1\n+casais++\n %0A       \n@@ -370,39 +370,40 @@\n e %7B%0A            \n-solteir\n+descasad\n os%5Banimal%5D ++%0A  \n@@ -396,17 +396,16 @@\n %5Banimal%5D\n- \n ++%0A     \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-17_21-27-04",
+            "content": "@@ -382,21 +382,20 @@\n         \n-casai\n+pare\n s += 1%0A \n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-17_21-27-13",
+            "content": "@@ -259,46 +259,8 @@\n al %7B\n-%0A%0A        // M%C3%A9todo para percorrer Map\n %0A   \n@@ -302,13 +302,8 @@\n al%5D%0A\n-    %0A\n     \n@@ -333,45 +333,8 @@\n 0 %7B%0A\n-            // Remove o valor do Map%0A\n     \n@@ -359,18 +359,26 @@\n -animal%5D\n---\n+ = qtd - 1\n %0A       \n@@ -415,45 +415,8 @@\n e %7B%0A\n-            // Guarda o valor no Map%0A\n     \n@@ -440,16 +440,17 @@\n %5Banimal%5D\n+ \n ++%0A     \n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-17_21-29-47",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n    var qtd int\n    fmt.Scan(&qtd)\n\n    animal := make([]int, qtd)\n    for i := 0; i < qtd; i++ {\n        fmt.Scan(&animal[i])\n    }\n\n    solteiros := make(map[int]int) \n    casais := 0\n    for _, animal := range animal {\n\n        // M\u00e9todo para percorrer Map\n        qtd, existe := solteiros[-animal]\n    \n        if existe && qtd > 0 {\n            // Remove o valor do Map\n            solteiros[-animal]--\n            casais += 1\n        } else {\n            // Guarda o valor no Map\n            solteiros[animal]++\n        }\n    }\n    fmt.Println(casais)\n}\n\n\n\n\n\n\n// func main() {\n//     solteiros := make(map[int]int)\n//     qtd := 0\n//     fmt.Scan(&qtd)\n//     pares := 0\n//     for range qtd {\n//         animal := 0\n//         fmt.Scan(&animal) \n//         qtd, existe := solteiros[-animal]\n//         if existe && qtd > 0 {\n//             solteiros[-animal] = qtd - 1\n//             pares += 1\n//         } else {\n//             solteiros[animal] ++\n//         }\n//     }\n\n//     fmt.Println(pares)\n// }\n\n\n// func casais(qtd int) int {\n//     casais := 0\n//     slice := make(map[int]int)\n//     for i := 0; i < qtd; i++ {\n//         var animal int\n//         fmt.Scan(&animal)\n\n//         if slice[-animal] > 0 {\n//             slice[-animal]--\n//             casais++\n//         } else {\n//             slice[animal]++\n//         }\n//     }\n//     return casais\n// }\n// func main() {\n//     var qtd int\n//     //vetor := []int{}\n//     fmt.Scan(&qtd)\n\n//     casais_formados := casais(qtd)\n//     fmt.Println(casais_formados)\n// }\n\n",
+            "lines": "82"
         }
     ]
 }

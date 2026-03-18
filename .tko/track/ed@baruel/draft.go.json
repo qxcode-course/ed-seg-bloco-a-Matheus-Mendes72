@@ -207,8 +207,68 @@
         },
         {
             "label": "2026-03-16_15-21-08",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtd_total, baruel int\n    fmt.Scan(&qtd_total, &baruel)\n\n    figurinhas := make(map[int]int)\n    for i := 0; i < baruel; i++ {\n        var val_figur int\n        fmt.Scan(&val_figur)\n        figurinhas[val_figur]++\n    }\n\n    fig_rep := false\n    prim := true\n    for i := 0; i < baruel; i++ {\n        if figurinhas[i] > 1 {\n            for j := 0; j < figurinhas[i]-1; j++ {\n                    if !prim {\n                        fmt.Print(\" \")\n                    }\n                fmt.Print(i)\n                fig_rep = true\n                prim = false\n            }\n        }\n    }\n\n    if !fig_rep {\n        fmt.Print(\"N\")\n    }\n\n    fmt.Println()\n\n    prim = true\n    faltando := false\n    for i := 1; i <= qtd_total; i++ {\n        if figurinhas[i] == 0 {\n            if !prim {\n                fmt.Print(\" \")\n            }\n            fmt.Print(i)\n            faltando = true\n            prim = false\n        }\n    }\n\n    if !faltando {\n        fmt.Print(\"N\")\n    }\n\n    fmt.Println()\n}\n",
+            "content": "@@ -37,488 +37,8 @@\n ) %7B%0A\n-    qtd_album := 0%0A    qtd_fig := 0%0A    fmt.Scan(&qtd_album, &qtd_fig)%0A    album := make(%5B%5Dint, qtd_fig)%0A    unicos := make(map%5Bint%5Dbool)%0A    repetidos := make(%5B%5Dint, 0, qtd)%0A%0A    for i := range algum %7B%0A        fmt.Scan(&album%5Bi%5D)%0A    %7D%0A%0A    for _, fig := range album %7B%0A        if unicos%5Bfig%5D %7B%0A            repetidos = append(repetidos, fig)%0A        %7D else %7B%0A            unicos%5Bfig%5D = true%0A        %7D%0A    %7D%0A    fmt.Println(unicos)%0A    fmt.Println(repetidos)%0A%7D%0A%0A// func main() %7B%0A// \n     \n@@ -59,27 +59,24 @@\n  baruel int%0A\n-// \n     fmt.Scan\n@@ -98,19 +98,16 @@\n aruel)%0A%0A\n-// \n     figu\n@@ -134,19 +134,16 @@\n nt%5Dint)%0A\n-// \n     for \n@@ -160,35 +160,32 @@\n %3C baruel; i++ %7B%0A\n-// \n         var val_\n@@ -194,19 +194,16 @@\n gur int%0A\n-// \n         \n@@ -223,19 +223,16 @@\n _figur)%0A\n-// \n         \n@@ -255,33 +255,27 @@\n igur%5D++%0A\n-// \n     %7D%0A%0A\n-//\n     \n- \n fig_rep \n@@ -283,23 +283,20 @@\n = false%0A\n-//\n     \n- \n prim := \n@@ -296,27 +296,24 @@\n rim := true%0A\n-// \n     for i :=\n@@ -330,34 +330,32 @@\n ruel; i++ %7B%0A\n-//\n         \n  if figurinh\n@@ -334,33 +334,32 @@\n ; i++ %7B%0A        \n- \n if figurinhas%5Bi%5D\n@@ -365,19 +365,16 @@\n %5D %3E 1 %7B%0A\n-// \n         \n@@ -412,27 +412,24 @@\n i%5D-1; j++ %7B%0A\n-// \n             \n@@ -439,35 +439,32 @@\n      if !prim %7B%0A\n-// \n                 \n@@ -478,35 +478,32 @@\n  fmt.Print(%22 %22)%0A\n-// \n                 \n@@ -500,34 +500,32 @@\n               %7D%0A\n-//\n                 \n@@ -516,33 +516,32 @@\n                 \n- \n fmt.Print(i)%0A// \n@@ -529,35 +529,32 @@\n    fmt.Print(i)%0A\n-// \n                 \n@@ -560,35 +560,32 @@\n  fig_rep = true%0A\n-// \n                 \n@@ -589,34 +589,32 @@\n    prim = false%0A\n-//\n              %7D%0A/\n@@ -601,38 +601,34 @@\n lse%0A            \n- \n %7D%0A\n-// \n         %7D%0A//    \n@@ -617,37 +617,31 @@\n %7D%0A        %7D%0A\n-// \n     %7D%0A%0A\n-// \n     if !fig_\n@@ -646,19 +646,16 @@\n g_rep %7B%0A\n-// \n         \n@@ -665,37 +665,31 @@\n .Print(%22N%22)%0A\n-// \n     %7D%0A%0A\n-// \n     fmt.Prin\n@@ -695,19 +695,16 @@\n ntln()%0A%0A\n-// \n     prim\n@@ -711,23 +711,20 @@\n  = true%0A\n-//\n     \n- \n faltando\n@@ -729,27 +729,24 @@\n do := false%0A\n-// \n     for i :=\n@@ -771,19 +771,16 @@\n ; i++ %7B%0A\n-// \n         \n@@ -803,18 +803,16 @@\n  == 0 %7B%0A\n-//\n         \n@@ -807,33 +807,32 @@\n 0 %7B%0A            \n- \n if !prim %7B%0A//   \n@@ -826,19 +826,16 @@\n !prim %7B%0A\n-// \n         \n@@ -857,19 +857,16 @@\n nt(%22 %22)%0A\n-// \n         \n@@ -867,27 +867,24 @@\n           %7D%0A\n-// \n             \n@@ -896,19 +896,16 @@\n rint(i)%0A\n-// \n         \n@@ -924,18 +924,16 @@\n  = true%0A\n-//\n         \n@@ -928,33 +928,32 @@\n rue%0A            \n- \n prim = false%0A// \n@@ -949,19 +949,16 @@\n = false%0A\n-// \n         \n@@ -959,29 +959,23 @@\n       %7D%0A\n-// \n     %7D%0A%0A\n-// \n     if !\n@@ -985,19 +985,16 @@\n tando %7B%0A\n-// \n         \n@@ -1012,21 +1012,15 @@\n N%22)%0A\n-// \n     %7D%0A%0A\n-// \n     \n@@ -1037,9 +1037,6 @@\n n()%0A\n-// \n %7D%0A\n",
             "lines": "53"
+        },
+        {
+            "label": "2026-03-17_16-23-26",
+            "content": "@@ -206,20 +206,16 @@\n , 0, qtd\n-_fig\n )%0A%0A    f\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-17_16-23-45",
+            "content": "@@ -226,33 +226,33 @@\n or i := range al\n-b\n+g\n um %7B%0A        fmt\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-17_16-23-59",
+            "content": "@@ -439,24 +439,48 @@\n     %7D%0A    %7D%0A\n+    fmt.Println(unicos)%0A\n     fmt.Prin\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-17_16-28-23",
+            "content": "@@ -447,393 +447,34 @@\n   %7D%0A\n-%0A    for i, valor := range repetidos %7B%0A        if i != 0 %7B%0A            fmt.Print(%22 %22)%0A        %7D%0A        fmt.Printf(%22%25v%22, valor)%0A    %7D%0A    fmt.Println(%22%22)%0A    saida := %22%22%0A    for i := 1; i %3C qtd_album; i++ %7B%0A        if !unicos%5Bi%5D %7B%0A            saida = fmt.Sprintf(%22%25s%25v %22, saida, i)%0A        %7D%0A    %7D%0A%0A    if saida == %22%22 %7B%0A        fmt.Println(%22N%22)%0A    %7D else %7B%0A        fmt.Println()%0A    %7D\n+    fmt.Println(repetidos)\n %0A%7D%0A%0A\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-17_16-35-40",
+            "content": "@@ -821,21 +821,16 @@\n Println(\n-saida\n )%0A    %7D%0A\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-03-17_16-35-46",
+            "content": "@@ -709,17 +709,16 @@\n intf(%22%25s\n- \n %25v %22, sa\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-03-17_16-36-00",
+            "content": "@@ -692,17 +692,16 @@\n   saida \n-+\n = fmt.Sp\n@@ -712,11 +712,21 @@\n f(%22%25\n-v %22\n+s %25v %22, saida\n , i)\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-03-17_16-36-51",
+            "content": "@@ -822,23 +822,8 @@\n aida\n-%5B:len(saida)-1%5D\n )%0A  \n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-03-17_16-37-17",
+            "content": "@@ -448,79 +448,8 @@\n  %7D%0A%0A\n-    if len(repetidos) == 0 %7B%0A        fmt.Println(%22N%22)%0A    %7D else %7B%0A    \n     \n@@ -490,20 +490,16 @@\n         \n-  \n-  \n if i != \n@@ -502,20 +502,16 @@\n  != 0 %7B%0A\n-    \n         \n@@ -541,24 +541,18 @@\n     \n-    %7D%0A  \n+%7D%0A\n         \n   fm\n@@ -539,34 +539,32 @@\n       %7D%0A        \n-  \n fmt.Printf(%22%25v%22,\n@@ -571,26 +571,16 @@\n  valor)%0A\n-        %7D%0A\n     %7D%0A  \n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-03-17_16-38-51",
+            "content": "@@ -670,24 +670,44 @@\n     %7D%0A    %7D%0A\n+    fmt.Println(%22%22)%0A\n     saida :=\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-03-17_16-39-28",
+            "content": "@@ -486,24 +486,26 @@\n    fmt.Print\n+ln\n (%22N%22)%0A    %7D \n@@ -678,28 +678,8 @@\n   %7D%0A\n-    fmt.Println(%22%22)%0A\n     \n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-03-17_16-39-50",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    qtd_album := 0\n    qtd_fig := 0\n    fmt.Scan(&qtd_album, &qtd_fig)\n    album := make([]int, qtd_fig)\n    unicos := make(map[int]bool)\n    repetidos := make([]int, 0, qtd_fig)\n\n    for i := range album {\n        fmt.Scan(&album[i])\n    }\n\n    for _, fig := range album {\n        if unicos[fig] {\n            repetidos = append(repetidos, fig)\n        } else {\n            unicos[fig] = true\n        }\n    }\n\n    if len(repetidos) == 0 {\n        fmt.Print(\"N\")\n    } else {\n        for i, valor := range repetidos {\n            if i != 0 {\n                fmt.Print(\" \")\n            }\n            fmt.Printf(\"%v\", valor)\n        }\n    }\n    fmt.Println(\"\")\n    saida := \"\"\n    for i := 1; i < qtd_album; i++ {\n        if !unicos[i] {\n            saida += fmt.Sprintf(\"%v \", i)\n        }\n    }\n\n    if saida == \"\" {\n        fmt.Println(\"N\")\n    } else {\n        fmt.Println(saida[:len(saida)-1])\n    }\n}\n\n// func main() {\n//     var qtd_total, baruel int\n//     fmt.Scan(&qtd_total, &baruel)\n\n//     figurinhas := make(map[int]int)\n//     for i := 0; i < baruel; i++ {\n//         var val_figur int\n//         fmt.Scan(&val_figur)\n//         figurinhas[val_figur]++\n//     }\n\n//     fig_rep := false\n//     prim := true\n//     for i := 0; i < baruel; i++ {\n//         if figurinhas[i] > 1 {\n//             for j := 0; j < figurinhas[i]-1; j++ {\n//                     if !prim {\n//                         fmt.Print(\" \")\n//                     }\n//                 fmt.Print(i)\n//                 fig_rep = true\n//                 prim = false\n//             }\n//         }\n//     }\n\n//     if !fig_rep {\n//         fmt.Print(\"N\")\n//     }\n\n//     fmt.Println()\n\n//     prim = true\n//     faltando := false\n//     for i := 1; i <= qtd_total; i++ {\n//         if figurinhas[i] == 0 {\n//             if !prim {\n//                 fmt.Print(\" \")\n//             }\n//             fmt.Print(i)\n//             faltando = true\n//             prim = false\n//         }\n//     }\n\n//     if !faltando {\n//         fmt.Print(\"N\")\n//     }\n\n//     fmt.Println()\n// }\n",
+            "lines": "98"
         }
     ]
 }
