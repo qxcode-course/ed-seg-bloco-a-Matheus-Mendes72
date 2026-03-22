@@ -1,0 +1,5 @@
+2026-03-20 05:55:20, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-20 05:55:22, EXEC, v:1, k:ed@baruel, mode:FULL, rate:75
+2026-03-20 05:56:30, EXEC, v:1, k:ed@baruel, mode:FULL, size:98, fail:COMP
+2026-03-20 05:56:51, EXEC, v:1, k:ed@baruel, mode:FULL, size:98, fail:COMP
+2026-03-20 05:57:00, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100, size:98

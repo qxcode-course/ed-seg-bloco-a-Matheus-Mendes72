@@ -1,0 +1,289 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-21_22-01-56",
+            "content": "@@ -23,25 +23,8 @@\n mt%22%0A\n-import %22strings%22%0A\n func\n@@ -41,300 +41,28 @@\n     \n-var qtd, escolhido int%0A    fmt.Scan(&qtd, &escolhido)%0A%0A    jogo := make(%5B%5Dint, qtd)%0A    for i := 1; i %3C= qtd; i++ %7B%0A        jogo%5Bi%5D = i;%0A    %7D%0A    fmt.Println(jogo)%0A%0A    for i, valor := range jogo %7B%0A        if valor == escolhido %7B%0A            jogo%5Bi%5D = strings.Join(valor, %22%3E%22)%0A        %7D%0A    %7D\n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-21_22-16-07",
+            "content": "@@ -223,19 +223,16 @@\n go)%0A%0A   \n- //\n  for i, \n@@ -252,27 +252,24 @@\n e jogo %7B%0A   \n- //\n      if valo\n@@ -293,18 +293,16 @@\n     \n-//\n         \n  jog\n@@ -293,25 +293,24 @@\n             \n- \n jogo%5Bi%5D = st\n@@ -335,19 +335,16 @@\n %22%3E%22)%0A   \n- //\n      %7D%0A \n@@ -349,11 +349,8 @@\n %0A   \n- //\n  %7D%0A%7D\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-21_22-16-14",
+            "content": "@@ -19,18 +19,16 @@\n t %22fmt%22%0A\n-//\n import %22\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-21_22-16-20",
+            "content": "@@ -157,14 +157,15 @@\n  := \n-0\n+1\n ; i %3C\n+=\n  qtd\n@@ -195,11 +195,8 @@\n  = i\n- +1\n ;%0A  \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-21_22-16-45",
+            "content": "@@ -19,16 +19,18 @@\n t %22fmt%22%0A\n+//\n import %22\n@@ -205,13 +205,8 @@\n   %7D%0A\n-    %0A\n     \n@@ -223,24 +223,27 @@\n n(jogo)%0A%0A   \n+ //\n  for i, valo\n@@ -264,20 +264,23 @@\n o %7B%0A    \n+//\n     \n+ \n if valor\n@@ -294,24 +294,27 @@\n olhido %7B%0A   \n+ //\n          jog\n@@ -344,24 +344,27 @@\n or, %22%3E%22)%0A   \n+ //\n      %7D%0A    %7D\n@@ -361,13 +361,16 @@\n    %7D%0A   \n+ //\n  %7D%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-21_22-17-58",
+            "content": "@@ -331,27 +331,13 @@\n oin(\n-strconv.Itoa(\n valor\n-)\n , %22%3E\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-21_22-19-16",
+            "content": "@@ -23,25 +23,8 @@\n mt%22%0A\n-import %22strconv%22%0A\n impo\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-21_22-19-46",
+            "content": "@@ -248,115 +248,8 @@\n o)%0A%0A\n-    aux := %5B%5Dstring%0A    for _, valor := range jogo %7B%0A        aux = append(aux, strconv.Itoa(valor))%0A    %7D%0A%0A\n     \n@@ -325,11 +325,15 @@\n     \n-aux\n+jogo%5Bi%5D\n  = s\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-21_22-21-27",
+            "content": "@@ -252,15 +252,14 @@\n     \n-var \n aux\n+ :=\n  %5B%5Ds\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-21_22-21-49",
+            "content": "@@ -400,11 +400,13 @@\n  if \n-i+1\n+valor\n  == \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-21_22-22-56",
+            "content": "@@ -469,17 +469,16 @@\n lor), %22%3E\n- \n %22)%0A     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-21_22-23-35",
+            "content": "@@ -256,16 +256,18 @@\n var aux \n+%5B%5D\n string%0A \n@@ -469,16 +469,17 @@\n lor), %22%3E\n+ \n %22)%0A     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-21_22-23-57",
+            "content": "@@ -256,18 +256,16 @@\n var aux \n-%5B%5D\n string%0A \n@@ -473,14 +473,8 @@\n %22%3E%22)\n- + %22 %22\n %0A   \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-21_22-24-41",
+            "content": "@@ -256,16 +256,18 @@\n var aux \n+%5B%5D\n string%0A \n@@ -314,10 +314,21 @@\n aux \n-+\n =\n+ append(aux,\n  str\n@@ -343,16 +343,17 @@\n a(valor)\n+)\n %0A    %7D%0A%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-21_22-25-21",
+            "content": "@@ -459,11 +459,16 @@\n , %22%3E\n- \n %22)\n+ + %22 %22\n %0A   \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-21_22-25-36",
+            "content": "@@ -455,16 +455,17 @@\n lor), %22%3E\n+ \n %22)%0A     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-21_22-26-09",
+            "content": "@@ -445,19 +445,21 @@\n nv.Itoa(\n-aux\n+valor\n ), %22%3E%22)%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-21_22-26-37",
+            "content": "@@ -256,18 +256,16 @@\n var aux \n-%5B%5D\n string%0A \n@@ -312,21 +312,10 @@\n aux \n++\n =\n- append(aux,\n  str\n@@ -330,17 +330,16 @@\n a(valor)\n-)\n %0A    %7D%0A%0A\n@@ -453,17 +453,16 @@\n aux), %22%3E\n- \n %22)%0A     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-21_22-27-01",
+            "content": "@@ -19,19 +19,16 @@\n t %22fmt%22%0A\n-// \n import %22\n@@ -36,19 +36,16 @@\n trconv%22%0A\n-// \n import %22\n@@ -57,265 +57,8 @@\n gs%22%0A\n-%0Afunc espada(jogo %5B%5Dint, escolhido int) %7B%0A    fmt.Print(%22%5B %22)%0A    for i, valor := range jogo %7B%0A        if i == escolhido-1 %7B%0A            fmt.Printf(%22%25v%3E %22, valor)%0A        %7D else %7B%0A            fmt.Printf(%22%25v %22, valor)%0A        %7D%0A    %7D%0A    fmt.Println(%22%5D%22)%0A%7D%0A%0A\n func\n@@ -229,78 +229,30 @@\n     \n-resultado := espada(jogo, escolhido)%0A    fmt.Println(resultado)%0A%0A%7D%0A%0A//\n+fmt.Println(jogo)%0A%0A   \n  var\n@@ -260,17 +260,20 @@\n aux \n+%5B%5D\n string%0A\n-//\n+   \n  for\n@@ -294,26 +294,27 @@\n ange jogo %7B%0A\n-//\n+   \n      aux += \n@@ -314,10 +314,21 @@\n aux \n-+\n =\n+ append(aux,\n  str\n@@ -347,17 +347,20 @@\n lor)\n-%0A//\n+)%0A   \n  %7D%0A%0A\n-//\n+   \n  for\n@@ -381,26 +381,27 @@\n ange jogo %7B%0A\n-//\n+   \n      if i+1 \n@@ -415,18 +415,19 @@\n lhido %7B%0A\n-//\n+   \n         \n@@ -471,20 +471,26 @@\n , %22%3E\n+ \n %22)%0A\n-//\n+   \n      %7D%0A\n-// %7D\n+    %7D%0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-21_22-35-26",
+            "content": "@@ -487,16 +487,29 @@\n     %0A   \n+ resultado :=\n  espada(\n@@ -529,18 +529,16 @@\n do)%0A    \n-//\n fmt.Prin\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-21_22-36-46",
+            "content": "@@ -320,187 +320,8 @@\n %0A%7D%0A%0A\n-func dinamismo(jogo %5B%5Dint, escolhido int) %7B%0A    for i, valor := range jogo %7B%0A        espada(jogo, escolhido)%0A        jogo = append(jogo%5B:escolhido+1%5D, jogo%5Bescolhido+2%5D)%0A    %7D%0A%7D%0A%0A\n func\n@@ -511,16 +511,45 @@\n colhido)\n+%0A    //fmt.Println(resultado)\n %0A%0A%7D%0A%0A// \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-21_23-48-45",
+            "content": "@@ -226,34 +226,8 @@\n or)%0A\n-            escolhido = i%0A\n     \n@@ -429,108 +429,8 @@\n do)%0A\n-        if escolhido+2 %3E len(jogo) %7B%0A            jogo = append(jogo%5B:len(jogo)%5D, jogo%5B0%5D)%0A        %7D%0A\n     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-21_23-54-40",
+            "content": "@@ -398,12 +398,16 @@\n for \n-_, _\n+i, valor\n  := \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-21_23-54-50",
+            "content": "@@ -393,16 +393,24 @@\n %0A    for\n+ _, _ :=\n  range j\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-21_23-55-00",
+            "content": "@@ -214,32 +214,58 @@\n (%22%25v%3E %22, valor)%0A\n+            escolhido = i%0A\n         %7D else %7B\n@@ -463,84 +463,12 @@\n hido\n- -1 %3C len(jogo) %7B%0A            escolhido ++%0A        %7D%0A        if escolhido ==\n++2 %3E\n  len\n@@ -477,11 +477,8 @@\n ogo)\n- -1\n  %7B%0A \n@@ -504,35 +504,33 @@\n ppend(jogo%5B:\n-escolhido-1\n+len(jogo)\n %5D, jogo%5B0:%5D.\n@@ -526,21 +526,17 @@\n , jogo%5B0\n-:%5D...\n+%5D\n )%0A      \n@@ -576,17 +576,17 @@\n scolhido\n--\n++\n 1%5D, jogo\n@@ -599,13 +599,11 @@\n hido\n-:%5D...\n++2%5D\n )%0A  \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-22_00-12-16",
+            "content": "@@ -838,25 +838,22 @@\n    %0A    \n-dinamismo\n+espada\n (jogo, e\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-22_00-12-28",
+            "content": "@@ -650,16 +650,17 @@\n scolhido\n+:\n %5D...)%0A  \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-22_00-12-56",
+            "content": "@@ -577,16 +577,17 @@\n , jogo%5B0\n+:\n %5D...)%0A  \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-22_00-13-04",
+            "content": "@@ -578,16 +578,19 @@\n  jogo%5B0%5D\n+...\n )%0A      \n@@ -650,16 +650,19 @@\n colhido%5D\n+...\n )%0A    %7D%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-22_00-13-12",
+            "content": "@@ -578,19 +578,16 @@\n  jogo%5B0%5D\n-...\n )%0A      \n@@ -633,25 +633,24 @@\n do-1%5D, jogo%5B\n-:\n escolhido%5D..\n@@ -651,11 +651,8 @@\n ido%5D\n-...\n )%0A  \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-22_00-13-30",
+            "content": "@@ -576,17 +576,16 @@\n %5D, jogo%5B\n-:\n 0%5D...)%0A \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-22_00-13-38",
+            "content": "@@ -641,16 +641,17 @@\n %5D, jogo%5B\n+:\n escolhid\n@@ -651,17 +651,16 @@\n scolhido\n-:\n %5D...)%0A  \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-22_00-13-56",
+            "content": "@@ -580,10 +580,10 @@\n ogo%5B\n-0\n :\n+0\n %5D...\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-22_00-14-14",
+            "content": "@@ -368,42 +368,22 @@\n     \n-escolhido--%0A%0A    for len(jogo) %3E 0\n+for range jogo\n  %7B%0A \n@@ -415,12 +415,9 @@\n hido\n-+1)%0A\n+)\n %0A   \n@@ -425,74 +425,96 @@\n     \n-jogo = append(jogo%5B:escolhido%5D, jogo%5Bescolhido+1:%5D...)%0A%0A        if\n+if escolhido -1 %3C len(jogo) %7B%0A            escolhido ++%0A        %7D%0A        if escolhido ==\n  len\n@@ -524,12 +524,10 @@\n go) \n-== 0\n+-1\n  %7B%0A \n@@ -541,64 +541,126 @@\n     \n-break%0A        %7D%0A        escolhido = escolhido %25 len(jogo\n+jogo = append(jogo%5B:escolhido-1%5D, jogo%5B0:%5D...)%0A        %7D%0A        jogo = append(jogo%5B:escolhido-1%5D, jogo%5Bescolhido:%5D...\n )%0A  \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-22_00-23-53",
+            "content": "@@ -495,9 +495,9 @@\n ido+\n-2\n+1\n :%5D..\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-22_00-24-43",
+            "content": "@@ -463,16 +463,17 @@\n nd(jogo%5B\n+:\n escolhid\n@@ -477,19 +477,16 @@\n hido\n-+1:\n %5D, jogo%5B\n :esc\n@@ -477,25 +477,24 @@\n hido%5D, jogo%5B\n-:\n escolhido%5D..\n@@ -490,16 +490,19 @@\n scolhido\n++2:\n %5D...)%0A%0A \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-22_00-25-24",
+            "content": "@@ -463,17 +463,16 @@\n nd(jogo%5B\n-:\n escolhid\n@@ -476,16 +476,19 @@\n hido\n++1:\n %5D, jogo%5B\n esco\n@@ -479,24 +479,25 @@\n o+1:%5D, jogo%5B\n+:\n escolhido+1:\n@@ -493,19 +493,16 @@\n scolhido\n-+1:\n %5D...)%0A%0A \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-22_00-25-47",
+            "content": "@@ -179,16 +179,18 @@\n scolhido\n+-1\n  %7B%0A     \n@@ -427,24 +427,26 @@\n o, escolhido\n++1\n )%0A%0A        j\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-22_00-26-25",
+            "content": "@@ -469,18 +469,16 @@\n scolhido\n-+1\n %5D, jogo%5B\n@@ -491,9 +491,9 @@\n ido+\n-2\n+1\n :%5D..\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-22_00-27-39",
+            "content": "@@ -469,16 +469,18 @@\n scolhido\n++1\n %5D, jogo%5B\n@@ -489,17 +489,17 @@\n colhido+\n-1\n+2\n :%5D...)%0A%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-22_00-28-45",
+            "content": "@@ -436,146 +436,8 @@\n o)%0A%0A\n-        if escolhido +1 == len(jogo) %7B%0A            escolhido = escolhido %25 len(jogo)%0A        %7D%0A        if escolhido +2 %3C= len(jogo) %7B%0A    \n     \n@@ -469,18 +469,16 @@\n scolhido\n-+1\n %5D, jogo%5B\n@@ -491,25 +491,15 @@\n ido+\n-2\n+1\n :%5D...)\n-%0A        %7D\n %0A%0A  \n@@ -548,24 +548,66 @@\n k%0A        %7D%0A\n+        escolhido = escolhido %25 len(jogo)%0A\n     %7D%0A%7D%0A%0Afun\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-22_00-34-16",
+            "content": "@@ -607,16 +607,18 @@\n scolhido\n++1\n %5D, jogo%5B\n@@ -627,17 +627,17 @@\n colhido+\n-1\n+2\n :%5D...)%0A \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-22_00-35-43",
+            "content": "@@ -1,367 +1,4 @@\n-// for len(jogo) %3E 0 %7B%0A//         espada(jogo, escolhido)%0A%0A//         if escolhido +1 == len(jogo) %7B%0A//             escolhido = escolhido %25 len(jogo)%0A//         %7D%0A//         if escolhido +2 %3C= len(jogo) %7B%0A//             jogo = append(jogo%5B:escolhido%5D, jogo%5Bescolhido+1:%5D...)%0A//         %7D%0A%0A//         if len(jogo) == 0 %7B%0A//             break%0A//         %7D%0A//     %7D%0A\n pack\n@@ -428,24 +428,162 @@\n escolhido)%0A%0A\n+        if escolhido +1 == len(jogo) %7B%0A            escolhido = escolhido %25 len(jogo)%0A        %7D%0A        if escolhido +2 %3C= len(jogo) %7B%0A    \n         jogo\n@@ -632,16 +632,26 @@\n +1:%5D...)\n+%0A        %7D\n %0A%0A      \n@@ -704,50 +704,8 @@\n   %7D%0A\n-        escolhido = escolhido %25 len(jogo)%0A\n     \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-22_00-37-07",
+            "content": "@@ -935,17 +935,16 @@\n lhido = \n-(\n escolhid\n@@ -948,12 +948,8 @@\n hido\n- +1)\n  %25 l\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-22_00-38-24",
+            "content": "@@ -832,18 +832,16 @@\n scolhido\n-+1\n %5D, jogo%5B\n@@ -850,17 +850,17 @@\n colhido+\n-2\n+1\n :%5D...)%0A%0A\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-22_00-39-57",
+            "content": "@@ -824,32 +824,34 @@\n (jogo%5B:escolhido\n++1\n %5D, jogo%5Bescolhid\n@@ -848,25 +848,25 @@\n o%5Bescolhido+\n-1\n+2\n :%5D...)%0A%0A    \n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-22_00-40-21",
+            "content": "@@ -587,75 +587,8 @@\n or)%0A\n-            jogo = append(jogo%5B:escolhido%5D, jogo%5Bescolhido+1:%5D...)%0A\n     \n@@ -806,11 +806,8 @@\n     \n- //\n  jog\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-22_00-41-53",
+            "content": "@@ -575,32 +575,99 @@\n (%22%25v%3E %22, valor)%0A\n+            jogo = append(jogo%5B:escolhido%5D, jogo%5Bescolhido+1:%5D...)%0A\n         %7D else %7B\n@@ -865,24 +865,27 @@\n do)%0A%0A       \n+ //\n  jogo = appe\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-22_00-42-33",
+            "content": "@@ -807,96 +807,54 @@\n     \n-remover := (escolhido +1) %25 len(jogo)%0A        jogo = append(jogo%5B:remover%5D, jogo%5Bremover\n+jogo = append(jogo%5B:escolhido%5D, jogo%5Bescolhido\n +1:%5D\n@@ -911,24 +911,71 @@\n k%0A        %7D%0A\n+        escolhido = (escolhido +1) %25 len(jogo)%0A\n     %7D%0A%7D%0A%0Afun\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-22_00-45-10",
+            "content": "@@ -783,23 +783,25 @@\n a(jogo, \n-remover\n+escolhido\n )%0A%0A     \n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-22_00-45-58",
+            "content": "@@ -758,24 +758,55 @@\n jogo) %3E 0 %7B%0A\n+        espada(jogo, remover)%0A%0A\n         remo\n@@ -843,39 +843,8 @@\n go)%0A\n-        espada(jogo, remover)%0A%0A\n     \n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-22_00-46-11",
+            "content": "@@ -740,33 +740,8 @@\n do--\n-%0A    remover := escolhido\n %0A%0A  \n@@ -774,83 +774,76 @@\n     \n-espada(jogo, remover)%0A        %0A        remover = (escolhido +1) %25 len(jogo)\n+remover := (escolhido +1) %25 len(jogo)%0A        espada(jogo, remover)%0A\n %0A   \n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-22_00-46-50",
+            "content": "@@ -744,11 +744,8 @@\n %0A   \n- //\n  rem\n@@ -808,25 +808,23 @@\n a(jogo, \n-escolhido\n+remover\n )%0A      \n@@ -842,17 +842,16 @@\n remover \n-:\n = (escol\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-22_00-47-45",
+            "content": "@@ -939,28 +939,8 @@\n ...)\n-%0A        escolhido--\n %0A%0A  \n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-22_00-48-41",
+            "content": "@@ -957,13 +957,10 @@\n hido\n- -= 2\n+--\n %0A%0A  \n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-22_00-48-59",
+            "content": "@@ -935,16 +935,39 @@\n +1:%5D...)\n+%0A        escolhido -= 2\n %0A%0A      \n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-22_00-49-24",
+            "content": "// for len(jogo) > 0 {\n//         espada(jogo, escolhido)\n\n//         if escolhido +1 == len(jogo) {\n//             escolhido = escolhido % len(jogo)\n//         }\n//         if escolhido +2 <= len(jogo) {\n//             jogo = append(jogo[:escolhido], jogo[escolhido+1:]...)\n//         }\n\n//         if len(jogo) == 0 {\n//             break\n//         }\n//     }\npackage main\nimport \"fmt\"\n// import \"strconv\"\n// import \"strings\"\n\nfunc espada(jogo []int, escolhido int) {\n    fmt.Print(\"[ \")\n    for i, valor := range jogo {\n        if i == escolhido {\n            fmt.Printf(\"%v> \", valor)\n        } else {\n            fmt.Printf(\"%v \", valor)\n        }\n    }\n    fmt.Println(\"]\")\n}\n\nfunc dinamismo(jogo []int, escolhido int) {\n    escolhido--\n    // remover := escolhido\n\n    for len(jogo) > 0 {\n        espada(jogo, escolhido)\n        \n        remover := (escolhido +1) % len(jogo)\n        jogo = append(jogo[:remover], jogo[remover+1:]...)\n\n        if len(jogo) == 0 {\n            break\n        }\n    }\n}\n\nfunc main() {\n    var qtd, escolhido int\n    fmt.Scan(&qtd, &escolhido)\n\n    jogo := make([]int, qtd)\n    for i := 0; i < qtd; i++ {\n        jogo[i] = i +1;\n    }\n    \n    dinamismo(jogo, escolhido)\n\n}\n\n// var aux string\n// for _, valor := range jogo {\n//     aux += strconv.Itoa(valor)\n// }\n\n// for i, valor := range jogo {\n//     if i+1 == escolhido {\n//         aux = strings.Join(strconv.Itoa(aux), \">\")\n//     }\n// }",
+            "lines": "70"
+        }
+    ]
+}

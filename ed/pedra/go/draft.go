@@ -3,28 +3,29 @@ import "fmt"
 //import "math"
 
 type jogada struct {
-    pa int
+    pa int 
     pb int
 }
 
 func abs(diferenca int) int {
-    if diferenca < 0 {
+    if (diferenca < 0) {
         return -diferenca
     }
     return diferenca
 }
 
-func verificacao(jogadas []jogada) int {
+func ganhador(jogadas []jogada) int {
     indice := -1
     ganhador := 1000
 
     for i, valor := range jogadas {
-        if valor.pa < 10 || valor.pb < 10 {
+        if (valor.pa < 10 || valor.pb < 10) {
             continue
         }
-        pontuacao := abs(valor.pa - valor.pb)
-        if pontuacao < ganhador {
-            ganhador = pontuacao
+
+        diferenca := abs(valor.pa - valor.pb)
+        if (diferenca < ganhador) {
+            ganhador = diferenca
             indice = i
         }
     }
@@ -40,13 +41,63 @@ func main() {
         fmt.Scan(&jogadas[i].pa, &jogadas[i].pb)
     }
 
-    indice := verificacao(jogadas)
-    if indice == -1 {
+    indice := ganhador(jogadas)
+    if (indice == -1) {
         fmt.Println("sem ganhador")
     } else {
         fmt.Println(indice)
     }
 }
+
+
+
+
+
+// type jogada struct {
+//     pa int
+//     pb int
+// }
+
+// func abs(diferenca int) int {
+//     if diferenca < 0 {
+//         return -diferenca
+//     }
+//     return diferenca
+// }
+
+// func verificacao(jogadas []jogada) int {
+//     indice := -1
+//     ganhador := 1000
+
+//     for i, valor := range jogadas {
+//         if valor.pa < 10 || valor.pb < 10 {
+//             continue
+//         }
+//         pontuacao := abs(valor.pa - valor.pb)
+//         if pontuacao < ganhador {
+//             ganhador = pontuacao
+//             indice = i
+//         }
+//     }
+//     return indice
+// }
+
+// func main() {
+//     var n int
+//     fmt.Scan(&n)
+
+//     jogadas := make([]jogada, n)
+//     for i := 0; i < n; i++ {
+//         fmt.Scan(&jogadas[i].pa, &jogadas[i].pb)
+//     }
+
+//     indice := verificacao(jogadas)
+//     if indice == -1 {
+//         fmt.Println("sem ganhador")
+//     } else {
+//         fmt.Println(indice)
+//     }
+// }
 
 
 

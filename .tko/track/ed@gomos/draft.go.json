@@ -17,8 +17,58 @@
         },
         {
             "label": "2026-03-16_21-18-45",
-            "content": "package main\nimport \"fmt\"\n\nfunc direcao(d string, x, y int) int {\n    if d == \"L\" {\n        return \n    } else if d == \"R\" {\n\n    } else if d == \"D\" {\n\n    } else {\n\n    }\n}\nfunc main() {\n    var qtd_gomos, x, y int\n    fmt.Scan(&qtd_gomos)\n}\n",
+            "content": "@@ -158,24 +158,16 @@\n  else %7B%0A\n-        \n %0A    %7D%0A%7D\n",
             "lines": "18"
+        },
+        {
+            "label": "2026-03-21_21-28-58",
+            "content": "@@ -20,16 +20,171 @@\n  %22fmt%22%0A%0A\n+func direcao(d string, x, y int) int %7B%0A    if d == %22L%22 %7B%0A        return %0A    %7D else if d == %22R%22 %7B%0A%0A    %7D else if d == %22D%22 %7B%0A%0A    %7D else %7B%0A        %0A    %7D%0A%7D%0A\n func mai\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-21_21-29-10",
+            "content": "@@ -38,18 +38,16 @@\n ) %7B%0A    \n-//\n var qtd_\n@@ -70,10 +70,8 @@\n     \n-//\n fmt.\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-03-21_21-29-18",
+            "content": "@@ -95,26 +95,6 @@\n os)%0A\n-    fmt.Println(%22%22)%0A\n %7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-03-21_21-29-35",
+            "content": "@@ -24,430 +24,58 @@\n t%22%0A%0A\n-type gomos struct %7B%0A    x int%0A    y int%0A%7D%0A%0Afunc movimento(direcao string) (int, int) %7B%0A    if direcao == %22L%22 %7B%0A        return -1, 0%0A    %7D %0A    if direcao == %22R%22 %7B%0A        return 1, 0%0A    %7D%0A    if direcao == %22U%22 %7B%0A        return 0, -1%0A    %7D%0A    %0A    return 0, 1%0A%7D%0A%0Afunc main() %7B%0A    var qtd int%0A    var direcao string%0A    fmt.Scan(&qtd, direcao)%0A    %0A%0A    cobra := make(%5B%5Dgomos, qtd)%0A    for i := 0; i %3C qtd; i++ %7B\n+func main() %7B%0A    //var qtd_gomos, x, y int\n %0A    \n-    \n+//\n fmt.\n@@ -84,265 +84,37 @@\n an(&\n-cobra%5Bi%5D.x, &cobra%5Bi%5D.y)%0A    %7D%0A%0A    dirX, dirY := movimento(direcao)%0A    cobra%5B0%5D.x = dirX%0A    cobra%5B0%5D.y = dirY%0A%0A    for i := 1; i %3C qtd; i++ %7B%0A        cobra%5Bi%5D = cobra%5Bi-1%5D%0A    %7D%0A    for _, valor := range cobra %7B%0A        fmt.Println(valor.x, valor.y)%0A    %7D\n+qtd_gomos)%0A    fmt.Println(%22%22)\n %0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-03-21_21-50-02",
+            "content": "@@ -579,127 +579,99 @@\n or i\n-, valor := range cobra %7B%0A        if i == 0 %7B%0A            continue%0A        %7D%0A        %0A        cobra%5Bi%5D = cobra%5Bi-1%5D%0A    \n+ := 1; i %3C qtd; i++ %7B%0A        cobra%5Bi%5D = cobra%5Bi-1%5D%0A    %7D%0A    for _, valor := range cobra %7B\n %0A   \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-21_21-51-37",
+            "content": "@@ -525,87 +525,8 @@\n ao)%0A\n-%0A    for i := len(cobra -1); i %3E 0; i-- %7B%0A        cobra%5Bi%5D = cobra%5Bi-1%5D%0A    %7D%0A%0A\n     \n@@ -578,9 +578,9 @@\n for \n-_\n+i\n , va\n@@ -600,16 +600,111 @@\n cobra %7B%0A\n+        if i == 0 %7B%0A            continue%0A        %7D%0A        %0A        cobra%5Bi%5D = cobra%5Bi-1%5D%0A    %0A\n         \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-21_21-55-31",
+            "content": "@@ -548,12 +548,12 @@\n obra\n-)\n  -1\n+)\n ; i \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-21_21-55-59",
+            "content": "@@ -615,17 +615,16 @@\n ra%5B0%5D.x \n-+\n = dirX%0A \n@@ -637,17 +637,16 @@\n ra%5B0%5D.y \n-+\n = dirY%0A%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-21_21-56-54",
+            "content": "@@ -356,17 +356,16 @@\n n(&qtd, \n-&\n direcao)\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-21_21-59-39",
+            "content": "package main\nimport \"fmt\"\n\ntype gomos struct {\n    x int\n    y int\n}\n\nfunc movimento(direcao string) (int, int) {\n    if direcao == \"L\" {\n        return -1, 0\n    } \n    if direcao == \"R\" {\n        return 1, 0\n    }\n    if direcao == \"U\" {\n        return 0, -1\n    }\n    \n    return 0, 1\n}\n\nfunc main() {\n    var qtd int\n    var direcao string\n    fmt.Scan(&qtd, &direcao)\n    \n\n    cobra := make([]gomos, qtd)\n    for i := 0; i < qtd; i++ {\n        fmt.Scan(&cobra[i].x, &cobra[i].y)\n    }\n\n    dirX, dirY := movimento(direcao)\n\n    for i := len(cobra) -1; i > 0; i-- {\n        cobra[i] = cobra[i-1]\n    }\n\n    cobra[0].x += dirX\n    cobra[0].y += dirY\n\n    for _, valor := range cobra {\n        fmt.Println(valor.x, valor.y)\n    }\n}\n",
+            "lines": "46"
         }
     ]
 }
