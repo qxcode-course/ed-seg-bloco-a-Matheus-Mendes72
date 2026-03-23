@@ -282,8 +282,28 @@
         },
         {
             "label": "2026-03-22_00-49-24",
-            "content": "// for len(jogo) > 0 {\n//         espada(jogo, escolhido)\n\n//         if escolhido +1 == len(jogo) {\n//             escolhido = escolhido % len(jogo)\n//         }\n//         if escolhido +2 <= len(jogo) {\n//             jogo = append(jogo[:escolhido], jogo[escolhido+1:]...)\n//         }\n\n//         if len(jogo) == 0 {\n//             break\n//         }\n//     }\npackage main\nimport \"fmt\"\n// import \"strconv\"\n// import \"strings\"\n\nfunc espada(jogo []int, escolhido int) {\n    fmt.Print(\"[ \")\n    for i, valor := range jogo {\n        if i == escolhido {\n            fmt.Printf(\"%v> \", valor)\n        } else {\n            fmt.Printf(\"%v \", valor)\n        }\n    }\n    fmt.Println(\"]\")\n}\n\nfunc dinamismo(jogo []int, escolhido int) {\n    escolhido--\n    // remover := escolhido\n\n    for len(jogo) > 0 {\n        espada(jogo, escolhido)\n        \n        remover := (escolhido +1) % len(jogo)\n        jogo = append(jogo[:remover], jogo[remover+1:]...)\n\n        if len(jogo) == 0 {\n            break\n        }\n    }\n}\n\nfunc main() {\n    var qtd, escolhido int\n    fmt.Scan(&qtd, &escolhido)\n\n    jogo := make([]int, qtd)\n    for i := 0; i < qtd; i++ {\n        jogo[i] = i +1;\n    }\n    \n    dinamismo(jogo, escolhido)\n\n}\n\n// var aux string\n// for _, valor := range jogo {\n//     aux += strconv.Itoa(valor)\n// }\n\n// for i, valor := range jogo {\n//     if i+1 == escolhido {\n//         aux = strings.Join(strconv.Itoa(aux), \">\")\n//     }\n// }",
+            "content": "@@ -941,21 +941,8 @@\n .)%0A%0A\n-        if %0A%0A\n     \n",
             "lines": "70"
+        },
+        {
+            "label": "2026-03-22_15-54-19",
+            "content": "@@ -843,70 +843,15 @@\n     \n-if len(jogo) == 1 %7B%0A            break%0A        %7D%0A%0A        morto\n+remover\n  := \n@@ -877,17 +877,16 @@\n n(jogo)%0A\n-%0A\n         \n@@ -949,37 +949,68 @@\n     \n-escolhido = morto %25 len(jogo)\n+if %0A%0A        if len(jogo) == 0 %7B%0A            break%0A        %7D\n %0A   \n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-22_16-00-14",
+            "content": "@@ -896,23 +896,21 @@\n         \n-remover\n+morto\n  := (esc\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-03-22_16-00-24",
+            "content": "@@ -1015,23 +1015,21 @@\n lhido = \n-remover\n+morto\n  %25 len(j\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-03-22_16-00-34",
+            "content": "// for len(jogo) > 0 {\n//         espada(jogo, escolhido)\n\n//         if escolhido +1 == len(jogo) {\n//             escolhido = escolhido % len(jogo)\n//         }\n//         if escolhido +2 <= len(jogo) {\n//             jogo = append(jogo[:escolhido], jogo[escolhido+1:]...)\n//         }\n\n//         if len(jogo) == 0 {\n//             break\n//         }\n//     }\npackage main\nimport \"fmt\"\n// import \"strconv\"\n// import \"strings\"\n\nfunc espada(jogo []int, escolhido int) {\n    fmt.Print(\"[ \")\n    for i, valor := range jogo {\n        if i == escolhido {\n            fmt.Printf(\"%v> \", valor)\n        } else {\n            fmt.Printf(\"%v \", valor)\n        }\n    }\n    fmt.Println(\"]\")\n}\n\nfunc dinamismo(jogo []int, escolhido int) {\n    escolhido--\n    // remover := escolhido\n\n    for len(jogo) > 0 {\n        espada(jogo, escolhido)\n        \n        if len(jogo) == 1 {\n            break\n        }\n\n        remover := (escolhido +1) % len(jogo)\n\n        jogo = append(jogo[:remover], jogo[remover+1:]...)\n\n        escolhido = remover % len(jogo)\n    }\n}\n\nfunc main() {\n    var qtd, escolhido int\n    fmt.Scan(&qtd, &escolhido)\n\n    jogo := make([]int, qtd)\n    for i := 0; i < qtd; i++ {\n        jogo[i] = i +1;\n    }\n    \n    dinamismo(jogo, escolhido)\n\n}\n\n// var aux string\n// for _, valor := range jogo {\n//     aux += strconv.Itoa(valor)\n// }\n\n// for i, valor := range jogo {\n//     if i+1 == escolhido {\n//         aux = strings.Join(strconv.Itoa(aux), \">\")\n//     }\n// }",
+            "lines": "73"
         }
     ]
 }

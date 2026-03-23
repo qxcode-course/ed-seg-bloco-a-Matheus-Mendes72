@@ -36,14 +36,15 @@ func dinamismo(jogo []int, escolhido int) {
     for len(jogo) > 0 {
         espada(jogo, escolhido)
         
-        remover := (escolhido +1) % len(jogo)
-        jogo = append(jogo[:remover], jogo[remover+1:]...)
-
-        if 
-
-        if len(jogo) == 0 {
+        if len(jogo) == 1 {
             break
         }
+
+        remover := (escolhido +1) % len(jogo)
+
+        jogo = append(jogo[:remover], jogo[remover+1:]...)
+
+        escolhido = remover % len(jogo)
     }
 }
 
