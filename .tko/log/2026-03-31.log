@@ -1,0 +1,45 @@
+2026-03-31 09:52:31, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-03-31 09:53:01, MOVE, v:1, k:ed@alternando, mode:BACK
+2026-03-31 10:03:50, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-03-31 10:03:50, EXEC, v:1, k:ed@alternando, mode:FULL, size:57, fail:COMP
+2026-03-31 10:04:13, EXEC, v:1, k:ed@alternando, mode:FULL, fail:COMP
+2026-03-31 10:04:44, EXEC, v:1, k:ed@alternando, mode:FULL, size:57, fail:COMP
+2026-03-31 10:07:44, EXEC, v:1, k:ed@alternando, mode:FULL, size:71, fail:COMP
+2026-03-31 10:07:54, EXEC, v:1, k:ed@alternando, mode:FULL, size:71, fail:COMP
+2026-03-31 10:08:08, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:71
+2026-03-31 10:08:28, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:71
+2026-03-31 10:10:19, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:71
+2026-03-31 10:10:45, EXEC, v:1, k:ed@alternando, mode:FULL, rate:46, size:71
+2026-03-31 10:12:01, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:71
+2026-03-31 10:12:12, EXEC, v:1, k:ed@alternando, mode:FULL, rate:46, size:71
+2026-03-31 10:12:36, EXEC, v:1, k:ed@alternando, mode:FULL, rate:46, size:71
+2026-03-31 10:17:09, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:71
+2026-03-31 10:17:52, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:71
+2026-03-31 10:18:50, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:71
+2026-03-31 10:19:52, EXEC, v:1, k:ed@alternando, mode:FULL, rate:46, size:71
+2026-03-31 10:20:07, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:71
+2026-03-31 10:20:13, EXEC, v:1, k:ed@alternando, mode:FULL, rate:46, size:71
+2026-03-31 10:22:22, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:71
+2026-03-31 10:22:27, EXEC, v:1, k:ed@alternando, mode:FULL, rate:46, size:71
+2026-03-31 10:25:48, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:71
+2026-03-31 10:26:41, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:75
+2026-03-31 10:29:17, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:76
+2026-03-31 10:31:23, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:76
+2026-03-31 10:31:34, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:76
+2026-03-31 10:31:55, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:76
+2026-03-31 10:32:30, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:76
+2026-03-31 10:32:56, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:76
+2026-03-31 10:33:09, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:76
+2026-03-31 10:33:49, EXEC, v:1, k:ed@alternando, mode:FULL, rate:46, size:71
+2026-03-31 10:34:14, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:71
+2026-03-31 10:34:25, EXEC, v:1, k:ed@alternando, mode:FULL, rate:46, size:71
+2026-03-31 10:36:15, EXEC, v:1, k:ed@alternando, mode:FULL, rate:7, size:72
+2026-03-31 10:36:56, EXEC, v:1, k:ed@alternando, mode:FULL, rate:7, size:72
+2026-03-31 10:41:21, EXEC, v:1, k:ed@alternando, mode:FULL, rate:7
+2026-03-31 10:41:28, EXEC, v:1, k:ed@alternando, mode:FULL, rate:30, size:72
+2026-03-31 10:42:34, EXEC, v:1, k:ed@alternando, mode:FULL, rate:23, size:72
+2026-03-31 10:43:44, EXEC, v:1, k:ed@alternando, mode:FULL, rate:23, size:72
+2026-03-31 10:47:07, EXEC, v:1, k:ed@alternando, mode:FULL, rate:46, size:72
+2026-03-31 10:55:18, EXEC, v:1, k:ed@alternando, mode:FULL, rate:100, size:73
+2026-03-31 10:55:19, MOVE, v:1, k:ed@alternando, mode:BACK
+2026-03-31 10:55:56, SELF, v:1, k:ed@alternando, self:1, rate:100, study:63, problem:1

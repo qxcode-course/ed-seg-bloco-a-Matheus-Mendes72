@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-27_12-58-12",
+            "content": "@@ -167,53 +167,26 @@\n %09if \n-posAtual.x %3C 0 %7C%7C posAtual.y %3C 0 %7C%7C posAtual.\n+x %3C 0 %7C%7C y %3C 0 %7C%7C \n x %3E \n@@ -200,25 +200,16 @@\n rix) %7C%7C \n-posAtual.\n y %3E len(\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-03-27_12-59-20",
+            "content": "@@ -402,31 +402,13 @@\n Pos%7B\n-posAtual.x-1, posAtual.\n+x-1, \n y%7D, \n@@ -454,31 +454,13 @@\n Pos%7B\n-posAtual.x+1, posAtual.\n+x+1, \n y%7D, \n@@ -505,37 +505,19 @@\n ix, Pos%7B\n-posAtual.x, posAtual.\n+x, \n y-1%7D, po\n@@ -563,29 +563,11 @@\n Pos%7B\n-posAtual.x, posAtual.\n+x, \n y+1%7D\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-03-27_13-00-36",
+            "content": "@@ -943,18 +943,10 @@\n %0A%09%09%09\n-caminho :=\n+if\n  max\n@@ -985,22 +985,8 @@\n ,j%7D)\n-%0A%09%09%09if caminho\n  %3E m\n@@ -1008,15 +1008,32 @@\n r = \n-caminho\n+maxlenpath(matrix, i, j)\n %0A%09%09%09\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-03-27_13-01-23",
+            "content": "@@ -211,17 +211,16 @@\n tual.x %3E\n-=\n  len(mat\n@@ -239,17 +239,16 @@\n tual.y %3E\n-=\n  len(mat\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-03-27_13-02-05",
+            "content": "@@ -292,17 +292,16 @@\n ual.y%5D %3E\n-=\n  matrix%5B\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-03-27_13-07-41",
+            "content": "@@ -805,33 +805,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(maior, dir)%0A\n %09ret\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-03-27_13-12-25",
+            "content": "@@ -337,41 +337,8 @@\n %5D %7B%0A\n-%09%09fmt.Println(%22ioasjdfhwafoijl%22)%0A\n %09%09re\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-03-27_13-13-34",
+            "content": "@@ -261,39 +261,10 @@\n 0%5D) \n-%7B%0A%09%09return 0%0A%09%7D%0A%09maior := 1%0A%09if\n+%7C%7C\n  mat\n@@ -339,23 +339,64 @@\n %7B%0A%09%09\n-return maior%0A%09%7D\n+fmt.Println(%22ioasjdfhwafoijl%22)%0A%09%09return 0%0A%09%7D%0A%09maior := 1\n %0A%09di\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-03-27_13-15-05",
+            "content": "@@ -263,39 +263,8 @@\n ) %7B%0A\n-%09%09fmt.Println(%22perdi a linha%22)%0A\n %09%09re\n@@ -366,35 +366,8 @@\n %5D %7B%0A\n-%09%09fmt.Println(%22deu menor%22)%0A\n %09%09re\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-03-27_13-16-03",
+            "content": "@@ -351,17 +351,17 @@\n tual.y%5D \n-%3C\n+%3E\n = matrix\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-03-27_13-16-40",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Pos struct {\n\tx, y int\n}\n\nfunc maxlenpath(matrix [][]int, posAtual, posAnterior Pos) int {\n\tif posAtual.x < 0 || posAtual.y < 0 || posAtual.x >= len(matrix) || posAtual.y >= len(matrix[0]) {\n\t\tfmt.Println(\"perdi a linha\")\n\t\treturn 0\n\t}\n\tmaior := 1\n\tif matrix[posAtual.x][posAtual.y] <= matrix[posAnterior.x][posAnterior.y] {\n\t\tfmt.Println(\"deu menor\")\n\t\treturn maior\n\t}\n\tdir := 0\n\tcima := maxlenpath(matrix, Pos{posAtual.x-1, posAtual.y}, posAtual)\n\tbaixo := maxlenpath(matrix, Pos{posAtual.x+1, posAtual.y}, posAtual)\n\tesquerda := maxlenpath(matrix, Pos{posAtual.x, posAtual.y-1}, posAtual)\n\tdireita := maxlenpath(matrix, Pos{posAtual.x, posAtual.y+1}, posAtual)\n\tif cima > dir {\n\t\tdir = cima\n\t}\n\tif baixo > dir {\n\t\tdir = baixo\n\t}\n\tif esquerda > dir {\n\t\tdir = esquerda\n\t}\n\tif direita > dir {\n\t\tdir = direita\n\t}\n\tfmt.Println(maior, dir)\n\treturn maior + dir\n}\n\nfunc longestIncreasingPath(matrix [][]int) int {\n\tmaior := 1\n\tfor i := range matrix {\n\t\tfor j := range matrix[0] {\n\t\t\tcaminho := maxlenpath(matrix, Pos{i, j}, Pos{i,j})\n\t\t\tif caminho > maior {\n\t\t\t\tmaior = caminho\n\t\t\t}\n\t\t}\n\t}\n\treturn maior\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tparts := strings.Fields(scanner.Text())\n\tif len(parts) < 2 {\n\t\treturn\n\t}\n\tnl, _ := strconv.Atoi(parts[0])\n\tnc, _ := strconv.Atoi(parts[1])\n\n\tmatrix := make([][]int, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tif !scanner.Scan() {\n\t\t\treturn\n\t\t}\n\t\ttokens := strings.Fields(scanner.Text())\n\t\trow := make([]int, nc)\n\t\tfor j := 0; j < nc && j < len(tokens); j++ {\n\t\t\tv, _ := strconv.Atoi(tokens[j])\n\t\t\trow[j] = v\n\t\t}\n\t\tmatrix[i] = row\n\t}\n\n\tfmt.Println(longestIncreasingPath(matrix))\n}\n",
+            "lines": "88"
+        }
+    ]
+}

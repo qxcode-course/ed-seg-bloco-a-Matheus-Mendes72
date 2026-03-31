@@ -1,0 +1,219 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-30_10-57-04",
+            "content": "@@ -41,314 +41,35 @@\n     \n-var tamCons int%0A    fmt.Scan(&tamCons)%0A%0A    vetCons := make(%5B%5Dstring, tamCons)%0A    for i := range vetCons %7B%0A        fmt.Scan(&vetCons%5Bi%5D)%0A    %7D%0A%0A    fmt.Scan(&tamBusc)%0A%0A    vetBusc := make(%5B%5Dstring, tamBusc)%0A    for i := range vetBusc %7B%0A        fmt.Scan(&vetBusc%5Bi%5D)%0A    %7D%0A%0A    fmt.Println(tamCons, tamBusc\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-30_11-04-34",
+            "content": "@@ -48,25 +48,16 @@\n  tamCons\n-, tamBusc\n  int%0A   \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-30_11-04-53",
+            "content": "@@ -340,20 +340,20 @@\n tln(\n-vet\n+tam\n Cons, \n-vet\n+tam\n Busc\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-30_11-05-18",
+            "content": "@@ -239,157 +239,16 @@\n ake(\n-map%5Bint%5Dstring)%0A    for i := 0; i %3C tamBusc; i++ %7B%0A        var s string%0A        fmt.Scan(&s)%0A        vetBusc%5Bi%5D = s%0A    %7D%0A%0A    contador := make(%5B%5Dint\n+%5B%5Dstring\n , ta\n@@ -267,15 +267,8 @@\n or i\n-, valor\n  := \n@@ -280,177 +280,40 @@\n  vet\n-Cons %7B%0A        exis, v := vetBusc%5Bvalor%5D%0A        if v %7B%0A            contador%5Bi%5D++%0A        %7D %0A    %7D%0A%0A    for i := 0; i %3C len(contador); i++ %7B%0A        fmt.Println(contador\n+Busc %7B%0A        fmt.Scan(&vetBusc\n %5Bi%5D)\n@@ -328,10 +328,8 @@\n     \n-//\n fmt.\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-30_16-02-42",
+            "content": "@@ -443,9 +443,12 @@\n     \n-_\n+exis\n , v \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-30_16-02-52",
+            "content": "@@ -396,32 +396,39 @@\n mBusc)%0A    for i\n+, valor\n  := range vetCon\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-30_16-03-16",
+            "content": "@@ -408,15 +408,8 @@\n or i\n-, valor\n  := \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-30_16-03-31",
+            "content": "@@ -239,22 +239,19 @@\n ake(map%5B\n-str\n in\n-g\n+t\n %5Dstring)\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-30_16-04-02",
+            "content": "@@ -246,19 +246,22 @@\n %5Bstring%5D\n+str\n in\n-t\n+g\n )%0A    fo\n@@ -351,14 +351,14 @@\n usc%5B\n-s\n+i\n %5D = \n-0\n+s\n %0A   \n@@ -365,18 +365,16 @@\n  %7D%0A%0A    \n-//\n contador\n@@ -446,12 +446,9 @@\n     \n-exis\n+_\n , v \n@@ -496,27 +496,21 @@\n     \n-vetBusc%5Bvalor%5D += 1\n+contador%5Bi%5D++\n %0A   \n@@ -515,16 +515,17 @@\n        %7D\n+ \n %0A    %7D%0A%0A\n@@ -533,39 +533,76 @@\n    f\n-mt.Println(vetBusc)%0A%0A    for  %7B\n+or i := 0; i %3C len(contador); i++ %7B%0A        fmt.Println(contador%5Bi%5D)\n %0A   \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-30_16-14-13",
+            "content": "@@ -405,17 +405,17 @@\n     for \n-_\n+i\n , valor \n@@ -451,9 +451,9 @@\n is, \n-_\n+v\n  := \n@@ -478,20 +478,17 @@\n      if \n-exis\n+v\n  %7B%0A     \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-30_16-14-32",
+            "content": "@@ -445,16 +445,19 @@\n     exis\n+, _\n  := vetB\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-30_16-14-38",
+            "content": "@@ -441,17 +441,20 @@\n         \n-v\n+exis\n  := vetB\n@@ -479,18 +479,12 @@\n  if \n-v == valor\n+exis\n  %7B%0A \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-30_16-15-22",
+            "content": "@@ -445,15 +445,10 @@\n     \n-exis, _\n+v \n := v\n@@ -476,12 +476,9 @@\n  if \n-exis\n+v\n  == \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-30_16-15-52",
+            "content": "@@ -447,18 +447,17 @@\n   exis, \n-v \n+_\n := vetBu\n@@ -477,17 +477,20 @@\n      if \n-v\n+exis\n  == valo\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-30_16-16-06",
+            "content": "@@ -360,33 +360,8 @@\n    %7D\n-%0A    fmt.Println(vetBusc)\n %0A%0A  \n@@ -400,19 +400,16 @@\n usc)%0A   \n- //\n  for _, \n@@ -441,26 +441,19 @@\n     \n-//\n    \n-  valor,\n  exis\n+, v\n  := \n@@ -471,23 +471,20 @@\n or%5D%0A    \n-//\n     \n- \n if v == \n@@ -490,27 +490,24 @@\n  valor %7B%0A   \n- //\n          vet\n@@ -531,26 +531,63 @@\n     \n-// \n+    %7D%0A\n     %7D%0A\n+%0A\n     \n-// %7D%0A\n+fmt.Println(vetBusc)%0A%0A    for  %7B%0A    %7D\n %0A%0A  \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-30_16-18-27",
+            "content": "@@ -421,24 +421,27 @@\n tamBusc)%0A   \n+ //\n  for _, valo\n@@ -468,17 +468,27 @@\n %0A   \n+ //\n      v\n-, _\n+alor, exis\n  := \n@@ -501,24 +501,27 @@\n c%5Bvalor%5D%0A   \n+ //\n      if v ==\n@@ -528,24 +528,27 @@\n  valor %7B%0A   \n+ //\n          vet\n@@ -563,24 +563,27 @@\n or%5D += 1%0A   \n+ //\n      %7D%0A    %7D\n@@ -576,24 +576,27 @@\n //     %7D%0A   \n+ //\n  %7D%0A%0A%0A    //f\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-30_16-23-49",
+            "content": "@@ -470,17 +470,12 @@\n     \n-_, existe\n+v, _\n  := \n@@ -504,14 +504,18 @@\n  if \n-existe\n+v == valor\n  %7B%0A \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-30_16-24-16",
+            "content": "@@ -361,16 +361,37 @@\n   %7D%0A    \n+fmt.Println(vetBusc)%0A\n %0A    //c\n@@ -566,33 +566,8 @@\n   %7D%0A\n-    fmt.Println(vetBusc)%0A\n %0A%0A  \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-30_16-24-26",
+            "content": "@@ -541,26 +541,24 @@\n %7D%0A    %7D%0A    \n-//\n fmt.Println(\n@@ -571,70 +571,8 @@\n c)%0A%0A\n-    for _, v := range vetBusc %7B%0A        fmt.Println(v)%0A    %7D%0A%0A\n %0A   \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-30_16-27-02",
+            "content": "@@ -577,17 +577,17 @@\n     for \n-i\n+_\n , v := r\n@@ -605,104 +605,8 @@\n c %7B%0A\n-        if i != len(vetBusc) -1 %7B%0A            fmt.Print(v, %22 %22)%0A            continue%0A        %7D%0A%0A\n     \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-30_16-28-40",
+            "content": "@@ -577,17 +577,17 @@\n     for \n-_\n+i\n , v := r\n@@ -609,25 +609,123 @@\n         \n-fmt.Print\n+if i != len(vetBusc) -1 %7B%0A            fmt.Print(v, %22 %22)%0A            continue%0A        %7D%0A%0A        fmt.Println\n (v)%0A    \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-30_16-29-22",
+            "content": "@@ -624,13 +624,8 @@\n nt(v\n-, %22 %22\n )%0A  \n@@ -633,26 +633,8 @@\n  %7D%0A%0A\n-    fmt.Println()%0A\n %0A   \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-30_16-29-47",
+            "content": "@@ -605,71 +605,8 @@\n c %7B%0A\n-        if len(vetBusc) %7B%0A            fmt.Println(v)%0A        %7D%0A\n     \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-30_16-30-49",
+            "content": "@@ -577,17 +577,17 @@\n     for \n-i\n+_\n , v := r\n@@ -615,13 +615,8 @@\n   if\n- i ==\n  len\n@@ -628,11 +628,8 @@\n usc)\n- -1\n  %7B%0A \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-30_16-33-30",
+            "content": "@@ -541,24 +541,26 @@\n %7D%0A    %7D%0A    \n+//\n fmt.Println(\n@@ -572,19 +572,16 @@\n sc)%0A%0A   \n- //\n  for i, \n@@ -600,27 +600,24 @@\n etBusc %7B%0A   \n- //\n      if i ==\n@@ -634,27 +634,24 @@\n sc) -1 %7B%0A   \n- //\n          fmt\n@@ -661,27 +661,24 @@\n intln(v)%0A   \n- //\n      %7D%0A    /\n@@ -675,19 +675,16 @@\n    %7D%0A   \n- //\n      fmt\n@@ -705,21 +705,15 @@\n %0A   \n- //\n  %7D%0A%0A   \n- //\n  fmt\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-30_16-35-52",
+            "content": "@@ -541,26 +541,24 @@\n %7D%0A    %7D%0A    \n-//\n fmt.Println(\n@@ -571,203 +571,8 @@\n c)%0A%0A\n-    for i := 0; i %3C len(vetBusc); i++ %7B%0A        if i == len(vetBusc) -1 %7B%0A            fmt.Println(vetBusc%5BvetCons%5Bi%5D%5D)%0A        %7D else %7B%0A            fmt.Print(vetBusc%5BvetCons%5Bi%5D%5D)%0A        %7D%0A    %7D%0A\n     \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-30_16-40-26",
+            "content": "@@ -409,17 +409,17 @@\n     for \n-i\n+_\n , valor \n@@ -539,79 +539,116 @@\n   %7D%0A\n-%0A\n     \n+%7D%0A    //fmt.Println(vetBusc)%0A%0A\n     \n-i\n f\n+or\n  i \n-== len(vetCons) -1 %7B%0A            for range vetBusc %7B%0A    \n+:= 0; i %3C len(vetBusc); i++ %7B%0A        if i == len(vetBusc) -1 %7B%0A\n     \n@@ -664,16 +664,18 @@\n mt.Print\n+ln\n (vetBusc\n@@ -676,20 +676,25 @@\n etBusc%5Bv\n-alor\n+etCons%5Bi%5D\n %5D)%0A     \n@@ -692,29 +692,32 @@\n %5D%5D)%0A        \n-    %7D\n+%7D else %7B\n %0A        %7D%0A \n@@ -709,38 +709,28 @@\n e %7B%0A        \n-%7D%0A\n     \n-%7D%0A    //\n fmt.Println(\n@@ -722,34 +722,32 @@\n    fmt.Print\n-ln\n (vetBusc\n )%0A%0A    // fo\n@@ -730,26 +730,53 @@\n rint(vetBusc\n-)%0A\n+%5BvetCons%5Bi%5D%5D)%0A        %7D%0A    %7D\n %0A    // for \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-30_16-52-03",
+            "content": "@@ -525,16 +525,97 @@\n r%5D += 1%0A\n+        %7D%0A%0A        if i == len(vetCons) -1 %7B%0A            for range vetBusc %7B%0A    \n         \n@@ -642,22 +642,31 @@\n c%5Bvalor%5D\n-, %22 %22)\n+)%0A            %7D\n %0A       \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-30_16-54-19",
+            "content": "@@ -409,17 +409,17 @@\n     for \n-_\n+i\n , valor \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-30_16-54-28",
+            "content": "@@ -525,16 +525,59 @@\n r%5D += 1%0A\n+            fmt.Print(vetBusc%5Bvalor%5D, %22 %22)%0A\n         \n@@ -620,31 +620,16 @@\n     \n-contador := 0%0A   \n+//\n  for \n-_\n+i\n , v \n@@ -655,23 +655,19 @@\n     \n+//\n     \n+ \n if \n-contador\n+i\n  == \n@@ -683,24 +683,27 @@\n sc) -1 %7B%0A   \n+ //\n          fmt\n@@ -713,24 +713,27 @@\n intln(v)%0A   \n+ //\n      %7D%0A     \n@@ -726,24 +726,27 @@\n //     %7D%0A   \n+ //\n      fmt.Pri\n@@ -764,26 +764,10 @@\n     \n-    contador++%0A   \n+//\n  %7D%0A%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-30_17-03-09",
+            "content": "@@ -541,24 +541,26 @@\n %7D%0A    %7D%0A    \n+//\n fmt.Println(\n@@ -572,19 +572,16 @@\n sc)%0A%0A   \n- //\n  contado\n@@ -590,19 +590,16 @@\n := 0%0A   \n- //\n  for _, \n@@ -618,27 +618,24 @@\n etBusc %7B%0A   \n- //\n      if cont\n@@ -668,18 +668,16 @@\n     \n-//\n         \n  fmt\n@@ -668,25 +668,24 @@\n             \n- \n fmt.Println(\n@@ -686,27 +686,24 @@\n intln(v)%0A   \n- //\n      %7D%0A    /\n@@ -696,27 +696,24 @@\n        %7D%0A   \n- //\n      fmt.Pri\n@@ -726,19 +726,16 @@\n %22 %22)%0A   \n- //\n      con\n@@ -745,19 +745,16 @@\n or++%0A   \n- //\n  %7D%0A%0A    \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-30_17-03-39",
+            "content": "@@ -541,26 +541,24 @@\n %7D%0A    %7D%0A    \n-//\n fmt.Println(\n@@ -570,16 +570,19 @@\n sc)%0A%0A   \n+ //\n  contado\n@@ -587,24 +587,27 @@\n dor := 0%0A   \n+ //\n  for _, v :=\n@@ -622,24 +622,27 @@\n etBusc %7B%0A   \n+ //\n      if cont\n@@ -671,24 +671,26 @@\n 1 %7B%0A    \n+//\n         \n fmt.Prin\n@@ -673,32 +673,33 @@\n %7B%0A    //        \n+ \n fmt.Println(v)%0A \n@@ -696,24 +696,27 @@\n intln(v)%0A   \n+ //\n      %7D%0A     \n@@ -709,24 +709,27 @@\n //     %7D%0A   \n+ //\n      fmt.Pri\n@@ -738,24 +738,27 @@\n (v, %22 %22)%0A   \n+ //\n      contado\n@@ -760,24 +760,27 @@\n ntador++%0A   \n+ //\n  %7D%0A%0A    // f\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-30_17-04-10",
+            "content": "@@ -623,27 +623,8 @@\n c %7B%0A\n-        contador++%0A\n     \n@@ -723,16 +723,35 @@\n v, %22 %22)%0A\n+        contador++%0A\n     %7D%0A%0A \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-30_17-04-41",
+            "content": "@@ -619,16 +619,35 @@\n tBusc %7B%0A\n+        contador++%0A\n         \n@@ -742,35 +742,16 @@\n v, %22 %22)%0A\n-        contador++%0A\n     %7D%0A%0A \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-30_17-04-56",
+            "content": "@@ -691,26 +691,8 @@\n (v)%0A\n-            break%0A\n     \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-30_17-06-07",
+            "content": "@@ -695,24 +695,29 @@\n             \n+break\n %0A        %7D e\n@@ -718,25 +718,17 @@\n    %7D\n- else %7B%0A \n+%0A\n         \n    f\n@@ -715,35 +715,32 @@\n       %7D%0A        \n-   \n fmt.Print(v, %22 %22\n@@ -741,26 +741,16 @@\n v, %22 %22)%0A\n-        %7D%0A\n         \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-30_17-06-32",
+            "content": "@@ -654,16 +654,19 @@\n vetBusc)\n+ -1\n  %7B%0A     \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-30_17-06-54",
+            "content": "@@ -569,26 +569,24 @@\n tBusc)%0A%0A    \n-//\n contador := \n@@ -626,19 +626,16 @@\n %0A       \n- //\n  if cont\n@@ -664,19 +664,16 @@\n %0A       \n- //\n      fmt\n@@ -709,12 +709,16 @@\n     \n-// %7D\n+%7D else %7B\n %0A   \n@@ -714,32 +714,36 @@\n  else %7B%0A        \n+    \n fmt.Print(v, %22 %22\n@@ -748,26 +748,34 @@\n  %22)%0A        \n-//\n+%7D%0A        \n contador++%0A \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-30_17-10-21",
+            "content": "@@ -541,24 +541,26 @@\n %7D%0A    %7D%0A    \n+//\n fmt.Println(\n@@ -592,19 +592,16 @@\n := 0%0A   \n- //\n  for _, \n@@ -620,27 +620,24 @@\n etBusc %7B%0A   \n- //\n      // if c\n@@ -661,27 +661,24 @@\n tBusc) %7B%0A   \n- //\n      //     \n@@ -704,27 +704,24 @@\n         %0A   \n- //\n      // %7D%0A  \n@@ -717,27 +717,24 @@\n     // %7D%0A   \n- //\n      fmt.Pri\n@@ -747,19 +747,16 @@\n %22 %22)%0A   \n- //\n      //c\n@@ -768,19 +768,16 @@\n or++%0A   \n- //\n  %7D%0A%0A    \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-30_17-10-50",
+            "content": "@@ -219,43 +219,8 @@\n c)%0A%0A\n-    vet := make(%5B%5Dstring, tamBusc)%0A\n     \n@@ -267,97 +267,8 @@\n i :=\n- range vet %7B%0A        fmt.Scan(&vet%5Bi%5D)%0A        vetBusc%5Bvet%5Bi%5D%5D = 0%0A    %7D%0A%0A    // for i :=\n  0; \n@@ -285,27 +285,24 @@\n c; i++ %7B%0A   \n- //\n      var s s\n@@ -306,27 +306,24 @@\n s string%0A   \n- //\n      fmt.Sca\n@@ -336,15 +336,12 @@\n     \n-//\n     \n- \n vetB\n@@ -354,19 +354,16 @@\n  = 0%0A   \n- //\n  %7D%0A    %0A\n@@ -594,53 +594,65 @@\n %0A   \n+ //\n  for \n-i := 0; i %3C len(vet); i++\n+_, v := range vetBusc\n  %7B%0A    \n+//\n     \n-if i\n+ // if contador\n  == \n@@ -662,22 +662,29 @@\n (vet\n-) -1\n+Busc)\n  %7B%0A    \n+//\n    \n+  //\n     \n@@ -697,29 +697,12 @@\n rint\n+ln\n (v\n-etBusc%5Bvet%5Bi%5D%5D, %22 %22\n )%0A  \n@@ -711,24 +711,35 @@\n     \n-%7D else %7B\n+    \n %0A   \n+ //\n     \n+ // %7D%0A    //\n     \n@@ -752,41 +752,23 @@\n rint\n-ln(vetBusc%5Bvet%5Bi%5D%5D)%0A        %7D%0A   \n+(v, %22 %22)%0A    //\n     \n@@ -780,24 +780,27 @@\n ntador++%0A   \n+ //\n  %7D%0A%0A    // f\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-30_20-18-32",
+            "content": "@@ -677,26 +677,24 @@\n %7D%0A    %7D%0A    \n-//\n fmt.Println(\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-30_20-19-15",
+            "content": "@@ -778,9 +778,9 @@\n f i \n-!\n+=\n = le\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-30_20-19-32",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var tamCons, tamBusc int\n    fmt.Scan(&tamCons)\n\n    vetCons := make([]string, tamCons)\n    for i := range vetCons {\n        fmt.Scan(&vetCons[i])\n    }\n\n    fmt.Scan(&tamBusc)\n\n    vet := make([]string, tamBusc)\n    vetBusc := make(map[string]int)\n    for i := range vet {\n        fmt.Scan(&vet[i])\n        vetBusc[vet[i]] = 0\n    }\n\n    // for i := 0; i < tamBusc; i++ {\n    //     var s string\n    //     fmt.Scan(&s)\n    //     vetBusc[s] = 0\n    // }\n    \n    //contador := make([]int, tamBusc)\n    for _, valor := range vetCons {\n        _, existe := vetBusc[valor]\n        if existe {\n            vetBusc[valor] += 1\n        }\n    }\n    //fmt.Println(vetBusc)\n\n    //contador := 0\n    for i := 0; i < len(vet); i++ {\n        if i != len(vet) -1 {\n            fmt.Print(vetBusc[vet[i]], \" \")\n        } else {\n            fmt.Println(vetBusc[vet[i]])\n        }\n        //contador++\n    }\n\n    // fmt.Println()\n\n    //fmt.Println(vetCons, vetBusc)\n}\n",
+            "lines": "49"
+        }
+    ]
+}

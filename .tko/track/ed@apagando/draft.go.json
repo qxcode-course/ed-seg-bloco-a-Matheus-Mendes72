@@ -12,8 +12,133 @@
         },
         {
             "label": "2026-03-22_16-11-27",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar pessoasFila, deixaramFila int\n\tfmt.Scan(&pessoasFila)\n\n\tfila := make([]int, pessoasFila)\n\tfor i := 0; i < pessoasFila; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tfmt.Scan(&deixaramFila)\n\n\tfilaSaida := make([]int, deixaramFila)\n\tfor i := 0; i < deixaramFila; i++ {\n\t\tfmt.Scan(&filaSaida[i])\n\t}\n\n\tfmt.Println(pessoasFila, fila, deixaramFila, filaSaida)\n}\n",
+            "content": "@@ -51,26 +51,28 @@\n asFila, \n-impaciente\n+deixaramFila\n  int%0A%09fm\n@@ -203,54 +203,61 @@\n an(&\n-impaciente)%0A%0A%09impacientes := make(map%5Bint%5Dbool\n+deixaramFila)%0A%0A%09filaSaida := make(%5B%5Dint, deixaramFila\n )%0A%09f\n@@ -271,25 +271,28 @@\n  0; i %3C \n-len(f\n+deixaramF\n ila\n-)\n ; i++ %7B%0A\n@@ -297,190 +297,91 @@\n %7B%0A%09%09\n-valor, _ := impacientes%5Bi%5D%0A%09%09if valor == fila%5Bi%5D %7B%0A%09%09%09continue%0A%09%09%7D else %7B%0A%09%09%09if i != len(fila) %7B%0A%09%09%09%09fmt.Printf(%22%25v %22, fila%5Bi%5D)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22%25v%5Cn%22, fila%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+fmt.Scan(&filaSaida%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Println(pessoasFila, fila, deixaramFila, filaSaida)\n %0A%7D%0A\n",
             "lines": "20"
+        },
+        {
+            "label": "2026-03-23_16-29-08",
+            "content": "@@ -239,19 +239,20 @@\n map%5Bint%5D\n-int\n+bool\n )%0A%09for i\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-23_16-29-19",
+            "content": "@@ -248,75 +248,8 @@\n nt)%0A\n-%09for i := 0; i %3C impaciente; i++ %7B%0A%09%09fmt.Scan(&impacientes%5Bi%5D)%0A%09%7D%0A%0A\n %09for\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-23_16-34-35",
+            "content": "@@ -283,20 +283,8 @@\n + %7B%0A\n-%09%09var x int%0A\n %09%09fm\n@@ -295,13 +295,8 @@\n an(&\n-x)%0A%09%09\n impa\n@@ -307,12 +307,11 @@\n tes%5B\n-x%5D++\n+i%5D)\n %0A%09%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-23_16-36-49",
+            "content": "@@ -333,35 +333,8 @@\n %09%7D%0A%0A\n-%09fmt.Println(impacientes)%0A%0A\n %09for\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-37-17",
+            "content": "@@ -335,78 +335,31 @@\n %0A%0A%09f\n-or chave, valor := range impacientes %7B%0A    fmt.Println(chave, valor)%0A%7D\n+mt.Println(impacientes)\n %0A%0A%09f\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-23_16-38-42",
+            "content": "@@ -271,32 +271,44 @@\n paciente; i++ %7B%0A\n+%09%09var x int%0A\n %09%09fmt.Scan(&impa\n@@ -295,32 +295,37 @@\n int%0A%09%09fmt.Scan(&\n+x)%0A%09%09\n impacientes%5Bi%5D)%0A\n@@ -320,19 +320,20 @@\n cientes%5B\n-i%5D)\n+x%5D++\n %0A%09%7D%0A%0A%09fo\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-23_16-41-08",
+            "content": "@@ -243,12 +243,11 @@\n int%5D\n-bool\n+int\n )%0A%09f\n@@ -309,15 +309,8 @@\n s%5Bi%5D\n- = true\n )%0A%09%7D\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-23_16-42-17",
+            "content": "@@ -284,25 +284,8 @@\n + %7B%0A\n-%09%09var indice int%0A\n %09%09fm\n@@ -296,18 +296,8 @@\n an(&\n-indice)%0A%09%09\n impa\n@@ -309,21 +309,16 @@\n es%5Bi\n-ndice\n %5D = true\n %0A%09%7D%0A\n@@ -313,16 +313,17 @@\n %5D = true\n+)\n %0A%09%7D%0A%0A%09fo\n@@ -328,23 +328,108 @@\n for \n-i := range fila\n+chave, valor := range impacientes %7B%0A    fmt.Println(chave, valor)%0A%7D%0A%0A%09for i := 0; i %3C len(fila); i++\n  %7B%0A%09\n@@ -470,17 +470,23 @@\n alor == \n-i\n+fila%5Bi%5D\n  %7B%0A%09%09%09co\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-23_16-44-50",
+            "content": "@@ -359,16 +359,9 @@\n for \n-_, valor\n+i\n  := \n@@ -379,17 +379,16 @@\n %7B%0A%09%09\n-_, existe\n+valor, _\n  := \n@@ -403,26 +403,26 @@\n tes%5B\n-valor\n+i\n %5D%0A%09%09if \n-existe\n+valor == i\n  %7B%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-46-45",
+            "content": "@@ -355,17 +355,17 @@\n %7D%0A%0A%09for \n-i\n+_\n , valor \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-47-37",
+            "content": "@@ -475,11 +475,8 @@\n ila)\n- -1\n  %7B%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-47-50",
+            "content": "@@ -471,16 +471,19 @@\n en(fila)\n+ -1\n  %7B%0A%09%09%09%09f\n@@ -536,16 +536,18 @@\n Printf(%22\n+%25v\n %5Cn%22, fil\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-48-09",
+            "content": "@@ -475,11 +475,8 @@\n ila)\n- -1\n  %7B%0A%09\n@@ -533,18 +533,16 @@\n Printf(%22\n-%25v\n %5Cn%22, fil\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-48-25",
+            "content": "@@ -538,17 +538,16 @@\n intf(%22%25v\n- \n %5Cn%22, fil\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-48-30",
+            "content": "@@ -499,21 +499,23 @@\n (%22%25v %22, \n-valor\n+fila%5Bi%5D\n )%0A%09%09%09%7D e\n@@ -544,21 +544,23 @@\n %25v %5Cn%22, \n-valor\n+fila%5Bi%5D\n )%0A%09%09%09%7D%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-49-00",
+            "content": "@@ -536,16 +536,17 @@\n intf(%22%25v\n+ \n %5Cn%22, val\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-50-38",
+            "content": "@@ -536,17 +536,16 @@\n intf(%22%25v\n- \n %5Cn%22, val\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-50-51",
+            "content": "@@ -536,16 +536,17 @@\n intf(%22%25v\n+ \n %5Cn%22, val\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-51-13",
+            "content": "@@ -459,17 +459,17 @@\n %09%09%09if i \n-=\n+!\n = len(fi\n@@ -500,10 +500,8 @@\n %22%25v \n-%5Cn\n %22, v\n@@ -528,33 +528,34 @@\n %09%09fmt.Printf(%22%25v\n- \n+%5Cn\n %22, valor)%0A%09%09%09%7D%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-51-55",
+            "content": "@@ -386,12 +386,17 @@\n %7B%0A%09%09\n-v, _\n+_, existe\n  := \n@@ -419,17 +419,22 @@\n r%5D%0A%09%09if \n-v\n+existe\n  %7B%0A%09%09%09co\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-52-51",
+            "content": "@@ -467,25 +467,9 @@\n a) -\n- len(impacientes)\n+1\n  %7B%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-57-59",
+            "content": "@@ -468,9 +468,24 @@\n ) - \n-1\n+len(impacientes)\n  %7B%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-58-16",
+            "content": "@@ -441,16 +441,44 @@\n  else %7B%0A\n+%09%09%09if i == len(fila) - 1 %7B%0A%09\n %09%09%09fmt.P\n@@ -487,16 +487,18 @@\n ntf(%22%25v \n+%5Cn\n %22, valor\n@@ -503,28 +503,59 @@\n or)%0A\n+%09\n %09%09%7D\n-%0A%09%7D%0A%09fmt.Println()\n+ else %7B%0A%09%09%09%09fmt.Printf(%22%25v %22, valor)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-59-38",
+            "content": "@@ -355,17 +355,17 @@\n %7D%0A%0A%09for \n-_\n+i\n , valor \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_16-59-47",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar pessoasFila, impaciente int\n\tfmt.Scan(&pessoasFila)\n\n\tfila := make([]int, pessoasFila)\n\tfor i := 0; i < pessoasFila; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tfmt.Scan(&impaciente)\n\n\timpacientes := make(map[int]bool)\n\tfor i := 0; i < impaciente; i++ {\n\t\tvar indice int\n\t\tfmt.Scan(&indice)\n\t\timpacientes[indice] = true\n\t}\n\n\tfor _, valor := range fila {\n\t\tv, _ := impacientes[valor]\n\t\tif v {\n\t\t\tcontinue\n\t\t} else {\n\t\t\tfmt.Printf(\"%v \", valor)\n\t\t}\n\t}\n\tfmt.Println()\n}\n",
+            "lines": "30"
         }
     ]
 }

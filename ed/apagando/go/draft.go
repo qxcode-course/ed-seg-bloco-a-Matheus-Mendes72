@@ -1,7 +1,7 @@
 package main
 import "fmt"
 func main() {
-	var pessoasFila, deixaramFila int
+	var pessoasFila, impaciente int
 	fmt.Scan(&pessoasFila)
 
 	fila := make([]int, pessoasFila)
@@ -9,12 +9,22 @@ func main() {
 		fmt.Scan(&fila[i])
 	}
 
-	fmt.Scan(&deixaramFila)
+	fmt.Scan(&impaciente)
 
-	filaSaida := make([]int, deixaramFila)
-	for i := 0; i < deixaramFila; i++ {
-		fmt.Scan(&filaSaida[i])
+	impacientes := make(map[int]bool)
+	for i := 0; i < impaciente; i++ {
+		var indice int
+		fmt.Scan(&indice)
+		impacientes[indice] = true
 	}
 
-	fmt.Println(pessoasFila, fila, deixaramFila, filaSaida)
+	for _, valor := range fila {
+		v, _ := impacientes[valor]
+		if v {
+			continue
+		} else {
+			fmt.Printf("%v ", valor)
+		}
+	}
+	fmt.Println()
 }

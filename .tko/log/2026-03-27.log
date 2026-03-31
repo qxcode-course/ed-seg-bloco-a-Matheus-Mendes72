@@ -1,0 +1,22 @@
+2026-03-27 10:49:56, MOVE, v:1, k:ed@queimada, mode:DOWN
+2026-03-27 10:49:57, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-03-27 12:03:23, MOVE, v:1, k:ed@longest, mode:DOWN
+2026-03-27 12:03:24, MOVE, v:1, k:ed@longest, mode:PICK
+2026-03-27 12:58:12, EXEC, v:1, k:ed@longest, mode:FULL, size:81, fail:COMP
+2026-03-27 12:59:20, EXEC, v:1, k:ed@longest, mode:FULL, size:81, fail:COMP
+2026-03-27 13:00:36, EXEC, v:1, k:ed@longest, mode:FULL, size:81, fail:COMP
+2026-03-27 13:01:23, EXEC, v:1, k:ed@longest, mode:FULL, rate:0, size:82
+2026-03-27 13:02:05, EXEC, v:1, k:ed@longest, mode:FULL, rate:0, size:82
+2026-03-27 13:02:46, EXEC, v:1, k:ed@longest, mode:FULL, rate:0
+2026-03-27 13:07:41, EXEC, v:1, k:ed@longest, mode:FULL, rate:33, size:82
+2026-03-27 13:12:25, EXEC, v:1, k:ed@longest, mode:FULL, rate:33, size:83
+2026-03-27 13:12:40, EXEC, v:1, k:ed@longest, mode:FULL, rate:33
+2026-03-27 13:12:41, EXEC, v:1, k:ed@longest, mode:FULL, rate:33
+2026-03-27 13:12:42, EXEC, v:1, k:ed@longest, mode:FULL, rate:33
+2026-03-27 13:12:47, EXEC, v:1, k:ed@longest, mode:FULL, rate:33
+2026-03-27 13:13:34, EXEC, v:1, k:ed@longest, mode:FULL, rate:0, size:84
+2026-03-27 13:15:05, EXEC, v:1, k:ed@longest, mode:FULL, rate:33, size:86
+2026-03-27 13:15:10, EXEC, v:1, k:ed@longest, mode:FULL, rate:33
+2026-03-27 13:16:03, EXEC, v:1, k:ed@longest, mode:FULL, rate:0, size:88
+2026-03-27 13:16:40, EXEC, v:1, k:ed@longest, mode:FULL, rate:0, size:88
+2026-03-27 13:17:58, MOVE, v:1, k:ed@longest, mode:BACK

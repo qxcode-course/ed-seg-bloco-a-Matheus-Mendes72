@@ -1,0 +1,199 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-30_20-57-02",
+            "content": "@@ -146,39 +146,8 @@\n o %7B%0A\n-            if valor %3E 0 %7B%0A    \n     \n@@ -184,35 +184,34 @@\n or)%0A        \n-   \n+//\n  %7D else \n %7B%0A          \n@@ -198,29 +198,45 @@\n  %7D else \n-%7B%0A   \n+if i == -escolhido %7B%0A\n         \n      fmt\n@@ -223,24 +223,26 @@\n o %7B%0A        \n+//\n      fmt.Pri\n@@ -265,22 +265,8 @@\n or)%0A\n-            %7D%0A\n     \n@@ -392,30 +392,24 @@\n t, escolhido\n-, fase\n  int) %7B%0A    \n@@ -513,21 +513,21 @@\n         \n+%0A\n     \n-%0A\n     if l\n@@ -550,16 +550,20 @@\n         \n+    \n break%0A  \n@@ -568,39 +568,14 @@\n     \n-%7D%0A%0A\n     \n-if jogo%5Bescolhido%5D %3E 0 %7B\n+%7D%0A\n %0A   \n@@ -621,86 +621,13 @@\n go)%0A\n+%0A\n     \n-%7D else %7B%0A        remover := (escolhido -1 + len(jogo)) %25 len(jogo)%0A    %7D%0A%0A\n     \n@@ -686,60 +686,8 @@\n     \n-if remover %3C escolhido %7B%0A        escolhido--%0A    %7D%0A%0A\n     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-31_10-03-50",
+            "content": "@@ -458,19 +458,18 @@\n o--%0A    \n-var\n+//\n  remover\n@@ -469,19 +469,28 @@\n remover \n-int\n+:= escolhido\n %0A%0A    fo\n@@ -634,32 +634,33 @@\n         remover \n+:\n = (escolhido +1)\n@@ -701,16 +701,17 @@\n remover \n+:\n = (escol\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-31_10-04-44",
+            "content": "@@ -1055,324 +1055,23 @@\n     \n-valor = i +1;%0A%0A        if fase == 1 %7B%0A            if i%252 == 0 %7B%0A                jogo%5Bi%5D = -valor%0A            %7D else %7B%0A                jogo%5Bi%5D = valor%0A            %7D%0A        %7D else %7B%0A            if i%252 == 0 %7B%0A                jogo%5Bi%5D = valor%0A            %7D else %7B%0A                jogo%5Bi%5D = -valor%0A            %7D%0A        %7D\n+jogo%5Bi%5D = i +1;\n %0A   \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-31_10-07-44",
+            "content": "@@ -1057,17 +1057,16 @@\n   valor \n-:\n = i +1;%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-07-54",
+            "content": "@@ -416,32 +416,38 @@\n %5B%5Dint, escolhido\n+, fase\n  int) %7B%0A    esco\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-08-08",
+            "content": "@@ -261,16 +261,17 @@\n rintf(%22%3C\n+-\n %25v %22, va\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-08-28",
+            "content": "@@ -1022,15 +1022,14 @@\n  := \n-1\n+0\n ; i %3C\n-=\n  qtd\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-10-19",
+            "content": "@@ -1022,14 +1022,15 @@\n  := \n-0\n+1\n ; i %3C\n+=\n  qtd\n@@ -1091,37 +1091,33 @@\n %0A            if \n-valor\n+i\n %252 == 0 %7B%0A      \n@@ -1242,21 +1242,17 @@\n      if \n-valor\n+i\n %252 == 0 \n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-10-45",
+            "content": "@@ -439,10 +439,8 @@\n     \n-//\n esco\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-12-01",
+            "content": "@@ -431,24 +431,26 @@\n  int) %7B%0A    \n+//\n escolhido--%0A\n@@ -794,19 +794,16 @@\n ..)%0A%0A   \n- //\n  if remo\n@@ -823,19 +823,16 @@\n do %7B%0A   \n- //\n      esc\n@@ -843,19 +843,16 @@\n do--%0A   \n- //\n  %7D%0A%0A    \n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-12-12",
+            "content": "@@ -788,24 +788,27 @@\n 1:%5D...)%0A%0A   \n+ //\n  if remover \n@@ -820,24 +820,27 @@\n olhido %7B%0A   \n+ //\n      escolhi\n@@ -843,24 +843,27 @@\n olhido--%0A   \n+ //\n  %7D%0A%0A    esco\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-12-36",
+            "content": "@@ -861,25 +861,23 @@\n lhido = \n-escolhido\n+remover\n  %25 len(j\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-17-09",
+            "content": "@@ -1092,33 +1092,37 @@\n %0A            if \n-i\n+valor\n %252 == 0 %7B%0A      \n@@ -1247,17 +1247,21 @@\n      if \n-i\n+valor\n %252 == 0 \n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-17-52",
+            "content": "@@ -1092,37 +1092,33 @@\n %0A            if \n-valor\n+i\n %252 == 0 %7B%0A      \n@@ -1243,21 +1243,17 @@\n      if \n-valor\n+i\n %252 == 0 \n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-18-50",
+            "content": "@@ -642,28 +642,16 @@\n lhido +1\n- + len(jogo)\n ) %25 len(\n@@ -861,23 +861,25 @@\n lhido = \n-remover\n+escolhido\n  %25 len(j\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-19-52",
+            "content": "@@ -873,25 +873,23 @@\n lhido = \n-escolhido\n+remover\n  %25 len(j\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-20-07",
+            "content": "@@ -873,23 +873,25 @@\n lhido = \n-remover\n+escolhido\n  %25 len(j\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-20-13",
+            "content": "@@ -791,17 +791,17 @@\n %5Bremover\n--\n++\n 1:%5D...)%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-22-22",
+            "content": "@@ -791,17 +791,17 @@\n %5Bremover\n-+\n+-\n 1:%5D...)%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-22-27",
+            "content": "@@ -877,31 +877,15 @@\n o = \n-(escolhido + len(jogo))\n+remover\n  %25 l\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-25-48",
+            "content": "@@ -805,55 +805,8 @@\n .)%0A%0A\n-    if jogo%5Bescolhido%5D %3E 0 %7B%0A%0A    %7D else %7B%0A    \n     \n@@ -838,20 +838,16 @@\n         \n-    \n escolhid\n@@ -850,26 +850,16 @@\n lhido--%0A\n-        %7D%0A\n     %7D%0A%0A \n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-26-41",
+            "content": "@@ -447,24 +447,40 @@\n lhido--%0A    \n+var remover int%0A\n %0A    for len\n@@ -528,29 +528,29 @@\n do)%0A        \n-%0A\n     \n+%0A\n     if len(j\n@@ -569,20 +569,16 @@\n         \n-    \n break%0A  \n@@ -583,52 +583,11 @@\n     \n-  \n-  \n %7D%0A%0A\n-        var remover int%0A        %0A    \n     \n@@ -611,36 +611,32 @@\n %5D %3E 0 %7B%0A        \n-    \n remover = (escol\n@@ -642,16 +642,28 @@\n lhido +1\n+ + len(jogo)\n ) %25 len(\n@@ -664,28 +664,24 @@\n %25 len(jogo)%0A\n-    \n     %7D else %7B\n@@ -685,28 +685,24 @@\n e %7B%0A        \n-  \n-  \n remover = (e\n@@ -738,20 +738,16 @@\n n(jogo)%0A\n-    \n     %7D%0A%0A \n@@ -745,28 +745,24 @@\n %0A    %7D%0A%0A    \n- \n-   \n jogo = appen\n@@ -805,20 +805,16 @@\n .)%0A%0A    \n-   \n- \n if jogo%5B\n@@ -831,20 +831,16 @@\n  %3E 0 %7B%0A%0A\n-    \n     %7D el\n@@ -852,20 +852,16 @@\n         \n-  \n-  \n if remov\n@@ -885,28 +885,24 @@\n             \n-    \n escolhido--%0A\n@@ -901,30 +901,16 @@\n lhido--%0A\n-            %7D%0A\n         \n@@ -911,21 +911,23 @@\n       %7D%0A\n-%0A\n     \n+%7D%0A%0A\n     esco\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-31_10-29-17",
+            "content": "@@ -1000,23 +1000,25 @@\n hido = (\n-remover\n+escolhido\n  + len(j\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-31_10-31-23",
+            "content": "@@ -1007,16 +1007,28 @@\n (remover\n+ + len(jogo)\n ) %25 len(\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-31_10-31-34",
+            "content": "@@ -675,28 +675,16 @@\n lhido +1\n- + len(jogo)\n ) %25 len(\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-31_10-31-55",
+            "content": "@@ -1011,23 +1011,25 @@\n lhido = \n+(\n remover\n+)\n  %25 len(j\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-31_10-32-30",
+            "content": "@@ -924,17 +924,17 @@\n remover \n-%3E\n+%3C\n  escolhi\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-31_10-32-56",
+            "content": "@@ -924,17 +924,17 @@\n remover \n-%3C\n+%3E\n  escolhi\n@@ -1240,33 +1240,37 @@\n %0A            if \n-i\n+valor\n %252 == 0 %7B%0A      \n@@ -1395,17 +1395,21 @@\n      if \n-i\n+valor\n %252 == 0 \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-31_10-33-09",
+            "content": "@@ -455,24 +455,8 @@\n     \n-var remover int%0A\n %0A   \n@@ -516,21 +516,21 @@\n         \n+%0A\n     \n-%0A\n     if l\n@@ -557,21 +557,66 @@\n     \n+    \n break%0A\n+    \n     %7D%0A%0A\n+        var remover int%0A        %0A    \n     \n@@ -636,24 +636,28 @@\n hido%5D %3E 0 %7B%0A\n+    \n         remo\n@@ -697,24 +697,28 @@\n %25 len(jogo)%0A\n+    \n     %7D else %7B\n@@ -710,32 +710,36 @@\n        %7D else %7B%0A\n+    \n         remover \n@@ -779,27 +779,35 @@\n n(jogo)%0A    \n-%7D%0A%0A\n+    %7D%0A%0A    \n     jogo = a\n@@ -850,16 +850,75 @@\n :%5D...)%0A%0A\n+        if jogo%5Bescolhido%5D %3E 0 %7B%0A%0A        %7D else %7B%0A        \n     if r\n@@ -942,24 +942,32 @@\n o %7B%0A        \n+ \n+       \n escolhido--%0A\n@@ -966,23 +966,45 @@\n lhido--%0A\n+            %7D%0A    \n     %7D%0A%0A\n+    \n     esco\n@@ -1240,37 +1240,33 @@\n %0A            if \n-valor\n+i\n %252 == 0 %7B%0A      \n@@ -1391,21 +1391,17 @@\n      if \n-valor\n+i\n %252 == 0 \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-31_10-33-49",
+            "content": "@@ -877,31 +877,15 @@\n o = \n-(escolhido + len(jogo))\n+remover\n  %25 l\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-34-14",
+            "content": "@@ -874,23 +874,25 @@\n hido = (\n-remover\n+escolhido\n  + len(j\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-34-25",
+            "content": "@@ -672,67 +672,8 @@\n go)%0A\n-        jogo = append(jogo%5B:remover%5D, jogo%5Bremover+1:%5D...)%0A\n     \n@@ -738,24 +738,27 @@\n n(jogo)%0A    \n+%7D%0A%0A\n     jogo = a\n@@ -776,18 +776,16 @@\n :remover\n-+1\n %5D, jogo%5B\n@@ -795,22 +795,17 @@\n over\n++1\n :%5D...)%0A\n-    %7D%0A%0A\n %0A   \n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-31_10-36-15",
+            "content": "@@ -936,23 +936,37 @@\n lhido = \n+(\n remover\n+ + len(jogo))\n  %25 len(j\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-31_10-36-56",
+            "content": "@@ -809,10 +809,8 @@\n     \n-//\n jogo\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-31_10-41-28",
+            "content": "@@ -668,24 +668,79 @@\n n(jogo)%0A    \n+    jogo = append(jogo%5B:remover%5D, jogo%5Bremover+1:%5D...)%0A\n     %7D else %7B\n@@ -744,28 +744,24 @@\n e %7B%0A        \n-  \n-  \n remover = (e\n@@ -793,28 +793,24 @@\n %25 len(jogo)%0A\n-    \n         //jo\n@@ -866,77 +866,10 @@\n     \n-  \n-  %7D%0A        %0A    jogo = append(jogo%5B:remover%5D, jogo%5Bremover+1:%5D...)\n+%7D%0A\n %0A%0A  \n@@ -942,19 +942,15 @@\n o = \n-(\n remover\n-+1)\n  %25 l\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-31_10-42-34",
+            "content": "@@ -533,28 +533,24 @@\n            %0A\n-    \n     if len(j\n@@ -575,35 +575,27 @@\n   break%0A    \n-    %7D%0A%0A    \n+%7D%0A%0A\n     if jogo%5B\n@@ -826,28 +826,24 @@\n  %7D%0A        %0A\n-    \n     jogo = a\n@@ -886,20 +886,16 @@\n :%5D...)%0A%0A\n-    \n     if r\n@@ -919,28 +919,24 @@\n o %7B%0A        \n-  \n-  \n escolhido--%0A\n@@ -939,27 +939,19 @@\n o--%0A    \n-    %7D%0A%0A    \n+%7D%0A%0A\n     esco\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-31_10-43-44",
+            "content": "@@ -990,23 +990,27 @@\n lhido = \n+(\n remover\n++1)\n  %25 len(j\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-31_10-47-07",
+            "content": "@@ -623,36 +623,32 @@\n %5D %3E 0 %7B%0A        \n-    \n remover = (escol\n@@ -654,19 +654,18 @@\n lhido +1\n-) %25\n+ +\n  len(jog\n@@ -670,105 +670,9 @@\n ogo)\n-%0A%0A            jogo = append(jogo%5B:remover%5D, jogo%5Bremover+1:%5D...)%0A%0A            escolhido = remover\n+)\n  %25 l\n@@ -770,29 +770,18 @@\n         \n-%0A            \n+//\n jogo = a\n@@ -799,16 +799,18 @@\n :remover\n++1\n %5D, jogo%5B\n@@ -816,18 +816,16 @@\n %5Bremover\n-+1\n :%5D...)%0A \n@@ -823,36 +823,33 @@\n r:%5D...)%0A        \n-    \n+%7D\n %0A            esc\n@@ -845,60 +845,8 @@\n     \n-    escolhido = (remover -1 + len(jogo)) %25 len(jogo)\n %0A   \n@@ -842,38 +842,32 @@\n        %0A        \n-    //\n jogo = append(jo\n@@ -869,34 +869,32 @@\n nd(jogo%5B:remover\n-+1\n %5D, jogo%5Bremover:\n@@ -884,38 +884,98 @@\n r%5D, jogo%5Bremover\n++1\n :%5D...)\n+%0A%0A        if remover %3C escolhido %7B%0A            escolhido--\n %0A        %7D%0A     \n@@ -965,32 +965,33 @@\n -%0A        %7D%0A\n+%0A\n         \n %0A    %7D%0A%7D%0A%0Afu\n@@ -974,24 +974,55 @@\n  %7D%0A%0A        \n+escolhido = remover %25 len(jogo)\n %0A    %7D%0A%7D%0A%0Afu\n@@ -1381,25 +1381,25 @@\n  valor%252 == \n-1\n+0\n  %7B%0A         \n@@ -1407,33 +1407,32 @@\n       jogo%5Bi%5D = \n--\n valor%0A          \n@@ -1460,32 +1460,33 @@\n       jogo%5Bi%5D = \n+-\n valor%0A          \n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-31_10-55-18",
+            "content": "package main\nimport \"fmt\"\n\nfunc espada(jogo []int, escolhido int) {\n    fmt.Print(\"[ \")\n    for i, valor := range jogo {\n        if i == escolhido {\n            if valor > 0 {\n                fmt.Printf(\"%v> \", valor)\n            } else {\n                fmt.Printf(\"<%v \", valor)\n            }\n        } else {\n            fmt.Printf(\"%v \", valor)     \n        }\n    }\n    fmt.Println(\"]\")\n}\n\nfunc dinamismo(jogo []int, escolhido int) {\n    escolhido--\n    var remover int\n\n    for len(jogo) > 0 {\n        espada(jogo, escolhido)\n            \n        if len(jogo) == 1 {\n        break\n        }\n\n        if jogo[escolhido] > 0 {\n            remover = (escolhido +1) % len(jogo)\n\n            jogo = append(jogo[:remover], jogo[remover+1:]...)\n\n            escolhido = remover % len(jogo)\n        } else {\n            remover = (escolhido -1 + len(jogo)) % len(jogo)\n            \n            jogo = append(jogo[:remover], jogo[remover+1:]...)\n            \n            escolhido = (remover -1 + len(jogo)) % len(jogo)\n            //jogo = append(jogo[:remover+1], jogo[remover:]...)\n        }\n        \n    }\n}\n\nfunc main() {\n    var qtd, escolhido, fase int\n    fmt.Scan(&qtd, &escolhido, &fase)\n\n    jogo := make([]int, qtd)\n    for i := 0; i < qtd; i++ {\n        valor := i +1;\n\n        if fase == 1 {\n            if valor%2 == 0 {\n                jogo[i] = -valor\n            } else {\n                jogo[i] = valor\n            }\n        } else {\n            if valor%2 == 1 {\n                jogo[i] = -valor\n            } else {\n                jogo[i] = valor\n            }\n        }\n    }\n    \n    dinamismo(jogo, escolhido)\n}\n",
+            "lines": "73"
+        }
+    ]
+}
