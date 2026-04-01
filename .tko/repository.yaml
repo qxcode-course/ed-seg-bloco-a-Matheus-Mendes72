@@ -2,18 +2,19 @@ version: '0.2'
 sources:
 - name: sandbox
   target: sandbox
+  index: README.md
   type: local
   writeable: true
   quests: null
   tasks: null
 - name: ed
   target: https://github.com/qxcodeed/arcade.git
+  index: README.md
   type: git
   writeable: false
   quests: null
   tasks: null
-expanded:
-- ed@rec
+expanded: []
 tasks:
   ed@pintando: '{self:1, rate:100, study:20, friend:nao, concept:1}'
   ed@mumia: '{self:1, rate:100, study:7, friend:nao}'
@@ -24,14 +25,94 @@ tasks:
   ed@gomos: '{self:1, rate:100, study:39, concept:1, debug:1}'
   ed@princesa: '{self:1, rate:100, study:117, concept:1, debug:1}'
   ed@apagando: '{self:1, rate:100, friend:40, concept:1}'
+  ed@manipulacao: '{self:1, rate:100, study:100, concept:1, debug:1}'
   ed@buscas: '{self:1, rate:100, study:120}'
   ed@rotacoes: '{self:1, rate:100, study:26, concept:1}'
   ed@alternando: '{self:1, rate:100, study:63, problem:1}'
+  ed@resto: '{self:1, rate:100, study:6}'
+  ed@mdc: '{self:1, rate:100, study:6}'
+  ed@eh_primo: '{self:1, rate:100, study:13}'
+  ed@analise: '{}'
+  ed@especiais: '{}'
+  ed@crec_view: '{}'
+  ed@rec_read: '{}'
+  ed@fractais_png: '{}'
+  ed@triangulo: '{}'
+  ed@treinando: '{}'
+  ed@queimada: '{}'
+  ed@labirinto: '{}'
+  ed@enesimo: '{}'
+  ed@vetequals: '{}'
+  ed@priminhos: '{}'
+  ed@escada: '{}'
+  ed@binomiais: '{}'
+  ed@diagonal: '{}'
+  ed@sufixos: '{}'
+  ed@padroes1: '{}'
+  ed@padroes2: '{}'
+  ed@padroes3: '{}'
+  ed@quadrado: '{}'
+  ed@fib1: '{}'
+  ed@fib2: '{}'
+  ed@santo: '{}'
+  ed@bitcoin: '{}'
+  ed@fractais: '{}'
+  ed@wordsearch: '{}'
+  ed@subset_sum: '{}'
+  ed@distancia: '{}'
+  ed@permutacoes: '{}'
+  ed@sudoku: '{}'
+  ed@n_rainhas: '{}'
+  ed@vetbuild: '{}'
+  ed@setbuild: '{}'
+  ed@bettersearch: '{}'
+  ed@multiset: '{}'
+  ed@magicsearch: '{}'
+  ed@iterador: '{}'
+  ed@lista_d1: '{}'
+  ed@lista_d2: '{}'
+  ed@lista_d4: '{}'
+  ed@prin_list1: '{}'
+  ed@editor: '{}'
+  ed@lista_d3: '{}'
+  ed@prin_list2: '{}'
+  ed@controlz: '{}'
+  ed@editorint: '{}'
+  ed@bufferring: '{}'
+  ed@fila_enc: '{}'
+  ed@pilha: '{}'
+  ed@chaves: '{}'
+  ed@queimando: '{}'
+  ed@pilhado: '{}'
+  ed@balanceada: '{}'
+  ed@caminhao: '{}'
+  ed@polonesa: '{}'
+  ed@serial: '{}'
+  ed@formatada: '{}'
+  ed@inverter: '{}'
+  ed@clonar: '{}'
+  ed@soma: '{}'
+  ed@altura: '{}'
+  ed@compare: '{}'
+  ed@arvore-path: '{}'
+  ed@bst_insert: '{}'
+  ed@bst_serial: '{}'
+  ed@bst_remove: '{}'
+  ed@dfs_bfs_bak: '{}'
+  ed@ilhas: '{}'
+  ed@cercado: '{}'
+  ed@pintura: '{}'
+  ed@longest: '{}'
+  ed@battleship: '{}'
+  ed@rotten: '{}'
+  ed@caminho: '{}'
+  ed@detonate: '{}'
+  ed@escapeSpread: '{}'
 flags:
-  panel: 3
-  inbox: 1
-  show_panel: 1
-  task_graph_mode: 0
-  show_time: 0
+  inbox: all
+  panel: graph
+  show_panel: 'true'
+  task_graph_mode: executions
+  show_time: 'true'
 lang: go
-selected: ed@resto
+selected: ed@basic

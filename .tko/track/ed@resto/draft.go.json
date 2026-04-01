@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-31_11-03-56",
+            "content": "@@ -163,25 +163,8 @@\n  %7D%0A%0A\n-    div(divisao)%0A\n     \n@@ -167,39 +167,44 @@\n     fmt.Println(\n+div(\n divisao\n+)\n , resto)%0A%7D%0A%0Afunc\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-31_11-04-30",
+            "content": "@@ -159,16 +159,33 @@\n %0A    %7D%0A%0A\n+    div(divisao)%0A\n     fmt.\n@@ -208,33 +208,16 @@\n  resto)%0A\n-    div(divisao)%0A\n %7D%0A%0Afunc \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-31_11-05-34",
+            "content": "@@ -47,23 +47,25 @@\n ) %7B%0A    \n-numer\n+divisa\n o \n+:\n = numero\n@@ -101,21 +101,22 @@\n %0A    if \n-numer\n+divisa\n o == 0 %7B\n@@ -175,21 +175,22 @@\n Println(\n-numer\n+divisa\n o, resto\n@@ -195,29 +195,30 @@\n to)%0A    div(\n-numer\n+divisa\n o)%0A%7D%0A%0Afunc m\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-31_11-06-26",
+            "content": "@@ -125,14 +125,35 @@\n     \n-return\n+fmt.Println(divisao, resto)\n %0A   \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-31_11-06-40",
+            "content": "@@ -117,43 +117,8 @@\n 0 %7B%0A\n-        fmt.Println(numero, resto)%0A\n     \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-31_11-06-54",
+            "content": "@@ -170,32 +170,16 @@\n %0A    %7D%0A%0A\n-    div(numero)%0A\n     fmt.\n@@ -201,16 +201,32 @@\n  resto)%0A\n+    div(numero)%0A\n %7D%0A%0Afunc \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-31_11-07-09",
+            "content": "@@ -51,17 +51,15 @@\n     \n-divisa\n+numer\n o \n-:\n = nu\n@@ -99,22 +99,21 @@\n %0A    if \n-divisa\n+numer\n o == 0 %7B\n@@ -125,38 +125,37 @@\n     fmt.Println(\n-divisa\n+numer\n o, resto)%0A      \n@@ -178,22 +178,21 @@\n     div(\n-divisa\n+numer\n o)%0A    f\n@@ -206,14 +206,13 @@\n tln(\n-divisa\n+numer\n o, r\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-31_11-07-57",
+            "content": "package main\nimport \"fmt\"\n\nfunc div(numero int) {\n    divisao := numero / 2\n    resto := numero % 2\n\n    if divisao == 0 {\n        fmt.Println(divisao, resto)\n        return\n    }\n\n    div(divisao)\n    fmt.Println(divisao, resto)\n}\n\nfunc main() {\n    var numero int\n    fmt.Scan(&numero)\n\n    div(numero)\n}\n",
+            "lines": "22"
+        }
+    ]
+}
