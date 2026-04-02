@@ -7,11 +7,24 @@ import (
 )
 
 func burnTrees(grid [][]rune, l, c int) {
-	_, _, _ = mat, l, c
 	// se estiver fora da matriz, retorne
 	// se o elemento atual não for uma arvore, retorne
 	// queime a arvore colocando o caractere 'o' na posição atual
 	// chame a recursão para todos os 4 vizinhos
+
+	if (l < 0 || l >= len(grid)) || (c < 0 || c >= len(grid[0])) {
+		return
+	}
+
+	if grid[l][c] != '#' {
+		return
+	} else {
+		grid[l][c] = 'o'
+		burnTrees(grid, l-1, c)
+		burnTrees(grid, l+1, c)
+		burnTrees(grid, l, c-1)
+		burnTrees(grid, l, c+1)
+	}
 }
 
 func main() {

@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-01_22-46-56",
+            "content": "@@ -45,346 +45,55 @@\n %0A)%0A%0A\n-type Pos struct %7B%0A%09l, c int%0A%7D%0A%0Afunc search(grid %5B%5D%5B%5Drune, startPos, endPos Pos) bool %7B%0A%09l, c := startPos.l, startPos.c%0A%0A%09if (l %3C 0 %7C%7C l %3E= len(grid)) %7C%7C (c %3C 0 %7C%7C c %3E= len(grid%5B0%5D)) %7B%0A%09%09return false%0A%09%7D%0A%0A%09if grid%5Bl%5D%5Bc%5D != ' ' %7B%0A%09%09return false%0A%09%7D%0A%0A%09if l == endPos.l && c == endPos.c %7B%0A%09%09return true%0A%09%7D%0A%0A%09grid%5Bl%5D%5Bc%5D = '.'%0A%0A%09%0A%0A%09return true%0A%7D%0A\n+%09_, _, _ = grid, startPos, endPos%0A%09return false\n %0Afun\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-01_23-09-12",
+            "content": "@@ -366,166 +366,8 @@\n '%0A%0A%09\n-if search(grid, Pos%7Bl-1, c%7D, endPos) %7C%7C %7B%0A%09%09search(grid, Pos%7Bl+1, c%7D, endPos) %7C%7C%0A%09%09search(grid, Pos%7Bl, c-1%7D, endPos) %7C%7C%0A%09%09search(grid, Pos%7Bl, c+1%7D, endPos)%0A%09%7D\n %0A%0A%09r\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-04-01_23-12-17",
+            "content": "@@ -393,32 +393,34 @@\n , c%7D, endPos) %7C%7C\n+ %7B\n %0A%09%09search(grid, \n@@ -521,25 +521,8 @@\n Pos)\n- %7B%0A%09%09%09return true\n %0A%09%7D%0A\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-01_23-13-17",
+            "content": "@@ -1,1262 +1,82 @@\n-package main%0A%0Aimport (%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0Atype Pos struct %7B%0A%09l, c int%0A%7D%0A%0Afunc search(grid %5B%5D%5B%5Drune, startPos, endPos Pos) bool %7B%0A%09l, c := startPos.l, startPos.c%0A%0A%09if (l %3C 0 %7C%7C l %3E= len(grid)) %7C%7C (c %3C 0 %7C%7C c %3E= len(grid%5B0%5D)) %7B%0A%09%09return false%0A%09%7D%0A%0A%09if grid%5Bl%5D%5Bc%5D != ' ' %7B%0A%09%09return false%0A%09%7D%0A%0A%09if l == endPos.l && c == endPos.c %7B%0A%09%09return true%0A%09%7D%0A%0A%09grid%5Bl%5D%5Bc%5D = '.'%0A%0A%09if search(grid, Pos%7Bl-1, c%7D, endPos) %7C%7C%0A%09%09search(grid, Pos%7Bl+1, c%7D, endPos) %7C%7C%0A%09%09search(grid, Pos%7Bl, c-1%7D, endPos) %7C%7C%0A%09%09search(grid, Pos%7Bl, c+1%7D, endPos) %7B%0A%09%09%09return true%0A%09%7D%0A%0A%09grid%5Bl%5D%5Bc%5D = %22 %22%0A%0A%09return true%0A%7D%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A%09nl_nc := scanner.Text()%0A%09var nl, nc int%0A%09fmt.Sscanf(nl_nc, %22%25d %25d%22, &nl, &nc)%0A%09grid := make(%5B%5D%5B%5Drune, nl)%0A%0A%09// L%C3%AA a gridriz%0A%09for i := range nl %7B%0A%09%09scanner.Scan()%0A%09%09grid%5Bi%5D = %5B%5Drune(scanner.Text())%0A%09%7D%0A%0A%09// Procura posi%C3%A7%C3%B5es de in%C3%ADcio e endPos e conserta para _%0A%09var startPos, endPos Pos%0A%09for l := range nl %7B%0A%09%09for c := range nc %7B%0A%09%09%09if grid%5Bl%5D%5Bc%5D == 'I' %7B%0A%09%09%09%09grid%5Bl%5D%5Bc%5D = ' '%0A%09%09%09%09startPos = Pos%7Bl, c%7D%0A%09%09%09%7D%0A%09%09%09if grid%5Bl%5D%5Bc%5D == 'F' %7B%0A%09%09%09%09grid%5Bl%5D%5Bc%5D = ' '%0A%09%09%09%09endPos = Pos%7Bl, c%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09search(grid, startPos, endPos)%0A%0A%09// Imprime o labirinto final%0A%09for _, line := range grid %7B%0A%09%09fmt.Println(string(line))%0A%09%7D%0A%7D\n+@@ -541,27 +541,8 @@%0A %2509%257D%250A%250A%0A-%2509grid%255Bl%255D%255Bc%255D = %2522 %2522%250A%250A%0A %2509ret\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-01_23-14-12",
+            "content": "@@ -551,19 +551,19 @@\n l%5D%5Bc%5D = \n-' '\n+%22 %22\n %0A%0A%09retur\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-04-01_23-14-18",
+            "content": "@@ -564,20 +564,19 @@\n %09return \n-fals\n+tru\n e%0A%7D%0A%0Afun\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-04-01_23-14-45",
+            "content": "@@ -538,18 +538,16 @@\n ue%0A%09%7D%0A%0A%09\n-//\n grid%5Bl%5D%5B\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-04-01_23-15-02",
+            "content": "@@ -530,32 +530,34 @@\n eturn true%0A%09%7D%0A%0A%09\n+//\n grid%5Bl%5D%5Bc%5D = ' '\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-04-01_23-15-13",
+            "content": "@@ -291,27 +291,8 @@\n %09%7D%0A%0A\n-%09grid%5Bl%5D%5Bc%5D = '.'%0A%0A\n %09if \n@@ -338,24 +338,43 @@\n rn true%0A%09%7D%0A%0A\n+%09grid%5Bl%5D%5Bc%5D = '.'%0A%0A\n %09if search(g\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-04-01_23-18-15",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc search(grid [][]rune, startPos, endPos Pos) bool {\n\tl, c := startPos.l, startPos.c\n\n\tif (l < 0 || l >= len(grid)) || (c < 0 || c >= len(grid[0])) {\n\t\treturn false\n\t}\n\n\tif grid[l][c] != ' ' {\n\t\treturn false\n\t}\n\n\tgrid[l][c] = '.'\n\n\tif l == endPos.l && c == endPos.c {\n\t\treturn true\n\t}\n\n\tif search(grid, Pos{l-1, c}, endPos) ||\n\t\tsearch(grid, Pos{l+1, c}, endPos) ||\n\t\tsearch(grid, Pos{l, c-1}, endPos) ||\n\t\tsearch(grid, Pos{l, c+1}, endPos) {\n\t\t\treturn true\n\t}\n\n\tgrid[l][c] = ' '\n\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tnl_nc := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(nl_nc, \"%d %d\", &nl, &nc)\n\tgrid := make([][]rune, nl)\n\n\t// L\u00ea a gridriz\n\tfor i := range nl {\n\t\tscanner.Scan()\n\t\tgrid[i] = []rune(scanner.Text())\n\t}\n\n\t// Procura posi\u00e7\u00f5es de in\u00edcio e endPos e conserta para _\n\tvar startPos, endPos Pos\n\tfor l := range nl {\n\t\tfor c := range nc {\n\t\t\tif grid[l][c] == 'I' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tstartPos = Pos{l, c}\n\t\t\t}\n\t\t\tif grid[l][c] == 'F' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tendPos = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(grid, startPos, endPos)\n\n\t// Imprime o labirinto final\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "77"
+        }
+    ]
+}
