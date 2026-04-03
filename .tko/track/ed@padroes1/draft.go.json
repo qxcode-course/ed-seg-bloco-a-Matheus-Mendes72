@@ -1,0 +1,144 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-02_22-53-31",
+            "content": "@@ -23,196 +23,53 @@\n mt%22%0A\n-%0A\n func \n-padrao(n, so\n ma\n- \n in\n-t) int\n+()\n  %7B%0A    \n-if n == 1 %7B%0A        soma += 20%0A        return soma%0A    %7D%0A%0A    soma += 8%0A    padrao(n-1)%0A%7D%0A%0Afunc main() %7B%0A    var n int%0A    fmt.Scan(&n)%0A%0A    padrao(n, 0\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-02_22-57-24",
+            "content": "@@ -33,20 +33,16 @@\n padrao(n\n- int\n , soma i\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-02_22-57-42",
+            "content": "@@ -33,16 +33,20 @@\n padrao(n\n+ int\n , soma i\n@@ -151,29 +151,8 @@\n -1)%0A\n-    %0A    return soma%0A\n %7D%0A%0Af\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-02_22-58-08",
+            "content": "@@ -221,20 +221,8 @@\n     \n-fmt.Println(\n padr\n@@ -229,12 +229,11 @@\n ao(n, 0)\n-)\n %0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_22-58-37",
+            "content": "@@ -141,22 +141,16 @@\n drao(n-1\n-, soma\n )%0A    %0A \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_22-58-55",
+            "content": "@@ -101,18 +101,20 @@\n  return \n-20\n+soma\n %0A    %7D%0A%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_23-01-22",
+            "content": "@@ -147,16 +147,37 @@\n , soma)%0A\n+    %0A    return soma%0A\n %7D%0A%0Afunc \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_23-01-58",
+            "content": "@@ -151,29 +151,8 @@\n ma)%0A\n-    %0A    return soma%0A\n %7D%0A%0Af\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-02_23-02-43",
+            "content": "@@ -111,16 +111,30 @@\n %0A    %7D%0A%0A\n+    soma += 8%0A\n     padr\n@@ -149,10 +149,8 @@\n soma\n-+8\n )%0A  \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_23-03-31",
+            "content": "@@ -67,16 +67,35 @@\n  == 1 %7B%0A\n+        soma += 20%0A\n         \n@@ -231,15 +231,14 @@\n drao(n, \n-2\n 0))%0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-02_23-04-36",
+            "content": "@@ -116,23 +116,11 @@\n soma\n-)%0A    soma += 8\n++8)\n %0A   \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-02_23-05-08",
+            "content": "@@ -92,30 +92,16 @@\n %0A    %7D%0A%0A\n-    soma += 8%0A\n     padr\n@@ -128,16 +128,20 @@\n ma += 8%0A\n+    \n %0A    ret\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-02_23-05-19",
+            "content": "@@ -92,16 +92,29 @@\n %0A    %7D%0A%0A\n+    soma += 8\n %0A    pad\n@@ -130,10 +130,8 @@\n soma\n-+8\n )%0A  \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_23-06-06",
+            "content": "@@ -63,17 +63,17 @@\n if n == \n-0\n+1\n  %7B%0A     \n@@ -113,16 +113,18 @@\n -1, soma\n++8\n )%0A    so\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_23-06-32",
+            "content": "@@ -64,12 +64,12 @@\n f n \n-%3C= 1\n+== 0\n  %7B%0A \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_23-07-06",
+            "content": "@@ -97,22 +97,8 @@\n %7D%0A%0A%0A\n-    soma += 8%0A\n     \n@@ -114,16 +114,30 @@\n 1, soma)\n+%0A    soma += 8\n %0A%0A    re\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_23-07-58",
+            "content": "@@ -129,29 +129,16 @@\n , soma)%0A\n-    soma += 8\n %0A    ret\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_23-08-11",
+            "content": "@@ -131,12 +131,23 @@\n soma\n-+=8)\n+)%0A    soma += 8\n %0A   \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_23-08-29",
+            "content": "@@ -97,16 +97,25 @@\n %7D%0A%0A%0A    \n+soma += 8\n %0A    pad\n@@ -127,16 +127,19 @@\n -1, soma\n++=8\n )%0A    re\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-02_23-10-22",
+            "content": "@@ -105,21 +105,8 @@\n %0A   \n- resultado :=\n  pad\n@@ -135,17 +135,12 @@\n urn \n-resultado\n+soma\n %0A%7D%0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-02_23-11-17",
+            "content": "@@ -135,10 +135,8 @@\n soma\n-+8\n )%0A  \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-02_23-12-06",
+            "content": "@@ -96,38 +96,71 @@\n  %7D%0A%0A\n-    return padrao(n-1, soma+8)\n+%0A    %0A    resultado := padrao(n-1, soma+8)%0A    return resultado\n %0A%7D%0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-02_23-13-15",
+            "content": "@@ -96,22 +96,8 @@\n  %7D%0A%0A\n-    soma += 8%0A\n     \n@@ -119,16 +119,18 @@\n -1, soma\n++8\n )%0A%7D%0A%0Afun\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-02_23-14-14",
+            "content": "@@ -133,20 +133,16 @@\n -1, soma\n-+= 8\n )%0A%7D%0A%0Afun\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_23-14-32",
+            "content": "@@ -134,16 +134,18 @@\n 1, soma+\n+= \n 8)%0A%7D%0A%0Afu\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_23-14-43",
+            "content": "@@ -82,20 +82,18 @@\n  return \n-soma\n+20\n %0A    %7D%0A%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_23-15-26",
+            "content": "@@ -94,16 +94,30 @@\n %0A    %7D%0A%0A\n+    soma += 8%0A\n     retu\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_23-15-35",
+            "content": "package main\nimport \"fmt\"\n\nfunc padrao(n, soma int) int {\n    if n <= 1 {\n        return soma\n    }\n\n    return padrao(n-1, soma+8)\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    fmt.Println(padrao(n, 20))\n}\n",
+            "lines": "17"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-02_10-07-06",
+            "content": "@@ -323,24 +323,31 @@\n 1 %7B%0A        \n+return \n vet = append\n@@ -359,27 +359,8 @@\n  2)%0A\n-        return vet%0A\n     \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-02_10-07-35",
+            "content": "@@ -294,19 +294,8 @@\n ual \n-int, vet %5B%5D\n int)\n@@ -470,13 +470,8 @@\n n, 2\n-, vet\n )%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-02_10-08-00",
+            "content": "@@ -387,24 +387,8 @@\n    %7D\n-%0A%0A    return vet\n %0A%7D%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-02_10-08-09",
+            "content": "@@ -483,20 +483,8 @@\n     \n-fmt.Println(\n numP\n@@ -499,12 +499,11 @@\n  2, vet)\n-)\n %0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-02_10-08-28",
+            "content": "@@ -279,34 +279,24 @@\n numPrimos(n,\n- contador,\n  atual int, \n@@ -314,16 +314,16 @@\n %5B%5Dint %7B%0A\n+\n     if n\n@@ -389,195 +389,8 @@\n  %7D%0A%0A\n-    if eh_primo(atual, 2) %7B%0A        vet = append(vet, atual)%0A        return numPrimos(n, contador+1, atual+1, vet)%0A    %7D else %7B%0A        return numPrimos(n, contador, atual+1, vet)%0A    %7D%0A%0A\n     \n@@ -475,16 +475,16 @@\n int, 0)%0A\n+\n     fmt.\n@@ -507,11 +507,8 @@\n s(n,\n- 0,\n  2, \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-02_10-15-23",
+            "content": "@@ -399,57 +399,8 @@\n  %7D%0A%0A\n-    if contador == n %7B%0A        return vet%0A    %7D%0A%0A\n     \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-02_10-15-52",
+            "content": "@@ -320,14 +320,13 @@\n nt) \n-string\n+%5B%5Dint\n  %7B%0A \n@@ -384,36 +384,19 @@\n  return \n-strconv.Itoa(vet%5B0%5D)\n+vet\n %0A    %7D%0A%0A\n@@ -437,59 +437,11 @@\n urn \n-strconv.Itoa(vet%5B0%5D) + %22, %22 + strconv.Itoa(vet%5B1:%5D)\n+vet\n %0A   \n@@ -646,52 +646,11 @@\n urn \n-strconv.Itoa(vet%5B0%5D) + %22, %22 + tostr(vet%5B1:%5D)\n+vet\n %0A%7D%0A%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-02_10-18-25",
+            "content": "@@ -22,25 +22,8 @@\n fmt%22\n-%0Aimport %22strconv%22\n %0A%0Afu\n@@ -734,36 +734,29 @@\n %5D) + %22, %22 + \n+to\n str\n-conv.Itoa\n (vet%5B1:%5D)%0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-02_10-19-35",
+            "content": "@@ -498,16 +498,28 @@\n  %22, %22 + \n+strconv.Itoa\n (vet%5B1:%5D\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-02_10-20-05",
+            "content": "@@ -41,205 +41,8 @@\n v%22%0A%0A\n-func tostr(vet %5B%5Dint) string %7B%0A    if len(vet) == 0 %7B%0A        return %22%22%0A    %7D%0A%0A    if len(vet) == 1 %7B%0A        strconv.Itoa(vet%5B0%5D)%0A    %7D%0A%0A    return strconv.Itoa(vet%5B0%5D) + %22, %22 + tostr(vet%5B1:%5D)%0A%7D%0A%0A\n func\n@@ -398,33 +398,43 @@\n      return \n-to\n str\n+conv.Itoa\n (vet\n+%5B0%5D\n )%0A    %7D%0A%0A   \n@@ -468,25 +468,54 @@\n  return \n-tostr(vet\n+strconv.Itoa(vet%5B0%5D) + %22, %22 + (vet%5B1:%5D\n )%0A    %7D%0A\n@@ -717,17 +717,58 @@\n urn \n-tostr(vet\n+strconv.Itoa(vet%5B0%5D) + %22, %22 + strconv.Itoa(vet%5B1:%5D\n )%0A%7D%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-02_10-24-04",
+            "content": "@@ -151,15 +151,8 @@\n     \n-retrun \n strc\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-04-02_10-24-38",
+            "content": "@@ -146,26 +146,26 @@\n %0A        ret\n-u\n r\n+u\n n strconv.It\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-04-02_10-24-46",
+            "content": "@@ -984,14 +984,8 @@\n tln(\n-%22%5B%22 + \n numP\n@@ -1007,14 +1007,8 @@\n vet)\n- + %22%5D%22\n )%0A%7D%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-04-02_10-25-12",
+            "content": "package main\nimport \"fmt\"\nimport \"strconv\"\n\nfunc tostr(vet []int) string {\n    if len(vet) == 0 {\n        return \"\"\n    }\n\n    if len(vet) == 1 {\n        return strconv.Itoa(vet[0])\n    }\n\n    return strconv.Itoa(vet[0]) + \", \" + tostr(vet[1:])\n}\n\nfunc eh_primo(numero, divisor int) bool {\n    if numero <= 1 {\n        return false\n    }\n\n    if numero == divisor {\n        return true\n    }\n\n    if numero % divisor == 0 {\n        return false\n    }\n\n    return eh_primo(numero, divisor+1)\n}\n\nfunc numPrimos(n, contador, atual int, vet []int) string {\n    if n == 1 {\n        vet = append(vet, 2)\n        return tostr(vet)\n    }\n\n    if contador == n {\n        return tostr(vet)\n    }\n\n    if eh_primo(atual, 2) {\n        vet = append(vet, atual)\n        return numPrimos(n, contador+1, atual+1, vet)\n    } else {\n        return numPrimos(n, contador, atual+1, vet)\n    }\n\n    return tostr(vet)\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    vet := make([]int, 0)\n    fmt.Println(\"[\" + numPrimos(n, 0, 2, vet) + \"]\")\n}\n",
+            "lines": "59"
+        }
+    ]
+}

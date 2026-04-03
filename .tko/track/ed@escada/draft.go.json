@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-02_10-27-27",
+            "content": "@@ -23,354 +23,53 @@\n mt%22%0A\n-%0Afunc escada(numDegraus, maneiras int) int %7B%0A    if numDegraus %3C= 2 %7B%0A        return 1%0A    %7D%0A%0A    if numDegraus == 3 %7B%0A        return 2%0A    %7D%0A%0A    if numDegraus %3E 3 %7B%0A        return escada(numDegraus, maneiras-1 + maneiras-3)%0A    %7D%0A%7D%0A%0Afunc main() %7B%0A    var numDegraus int %0A    fmt.Scan(&numDegraus)%0A%0A    fmt.Println(escada(numDegraus, numDegraus)\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-02_10-37-42",
+            "content": "@@ -158,24 +158,52 @@\n rn 2%0A    %7D%0A%0A\n+    if numDegraus %3E 3 %7B%0A    \n     return e\n@@ -245,16 +245,22 @@\n iras-3)%0A\n+    %7D%0A\n %7D%0A%0Afunc \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-02_10-38-12",
+            "content": "@@ -196,32 +196,28 @@\n us, \n-numDeg\n+manei\n ra\n-u\n s-1 + \n-numDeg\n+manei\n ra\n-u\n s-3)\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_10-39-06",
+            "content": "@@ -196,34 +196,36 @@\n us, \n-(manei\n+numDeg\n ra\n+u\n s-1 + \n-manei\n+numDeg\n ra\n+u\n s-3)\n-)\n %0A%7D%0A%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_10-41-49",
+            "content": "@@ -38,24 +38,34 @@\n a(numDegraus\n+, maneiras\n  int) int %7B%0A\n@@ -64,16 +64,16 @@\n ) int %7B%0A\n-\n     if n\n@@ -194,34 +194,36 @@\n raus\n+, (maneiras\n -1\n-)\n  + \n-escada(numDeg\n+manei\n ra\n-u\n s-3)\n+)\n %0A%7D%0A%0A\n@@ -287,16 +287,16 @@\n graus)%0A%0A\n-\n     fmt.\n@@ -306,24 +306,36 @@\n ntln(escada(\n+numDegraus, \n numDegraus))\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-02_10-43-53",
+            "content": "package main\nimport \"fmt\"\n\nfunc escada(numDegraus int) int {\n    if numDegraus <= 2 {\n        return 1\n    }\n\n    if numDegraus == 3 {\n        return 2\n    }\n\n    return escada(numDegraus-1) + escada(numDegraus-3)\n}\n\nfunc main() {\n    var numDegraus int \n    fmt.Scan(&numDegraus)\n\n    fmt.Println(escada(numDegraus))\n}\n",
+            "lines": "21"
+        }
+    ]
+}

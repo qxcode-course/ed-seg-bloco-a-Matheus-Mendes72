@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-02_23-39-18",
+            "content": "@@ -20,19 +20,16 @@\n  %22fmt%22%0A%0A\n-// \n func pad\n@@ -52,12 +52,13 @@\n t %7B%0A\n-%0A// \n+    %0A\n %7D%0A%0Af\n@@ -125,16 +125,22 @@\n Println(\n+padrao\n (n, m))%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-02_23-39-30",
+            "content": "@@ -131,12 +131,14 @@\n tln(\n+(\n n, m)\n+)\n %0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-02_23-39-40",
+            "content": "package main\nimport \"fmt\"\n\n// func padrao(n, m int) int {\n\n// }\n\nfunc main() {\n    var n, m int\n    fmt.Scan(&n, &m)\n\n    fmt.Println(n, m)\n}\n",
+            "lines": "13"
+        }
+    ]
+}

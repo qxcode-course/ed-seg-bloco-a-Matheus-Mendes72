@@ -1,0 +1,124 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-02_22-12-11",
+            "content": "@@ -63,21 +63,8 @@\n e %7B%0A\n-    return %22%22\n %0A%7D%0A%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-02_22-12-19",
+            "content": "@@ -71,17 +71,16 @@\n return %22\n- \n %22%0A%7D%0A%0Afun\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-02_22-12-25",
+            "content": "@@ -74,10 +74,11 @@\n urn \n-''\n+%22 %22\n %0A%7D%0A%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-02_22-12-38",
+            "content": "@@ -71,17 +71,16 @@\n return '\n- \n '%0A%7D%0A%0Afun\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-02_22-12-49",
+            "content": "@@ -72,17 +72,16 @@\n eturn ' \n-a\n '%0A%7D%0A%0Afun\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-02_22-13-03",
+            "content": "@@ -50,22 +50,22 @@\n string) \n-string\n+%5B%5Drune\n  %7B%0A    r\n@@ -74,10 +74,12 @@\n urn \n-%22%22\n+' a'\n %0A%7D%0A%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-02_22-13-23",
+            "content": "@@ -52,97 +52,32 @@\n ring\n-, k int) %7B%0A    if len(palavra) == 0 %7B%0A        return%0A    %7D%0A%0A    diagonal(palavra%5Bk%5D, k+1)\n+) string %7B%0A    return %22%22\n %0A%7D%0A%0A\n@@ -145,20 +145,8 @@\n     \n-fmt.Println(\n diag\n@@ -161,12 +161,8 @@\n avra\n-, 0)\n )%0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-02_22-17-58",
+            "content": "@@ -219,18 +219,11 @@\n rint\n-f(%22%25c%5Cn%22, \n+ln(\n diag\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-02_22-21-34",
+            "content": "@@ -142,43 +142,8 @@\n +1)%0A\n-    fmt.Printf(%22%25c%5Cn%22, palavra%5Bk%5D)%0A\n %7D%0A%0Af\n@@ -201,24 +201,43 @@\n alavra)%0A%0A   \n+ fmt.Printf(%22%25c%5Cn%22,\n  diagonal(pa\n@@ -245,11 +245,12 @@\n avra, 0)\n+)\n %0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-02_22-22-17",
+            "content": "@@ -112,32 +112,8 @@\n  %7D%0A%0A\n-    valor := palavra%5Bk%5D%0A\n     \n@@ -155,16 +155,28 @@\n rint\n-ln(valor\n+f(%22%25c%5Cn%22, palavra%5Bk%5D\n )%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_22-23-21",
+            "content": "@@ -108,16 +108,40 @@\n %0A    %7D%0A%0A\n+    valor := palavra%5Bk%5D%0A\n     diag\n@@ -145,23 +145,16 @@\n iagonal(\n-string(\n palavra%5B\n@@ -155,17 +155,16 @@\n lavra%5Bk%5D\n-)\n , k+1)%0A \n@@ -182,26 +182,13 @@\n tln(\n-string(palavra%5Bk%5D)\n+valor\n )%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-02_22-25-08",
+            "content": "@@ -136,17 +136,17 @@\n palavra%5B\n-0\n+k\n %5D), k+1)\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_22-25-21",
+            "content": "@@ -140,10 +140,9 @@\n vra%5B\n-k:\n+0\n %5D), \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_22-26-05",
+            "content": "@@ -140,10 +140,10 @@\n vra%5B\n-:\n k\n+:\n %5D), \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_22-26-17",
+            "content": "@@ -136,17 +136,16 @@\n palavra%5B\n-0\n :k%5D), k+\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_22-26-31",
+            "content": "@@ -24,48 +24,8 @@\n t%22%0A%0A\n-func tostr(palavra string) string %7B%0A%0A%7D%0A%0A\n func\n@@ -121,21 +121,22 @@\n iagonal(\n-to\n str\n+ing\n (palavra\n@@ -168,13 +168,14 @@\n tln(\n-to\n str\n+ing\n (pal\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_22-28-48",
+            "content": "@@ -60,179 +60,8 @@\n g %7B%0A\n-    if len(palavra) == 0 %7B%0A        return %22%22%0A    %7D%0A%0A    if len(palavra) == 1 %7B%0A        return string(palavra%5B0%5D)%0A    %7D%0A%0A    return string(palavra%5B0%5D + %22%5Cn %22 + palavra%5B1:%5D)\n %0A%7D%0A%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-02_22-32-44",
+            "content": "@@ -204,17 +204,16 @@\n lavra%5B0%5D\n-)\n  + %22%5Cn %22\n@@ -215,22 +215,16 @@\n %22%5Cn %22 + \n-tostr(\n palavra%5B\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-02_22-33-12",
+            "content": "@@ -330,95 +330,8 @@\n  %7D%0A%0A\n-    for i := 1; i %3C k; i++ %7B%0A        fmt.Print(%22 %22)%0A    %7D%0A    fmt.Println(palavra%5B0%5D)%0A%0A\n     \n@@ -353,18 +353,19 @@\n palavra%5B\n-1:\n+0:k\n %5D), k+1)\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-02_22-38-15",
+            "content": "@@ -451,16 +451,51 @@\n ), k+1)%0A\n+    fmt.Println(tostr(palavra%5Bk%5D))%0A\n %7D%0A%0Afunc \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-02_22-38-29",
+            "content": "@@ -20,19 +20,16 @@\n  %22fmt%22%0A%0A\n-// \n func tos\n@@ -56,19 +56,16 @@\n tring %7B%0A\n-// \n     if l\n@@ -83,19 +83,16 @@\n  == 0 %7B%0A\n-// \n         \n@@ -101,33 +101,27 @@\n turn %22%22%0A\n-// \n     %7D%0A%0A\n-//\n     \n- \n if len(p\n@@ -135,19 +135,16 @@\n  == 1 %7B%0A\n-// \n         \n@@ -173,21 +173,15 @@\n 0%5D)%0A\n-// \n     %7D%0A%0A\n-// \n     \n@@ -239,11 +239,8 @@\n :%5D)%0A\n-// \n %7D%0A%0Af\n@@ -422,24 +422,30 @@\n    diagonal(\n+tostr(\n palavra%5B1:%5D,\n@@ -443,16 +443,17 @@\n avra%5B1:%5D\n+)\n , k+1)%0A%7D\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-02_22-38-57",
+            "content": "@@ -427,23 +427,16 @@\n Println(\n-string(\n palavra%5B\n@@ -438,17 +438,16 @@\n avra%5B0%5D)\n-)\n %0A%0A    di\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-02_22-39-13",
+            "content": "@@ -372,17 +372,16 @@\n = 1; i %3C\n-=\n  k; i++ \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-02_22-39-36",
+            "content": "package main\nimport \"fmt\"\n\n// func tostr(palavra string) string {\n//     if len(palavra) == 0 {\n//         return \"\"\n//     }\n\n//     if len(palavra) == 1 {\n//         return string(palavra[0])\n//     }\n\n//     return string(palavra[0]) + \"\\n \" + tostr(palavra[1:])\n// }\n\nfunc diagonal(palavra string, k int) {\n    if len(palavra) == 0 {\n        return\n    }\n\n    for i := 1; i <= k; i++ {\n        fmt.Print(\" \")\n    }\n    fmt.Println(string(palavra[0]))\n\n    diagonal(palavra[1:], k+1)\n}\n\nfunc main() {\n    var palavra string\n    fmt.Scan(&palavra)\n\n    diagonal(palavra, 0)\n}\n",
+            "lines": "34"
+        }
+    ]
+}

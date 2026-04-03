@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-02_09-23-11",
+            "content": "@@ -23,588 +23,53 @@\n mt%22%0A\n-%0A\n func \n-eh_primo(numero, divisor int) bool %7B%0A    if numero %3C= 1 %7B%0A        return false%0A    %7D%0A%0A    if div == numero %7B%0A        return true%0A    %7D%0A%0A    if numero %25 divisor == 0 %7B%0A        return false%0A    %7D%0A%0A    eh_primo(numero, divisor+1)%0A%7D%0A%0Afunc nPrimo(numero, contador, divisor int) int %7B%0A    if count == numero %7B%0A        return 2%0A    %7D%0A%0A    if eh_primo(numero, divisor) %7B%0A        return nPrimo(numero+1, contador+1, divisor)%0A    %7D %0A        %0A    return nPrimo(numero+1, contador, divisor)%0A%7D%0A%0Afunc main() %7B%0A    var numero int%0A    fmt.Scan(&numero)%0A%0A    fmt.Println(nPrimo(numero, 0, 2)\n+main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-02_09-40-42",
+            "content": "@@ -224,23 +224,16 @@\n  %7D%0A%0A    \n-return \n eh_primo\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-02_09-40-54",
+            "content": "@@ -117,28 +117,24 @@\n %0A%0A    if div\n-isor\n  == numero %7B\n@@ -320,22 +320,19 @@\n    if co\n+u\n nt\n-ador\n  == nume\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-02_09-41-23",
+            "content": "@@ -296,19 +296,23 @@\n ntador, \n-num\n+divisor\n  int) in\n@@ -337,16 +337,19 @@\n r == num\n+ero\n  %7B%0A     \n@@ -446,19 +446,23 @@\n ador+1, \n-num\n+divisor\n )%0A    %7D \n@@ -509,19 +509,23 @@\n ntador, \n-num\n+divisor\n )%0A%7D%0A%0Afun\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-02_09-43-42",
+            "content": "@@ -384,19 +384,23 @@\n numero, \n-num\n+divisor\n ) %7B%0A    \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-02_09-44-02",
+            "content": "@@ -325,35 +325,32 @@\n  contador == num\n-ero\n  %7B%0A        retur\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-02_09-44-29",
+            "content": "@@ -281,16 +281,19 @@\n rimo(num\n+ero\n , contad\n@@ -295,27 +295,24 @@\n ontador, num\n-ero\n  int) int %7B%0A\n@@ -411,32 +411,35 @@\n eturn nPrimo(num\n+ero\n +1, contador+1, \n@@ -441,19 +441,16 @@\n r+1, num\n-ero\n )%0A    %7D \n@@ -480,16 +480,19 @@\n rimo(num\n+ero\n +1, cont\n@@ -500,19 +500,16 @@\n dor, num\n-ero\n )%0A%7D%0A%0Afun\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-02_09-46-50",
+            "content": "@@ -281,19 +281,16 @@\n rimo(num\n-ero\n , contad\n@@ -293,23 +293,22 @@\n ntador, \n-divisor\n+numero\n  int) in\n@@ -411,35 +411,32 @@\n eturn nPrimo(num\n-ero\n +1, contador+1, \n@@ -435,17 +435,22 @@\n ador+1, \n-2\n+numero\n )%0A    %7D \n@@ -480,19 +480,16 @@\n rimo(num\n-ero\n +1, cont\n@@ -494,17 +494,22 @@\n ntador, \n-2\n+numero\n )%0A%7D%0A%0Afun\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-02_09-52-20",
+            "content": "@@ -391,17 +391,19 @@\n numero, \n-2\n+num\n ) %7B%0A    \n@@ -442,23 +442,17 @@\n ador+1, \n-divisor\n+2\n )%0A    %7D \n@@ -499,23 +499,17 @@\n ntador, \n-divisor\n+2\n )%0A%7D%0A%0Afun\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-02_09-52-47",
+            "content": "@@ -296,21 +296,23 @@\n ntador, \n-atual\n+divisor\n  int) in\n@@ -358,21 +358,17 @@\n  return \n-atual\n+2\n %0A    %7D%0A%0A\n@@ -383,21 +383,22 @@\n h_primo(\n-atual\n+numero\n , 2) %7B%0A \n@@ -416,32 +416,34 @@\n rn nPrimo(numero\n++1\n , contador+1, at\n@@ -440,23 +440,23 @@\n ador+1, \n-atual+1\n+divisor\n )%0A    %7D \n@@ -481,32 +481,34 @@\n rn nPrimo(numero\n++1\n , contador, atua\n@@ -507,15 +507,15 @@\n or, \n-atual+1\n+divisor\n )%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-02_09-56-03",
+            "content": "@@ -365,10 +365,8 @@\n tual\n--1\n %0A   \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-02_09-56-17",
+            "content": "package main\nimport \"fmt\"\n\nfunc eh_primo(numero, divisor int) bool {\n    if numero <= 1 {\n        return false\n    }\n\n    if divisor == numero {\n        return true\n    }\n\n    if numero % divisor == 0 {\n        return false\n    }\n\n    return eh_primo(numero, divisor+1)\n}\n\nfunc nPrimo(numero, contador, atual int) int {\n    if contador == numero {\n        return atual-1\n    }\n\n    if eh_primo(atual, 2) {\n        return nPrimo(numero, contador+1, atual+1)\n    } \n        \n    return nPrimo(numero, contador, atual+1)\n}\n\nfunc main() {\n    var numero int\n    fmt.Scan(&numero)\n\n    fmt.Println(nPrimo(numero, 0, 2))\n}\n",
+            "lines": "37"
+        }
+    ]
+}

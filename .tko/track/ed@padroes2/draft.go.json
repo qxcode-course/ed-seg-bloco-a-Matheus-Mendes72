@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-02_23-16-06",
+            "content": "@@ -23,178 +23,53 @@\n mt%22%0A\n-%0A\n func \n-padrao(n, so\n ma\n- \n in\n-t) int\n+()\n  %7B%0A    \n-if n %3C= 1 %7B%0A        return soma%0A    %7D%0A%0A    return padrao(n-1, soma+2)%0A%7D%0A%0Afunc main() %7B%0A    var n int%0A    fmt.Scan(&n)%0A%0A    padrao(n, 3\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-02_23-20-55",
+            "content": "@@ -182,20 +182,8 @@\n     \n-fmt.Println(\n padr\n@@ -190,12 +190,11 @@\n ao(n, 3)\n-)\n %0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-02_23-21-10",
+            "content": "@@ -71,26 +71,8 @@\n 1 %7B%0A\n-        soma -= 3%0A\n     \n@@ -204,9 +204,9 @@\n (n, \n-6\n+3\n ))%0A%7D\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-02_23-22-18",
+            "content": "@@ -39,26 +39,16 @@\n (n, soma\n-, contador\n  int) in\n@@ -79,68 +79,44 @@\n     \n-return soma\n+soma -= 3\n %0A    \n-%7D%0A%0A\n     \n-soma = contador*contador + 2*contador\n+return soma%0A    %7D%0A\n %0A   \n@@ -143,20 +143,10 @@\n soma\n-, contador+1\n++2\n )%0A%7D%0A\n@@ -222,12 +222,9 @@\n (n, \n-3, 1\n+6\n ))%0A%7D\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_23-32-28",
+            "content": "@@ -113,17 +113,16 @@\n    soma \n-+\n = contad\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_23-32-45",
+            "content": "@@ -266,14 +266,14 @@\n o(n, 3, \n-2\n+1\n ))%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_23-33-29",
+            "content": "@@ -113,16 +113,17 @@\n    soma \n++\n = contad\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_23-33-38",
+            "content": "package main\nimport \"fmt\"\n\nfunc padrao(n, soma, contador int) int {\n    if n <= 1 {\n        return soma\n    }\n\n    soma = contador*contador + 2*contador\n    return padrao(n-1, soma, contador+1)\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    fmt.Println(padrao(n, 3, 2))\n}\n",
+            "lines": "18"
+        }
+    ]
+}

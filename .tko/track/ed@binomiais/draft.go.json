@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-02_10-46-01",
+            "content": "@@ -23,56 +23,8 @@\n mt%22%0A\n-%0Afunc binomiais(n, k int) int %7B%0A    return 0%0A%7D%0A%0A\n func\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-04-02_10-46-25",
+            "content": "@@ -59,157 +59,16 @@\n     \n-if k == 0 %7C%7C k == n %7B%0A        return 1%0A    %7D%0A%0A    if k %3E= 1 && k %3C= n-1 %7B%0A        return binomiais(n-1, k-1) + binomiais(n-1, k)%0A    %7D%0A%0A    return -1\n+return 0\n %0A%7D%0A%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-02_10-48-35",
+            "content": "package main\nimport \"fmt\"\n\nfunc binomiais(n, k int) int {\n    if k == 0 || k == n {\n        return 1\n    }\n\n    if k >= 1 && k <= n-1 {\n        return binomiais(n-1, k-1) + binomiais(n-1, k)\n    }\n\n    return -1\n}\n\nfunc main() {\n    var n, k int\n    fmt.Scan(&n, &k)\n\n    fmt.Println(binomiais(n, k))\n}\n",
+            "lines": "21"
+        }
+    ]
+}

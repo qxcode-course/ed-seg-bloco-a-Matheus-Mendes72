@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-02_22-45-24",
+            "content": "@@ -23,209 +23,53 @@\n mt%22%0A\n-%0A\n func \n-palavPeda%C3%A7o(palavra string) %7B%0A    if len(palavra) == 0 %7B%0A        return%0A    %7D%0A%0A    palavPeda%C3%A7o(palavra%5B1:%5D)%0A%7D%0A%0Afunc main() %7B%0A    var palavra string%0A    fmt.Scan(&palavra)%0A%0A    palavPeda%C3%A7o(palavra\n+main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-02_22-48-40",
+            "content": "@@ -137,43 +137,8 @@\n :%5D)%0A\n-    fmt.Printf(%22%25c%5Cn%22, palavra%5B0%5D)%0A\n %7D%0A%0Af\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-02_22-49-24",
+            "content": "@@ -169,10 +169,8 @@\n ra%5B0\n-+1\n %5D)%0A%7D\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_22-49-56",
+            "content": "@@ -112,65 +112,67 @@\n     \n-fmt.Printf(%22%25c%5Cn%22, palavra%5B0%5D)%0A    palavPeda%C3%A7o(palavra%5B1:\n+palavPeda%C3%A7o(palavra%5B1:%5D)%0A    fmt.Printf(%22%25c%5Cn%22, palavra%5B0+1\n %5D)%0A%7D\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_22-50-49",
+            "content": "@@ -134,16 +134,19 @@\n  palavra\n+%5B0%5D\n )%0A    pa\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_22-51-00",
+            "content": "@@ -121,11 +121,18 @@\n rint\n-ln(\n+f(%22%25c%5Cn%22, \n pala\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_22-51-12",
+            "content": "@@ -108,35 +108,35 @@\n  %7D%0A%0A    \n-palavPeda%C3%A7o\n+fmt.Println\n (palavra\n %5B1:%5D)%0A  \n@@ -131,37 +131,33 @@\n avra\n-%5B1:%5D\n )%0A    \n-fmt.Println\n+palavPeda%C3%A7o\n (palavra\n )%0A%7D%0A\n@@ -148,24 +148,28 @@\n da%C3%A7o(palavra\n+%5B1:%5D\n )%0A%7D%0A%0Afunc ma\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-02_22-51-21",
+            "content": "package main\nimport \"fmt\"\n\nfunc palavPeda\u00e7o(palavra string) {\n    if len(palavra) == 0 {\n        return\n    }\n\n    palavPeda\u00e7o(palavra[1:])\n    fmt.Println(palavra)\n}\n\nfunc main() {\n    var palavra string\n    fmt.Scan(&palavra)\n\n    palavPeda\u00e7o(palavra)\n}\n",
+            "lines": "18"
+        }
+    ]
+}
