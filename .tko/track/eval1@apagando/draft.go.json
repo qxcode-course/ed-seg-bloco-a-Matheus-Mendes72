@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_17-08-49",
+            "content": "@@ -38,207 +38,27 @@\n  %7B%0A%09\n-var qtdPessoas, qtdPessoas_deixaramFila int%0A%09fmt.Scan(&qtdPessoas)%0A%0A%09fila := make(%5B%5Dint, qtdPessoas)%0A%09for int i := 0; i %3C qtdPessoas; i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Scan(&qtdPessoas_deixaramFila\n+fmt.Println(%22heloo%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-13_17-12-30",
+            "content": "@@ -140,16 +140,20 @@\n s)%0A%09for \n+int \n i := 0; \n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-13_17-13-06",
+            "content": "@@ -196,96 +196,22 @@\n %5D)%0A%09\n-%09fmt.Println(fila%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Scan(&qtdPessoas_deixaramFila)%0A%0A%09fmt.Println(qtdPessoas, \n+%7D%0A%0A%09fmt.Scan(&\n qtdP\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-13_17-13-42",
+            "content": "@@ -191,19 +191,42 @@\n ila%5Bi%5D)%0A\n+%09%09fmt.Println(fila%5Bi%5D)%0A\n %09%7D%0A\n-\n %0A%09fmt.Sc\n@@ -260,133 +260,55 @@\n )%0A%0A%09\n-pessoasImpacientes := make(map%5Bint%5Dbool)%0A%09for i := 0; i %3C qtdPessoas_deixaramFila; i++ %7B%0A%09%09fmt.Scan(&pessoasImpacientes%5Bi%5D)%0A%09%7D\n+fmt.Println(qtdPessoas, qtdPessoas_deixaramFila)\n %0A%7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-13_17-16-02",
+            "content": "@@ -328,213 +328,40 @@\n %7B%0A%09%09\n-indice := 0%0A%09%09fmt.Scan(&indice)%0A%09%09pessoasImpacientes%5Bindice%5D = true%0A%09%7D%0A%0A%09for _, valor := range fila %7B%0A%09%09impaciente, _ := pessoasImpacientes%5Bvalor%5D%0A%0A%09%09if impaciente == false %7B%0A%09%09%09fmt.Printf(%22%25v%22, valor)%0A%09%09%7D\n+fmt.Scan(&pessoasImpacientes%5Bi%5D)\n %0A%09%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-13_17-19-34",
+            "content": "@@ -516,17 +516,16 @@\n intf(%22%25v\n- \n %22, valor\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_17-19-43",
+            "content": "@@ -537,23 +537,7 @@\n %7D%0A%09%7D\n-%0A%0A%09fmt.Println()\n %0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-13_17-20-01",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar qtdPessoas, qtdPessoas_deixaramFila int\n\tfmt.Scan(&qtdPessoas)\n\n\tfila := make([]int, qtdPessoas)\n\tfor i := 0; i < qtdPessoas; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tfmt.Scan(&qtdPessoas_deixaramFila)\n\n\tpessoasImpacientes := make(map[int]bool)\n\tfor i := 0; i < qtdPessoas_deixaramFila; i++ {\n\t\tindice := 0\n\t\tfmt.Scan(&indice)\n\t\tpessoasImpacientes[indice] = true\n\t}\n\n\tfor _, valor := range fila {\n\t\timpaciente, _ := pessoasImpacientes[valor]\n\n\t\tif impaciente == false {\n\t\t\tfmt.Printf(\"%v \", valor)\n\t\t}\n\t}\n\n\tfmt.Println()\n}\n",
+            "lines": "30"
+        }
+    ]
+}

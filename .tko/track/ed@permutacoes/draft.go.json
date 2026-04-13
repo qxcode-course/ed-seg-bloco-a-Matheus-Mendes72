@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-06_10-20-51",
+            "content": "@@ -23,138 +23,53 @@\n mt%22%0A\n-%0A// func permutacao(ref string) string %7B%0A//     if %0A// %7D%0A%0Afunc main() %7B%0A    var ref string%0A    fmt.Scan(&ref)%0A%0A    fmt.Println(ref\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-13_14-15-11",
+            "content": "@@ -150,23 +150,11 @@\n tln(\n-permutacao(\n ref)\n-)\n %0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-13_14-27-56",
+            "content": "@@ -146,15 +146,27 @@\n Println(\n+permutacao(\n ref)\n+)\n %0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-13_14-28-03",
+            "content": "@@ -24,758 +24,118 @@\n t%22%0A%0A\n-backtrack(pos, tamanho int, ref string, usado %5B%5Dbool, atual %5B%5Drune, resultado %5B%5Dstring) %7B%0A    if (pos == tamanho) %7B%0A        resultado = append(resultado, string(atual))%0A        return%0A    %7D%0A%0A    for (i := 0; i %3C tamanho; i++) %7B%0A        if (!usado%5Bi%5D) %7B%0A            usado%5Bi%5D = true%0A            atual%5Bpos%5D = rune%5Bref%5Bi%5D%5D%0A            %0A            backtrack(pos+1, tamanho, ref, usado, atual, resultado)%0A            usado%5Bi%5D = false%0A%0A        %7D%0A    %7D%0A%7D%0A%0Afunc main() %7B%0A    var ref string%0A    fmt.Scan(&ref)%0A%0A    tamanho = len(ref)%0A    usado := make(%5B%5Dbool, tamanho)%0A    atual := make(%5B%5Drune, tamanho)%0A    var resultado %5B%5Dstring%0A%0A    backtrack(0, tamanho, ref usado, atual, resultado)%0A%0A    sort.Strings(resultado)%0A%0A    for (_, res := range resultado) %7B%0A    \n+// func permutacao(ref string) string %7B%0A//     if %0A// %7D%0A%0Afunc main() %7B%0A    var ref string%0A    fmt.Scan(&ref)%0A%0A\n     \n@@ -152,15 +152,9 @@\n n(re\n-s)%0A    %7D\n+f)\n %0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-13_14-56-59",
+            "content": "@@ -664,33 +664,32 @@\n (0, tamanho, ref\n-,\n  usado, atual, r\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_14-57-45",
+            "content": "@@ -737,16 +737,17 @@\n     for \n+(\n _, res :\n@@ -763,16 +763,17 @@\n esultado\n+)\n  %7B%0A     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_14-59-50",
+            "content": "@@ -219,16 +219,17 @@\n     for \n+(\n i := 0; \n@@ -244,16 +244,17 @@\n nho; i++\n+)\n  %7B%0A     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_15-00-06",
+            "content": "@@ -20,21 +20,16 @@\n  %22fmt%22%0A%0A\n-func \n backtrac\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_15-01-14",
+            "content": "@@ -337,16 +337,16 @@\n rune\n-(\n+%5B\n ref%5Bi%5D\n-)\n+%5D\n %0A   \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_15-01-39",
+            "content": "@@ -22,22 +22,8 @@\n fmt%22\n-%0Aimport %22sort%22\n %0A%0Afu\n@@ -537,17 +537,16 @@\n tamanho \n-:\n = len(re\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_15-02-16",
+            "content": "@@ -126,25 +126,16 @@\n %5Dstring)\n- %5B%5Dstring\n  %7B%0A    i\n@@ -167,15 +167,8 @@\n     \n-return \n resu\n@@ -208,16 +208,31 @@\n atual))%0A\n+        return%0A\n     %7D%0A%0A \n@@ -664,28 +664,16 @@\n ing%0A%0A   \n- resultado =\n  backtra\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-13_15-04-15",
+            "content": "@@ -178,16 +178,28 @@\n   return\n+ resultado =\n  append(\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_15-04-49",
+            "content": "@@ -475,30 +475,8 @@\n    %7D\n-%0A%0A    return resultado\n %0A%7D%0A%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-13_15-05-20",
+            "content": "@@ -675,16 +675,28 @@\n ing%0A%0A   \n+ resultado =\n  backtra\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-13_15-05-30",
+            "content": "@@ -369,28 +369,16 @@\n         \n- resultado =\n  backtra\n@@ -679,20 +679,8 @@\n %0A   \n- resultado =\n  bac\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-13_15-08-49",
+            "content": "package main\nimport \"fmt\"\nimport \"sort\"\n\nfunc backtrack(pos, tamanho int, ref string, usado []bool, atual []rune, resultado []string) []string {\n    if (pos == tamanho) {\n        return append(resultado, string(atual))\n    }\n\n    for i := 0; i < tamanho; i++ {\n        if (!usado[i]) {\n            usado[i] = true\n            atual[pos] = rune(ref[i])\n            \n            resultado = backtrack(pos+1, tamanho, ref, usado, atual, resultado)\n            usado[i] = false\n\n        }\n    }\n\n    return resultado\n}\n\nfunc main() {\n    var ref string\n    fmt.Scan(&ref)\n\n    tamanho := len(ref)\n    usado := make([]bool, tamanho)\n    atual := make([]rune, tamanho)\n    var resultado []string\n\n    resultado = backtrack(0, tamanho, ref, usado, atual, resultado)\n\n    sort.Strings(resultado)\n\n    for _, res := range resultado {\n        fmt.Println(res)\n    }\n}\n",
+            "lines": "40"
+        }
+    ]
+}

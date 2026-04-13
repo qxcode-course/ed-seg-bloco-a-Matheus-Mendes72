@@ -1,19 +1,17 @@
 package main
 import "fmt"
 
-func padrao(n, m, soma int) int {
-    if m == 0 {
-        return soma
+func padrao(n, m int) int {
+    if m == 1 {
+        return n
     }
-
-    soma = 
     
-    return padrao(n-1, m-1, soma)
+    return padrao(n, m-1) + (n-2)
 }
 
 func main() {
     var n, m int
     fmt.Scan(&n, &m)
 
-    fmt.Println(padrao(n, m, 1))
+    fmt.Println(padrao(n, m))
 }

@@ -22,18 +22,18 @@ func search(grid [][]rune, startPos, endPos Pos) bool {
 	}
 
 	grid[l][c] = '.'
-
+	
 	if l == endPos.l && c == endPos.c {
 		return true
 	}
-
+	
 	if search(grid, Pos{l-1, c}, endPos) ||
-		search(grid, Pos{l+1, c}, endPos) ||
-		search(grid, Pos{l, c-1}, endPos) ||
-		search(grid, Pos{l, c+1}, endPos) {
-			return true
+	search(grid, Pos{l+1, c}, endPos) ||
+	search(grid, Pos{l, c-1}, endPos) ||
+	search(grid, Pos{l, c+1}, endPos) {
+		return true
 	}
-
+	
 	grid[l][c] = ' '
 
 	return false

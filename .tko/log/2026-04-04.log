@@ -1,0 +1,15 @@
+2026-04-04 06:56:11, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-04-04 06:56:17, EXEC, v:1, k:ed@padroes3, mode:FULL, size:19, fail:COMP
+2026-04-04 06:59:36, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:0, size:19
+2026-04-04 07:20:01, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:10, size:19
+2026-04-04 07:20:23, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:10, size:19
+2026-04-04 07:20:37, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:10, size:19
+2026-04-04 07:23:13, EXEC, v:1, k:ed@padroes3, mode:FULL, size:19, fail:COMP
+2026-04-04 07:23:23, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:10, size:17
+2026-04-04 07:26:53, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-04-04 07:27:20, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:10, size:19
+2026-04-04 07:28:32, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:10, size:19
+2026-04-04 07:30:22, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:10, size:19
+2026-04-04 07:32:33, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:10, size:19
+2026-04-04 07:33:19, EXEC, v:1, k:ed@padroes3, mode:FULL, size:17, fail:COMP
+2026-04-04 07:33:26, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:0, size:17

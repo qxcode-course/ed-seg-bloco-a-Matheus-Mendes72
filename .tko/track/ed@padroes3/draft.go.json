@@ -12,8 +12,73 @@
         },
         {
             "label": "2026-04-02_23-39-40",
-            "content": "package main\nimport \"fmt\"\n\n// func padrao(n, m int) int {\n\n// }\n\nfunc main() {\n    var n, m int\n    fmt.Scan(&n, &m)\n\n    fmt.Println(n, m)\n}\n",
+            "content": "@@ -20,16 +20,19 @@\n  %22fmt%22%0A%0A\n+// \n func pad\n@@ -39,22 +39,16 @@\n rao(n, m\n-, soma\n  int) in\n@@ -55,102 +55,12 @@\n t %7B%0A\n-    if m == 0 %7B%0A        return soma%0A    %7D%0A%0A    soma = %0A    %0A    return padrao(n-1, m-1, soma)%0A\n+%0A// \n %7D%0A%0Af\n@@ -131,23 +131,12 @@\n tln(\n-padrao(n, m, 1)\n+n, m\n )%0A%7D%0A\n",
             "lines": "13"
+        },
+        {
+            "label": "2026-04-04_06-56-17",
+            "content": "@@ -20,19 +20,16 @@\n  %22fmt%22%0A%0A\n-// \n func pad\n@@ -54,19 +54,16 @@\n ) int %7B%0A\n-// \n     if m\n@@ -70,19 +70,16 @@\n  == 0 %7B%0A\n-// \n         \n@@ -94,21 +94,15 @@\n oma%0A\n-//\n     \n- \n %7D%0A%0A\n-// \n     \n@@ -114,19 +114,16 @@\n = %0A    %0A\n-// \n     retu\n@@ -148,19 +148,16 @@\n , soma)%0A\n-// \n %7D%0A%0Afunc \n@@ -211,11 +211,8 @@\n %0A   \n- //\n  fmt\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-04_06-59-36",
+            "content": "@@ -20,16 +20,19 @@\n  %22fmt%22%0A%0A\n+// \n func pad\n@@ -57,16 +57,19 @@\n ) int %7B%0A\n+// \n     if m\n@@ -76,12 +76,15 @@\n  == \n-1\n+0\n  %7B%0A\n+// \n     \n@@ -102,19 +102,22 @@\n soma\n- +1%0A\n+%0A// \n     %7D%0A%0A\n+// \n     \n@@ -127,45 +127,21 @@\n a = \n-n + ((n-2) * m * (m-1) /2) \n %0A    %0A\n+//  \n    \n- \n retu\n@@ -151,16 +151,18 @@\n padrao(n\n+-1\n , m-1, s\n@@ -166,16 +166,19 @@\n , soma)%0A\n+// \n %7D%0A%0Afunc \n@@ -224,24 +224,27 @@\n &n, &m)%0A%0A   \n+ //\n  fmt.Println\n@@ -257,14 +257,14 @@\n o(n, m, \n-0\n+1\n ))%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-04_07-20-01",
+            "content": "@@ -117,17 +117,16 @@\n = n + ((\n-(\n n-2) * m\n@@ -137,12 +137,10 @@\n m-1)\n-)\n  /\n- \n 2) %0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-04_07-20-23",
+            "content": "@@ -89,16 +89,19 @@\n urn soma\n+ +1\n %0A    %7D%0A%0A\n@@ -264,14 +264,14 @@\n o(n, m, \n-1\n+0\n ))%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-04_07-20-37",
+            "content": "@@ -32,24 +32,30 @@\n  padrao(n, m\n+, soma\n  int) int %7B%0A\n@@ -85,17 +85,20 @@\n  return \n-1\n+soma\n %0A    %7D%0A%0A\n@@ -172,22 +172,14 @@\n  m-1\n-) + (n-2)*(m-1\n+, soma\n )%0A%7D%0A\n@@ -259,13 +259,16 @@\n rao(n, m\n+, 1\n ))%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-04_07-23-13",
+            "content": "@@ -86,16 +86,59 @@\n  1%0A    %7D\n+%0A%0A    soma = n + (((n-2) * m * (m-1)) / 2) \n %0A    %0A  \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-04_07-23-23",
+            "content": "@@ -36,22 +36,16 @@\n rao(n, m\n-, soma\n  int) in\n@@ -83,46 +83,15 @@\n urn \n-soma\n+1\n %0A    %7D\n-%0A%0A    soma = ((n-2)* (m-1)) \n %0A   \n@@ -120,14 +120,22 @@\n  m-1\n-, soma\n+) + (n-2)*(m-1\n )%0A%7D%0A\n@@ -219,11 +219,8 @@\n n, m\n-, 1\n ))%0A%7D\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-04_07-27-20",
+            "content": "@@ -115,14 +115,17 @@\n  ((n\n+-2\n )\n- \n * (m\n+-1\n )) %0A\n@@ -148,18 +148,16 @@\n padrao(n\n--2\n , m-1, s\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-04_07-28-32",
+            "content": "@@ -121,22 +121,11 @@\n * (m\n-+1) * (m)) / 2\n+)) \n %0A   \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-04_07-30-22",
+            "content": "@@ -112,10 +112,30 @@\n a = \n-n-\n+((n) * (m+1) * (m)) / \n 2%0A  \n@@ -156,16 +156,18 @@\n padrao(n\n+-2\n , m-1, s\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-04_07-32-33",
+            "content": "@@ -89,15 +89,34 @@\n urn \n-n\n+soma\n %0A    %7D\n+%0A%0A    soma = n-2\n %0A   \n@@ -145,16 +145,14 @@\n  m-1\n-) + (n-2\n+, soma\n )%0A%7D%0A\n@@ -232,13 +232,16 @@\n rao(n, m\n+, 1\n ))%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-04_07-33-19",
+            "content": "@@ -32,24 +32,30 @@\n  padrao(n, m\n+, soma\n  int) int %7B%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-04_07-33-26",
+            "content": "package main\nimport \"fmt\"\n\nfunc padrao(n, m int) int {\n    if m == 1 {\n        return n\n    }\n    \n    return padrao(n, m-1) + (n-2)\n}\n\nfunc main() {\n    var n, m int\n    fmt.Scan(&n, &m)\n\n    fmt.Println(padrao(n, m))\n}\n",
+            "lines": "17"
         }
     ]
 }

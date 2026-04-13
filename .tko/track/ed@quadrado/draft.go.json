@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-06_15-21-15",
+            "content": "@@ -23,101 +23,53 @@\n mt%22%0A\n-%0Afunc quadrado(n int)  %7B%0A    %0A%7D%0A%0Afunc main() %7B%0A    var n int%0A    fmt.Scan(&n)%0A%0A    quadrado(n\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-06_15-31-01",
+            "content": "package main\nimport \"fmt\"\n\nfunc quadrado(n int)  {\n    \n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    quadrado(n)\n}\n",
+            "lines": "13"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_17-24-29",
+            "content": "@@ -170,268 +170,40 @@\n     \n-%7D%0A%0A\n     \n-varAuxiliar := make(%5B%5Dint, len(animais)-1)%0A    contador := 0%0A%0A    for i := 0; i %3C len(animais) -1; i++ %7B%0A        varAuxiliar%5Bi%5D = animais%5Bi+1%5D%0A%0A        if (varAuxiliar%5Bi%5D == -animais%5Bi%5D) %7B%0A            contador++%0A        %7D%0A    %7D%0A%0A    fmt.Println(contador)\n+fmt.Println(animais%5Bi%5D)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-04-13_17-28-29",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtd int\n    fmt.Scan(&qtd)\n\n    animais := make([]int, qtd)\n    for i := 0; i < qtd; i++ {\n        fmt.Scan(&animais[i])\n    }\n\n    varAuxiliar := make([]int, len(animais)-1)\n    contador := 0\n\n    for i := 0; i < len(animais) -1; i++ {\n        varAuxiliar[i] = animais[i+1]\n\n        if (varAuxiliar[i] == -animais[i]) {\n            contador++\n        }\n    }\n\n    fmt.Println(contador)\n}\n",
+            "lines": "24"
+        }
+    ]
+}

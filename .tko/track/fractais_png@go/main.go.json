@@ -2,8 +2,108 @@
     "patches": [
         {
             "label": "2026-04-02_08-46-19",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(250, 500) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.Walk(100)             // anda 100 pixels\n\tpen.Left(30)              // dobra 30 graus para esquerda\n\tpen.Walk(100)             // anda 100 pixels\n\tpen.DrawCircle(50)        // desenha um c\u00edrculo de raio 50\n\tpen.Right(60)             // gira para direita 60 graus\n\tpen.Walk(150)\n\tfor range 10 {\n\t\tpen.Up()\n\t\tpen.Walk(30) // anda sem riscar\n\t\tpen.Down()\n\n\t\tpen.DrawCircle(10) //desenha um circulo pequeno\n\n\t\tpen.Up()\n\t\tpen.Walk(-30) // volta sem riscar\n\t\tpen.Down()\n\n\t\tpen.Left(36) // gira\n\t}\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -513,17 +513,17 @@\n en.Walk(\n-2\n+1\n 00)     \n",
             "lines": "39"
+        },
+        {
+            "label": "2026-04-06_16-21-24",
+            "content": "@@ -505,33 +505,33 @@\n uerda%0A%09pen.Walk(\n-1\n+2\n 00)             \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-06_16-21-38",
+            "content": "@@ -355,84 +355,8 @@\n (90)\n-%0A%09%0A%09for range 4 %7B%0A%09%09pen.Walk(100)%0A%09%09pen.Right(90)%0A%09%7D%0A%0A%09// pen.SetHeading(90)\n     \n@@ -399,19 +399,16 @@\n a cima%0A%09\n-// \n pen.Walk\n@@ -441,27 +441,24 @@\n 100 pixels%0A%09\n-// \n pen.Left(30)\n@@ -504,19 +504,16 @@\n querda%0A%09\n-// \n pen.Walk\n@@ -550,19 +550,16 @@\n pixels%0A%09\n-// \n pen.Draw\n@@ -610,19 +610,16 @@\n aio 50%0A%09\n-// \n pen.Righ\n@@ -667,19 +667,16 @@\n  graus%0A%09\n-// \n pen.Walk\n@@ -682,19 +682,16 @@\n k(150)%0A%09\n-// \n for rang\n@@ -698,19 +698,16 @@\n e 10 %7B%0A%09\n-// \n %09pen.Up(\n@@ -701,35 +701,32 @@\n 0 %7B%0A%09%09pen.Up()%0A%09\n-// \n %09pen.Walk(30) //\n@@ -735,35 +735,32 @@\n nda sem riscar%0A%09\n-// \n %09pen.Down()%0A%0A%09//\n@@ -753,27 +753,24 @@\n en.Down()%0A%0A%09\n-// \n %09pen.DrawCir\n@@ -808,19 +808,16 @@\n queno%0A%0A%09\n-// \n %09pen.Up(\n@@ -819,19 +819,16 @@\n n.Up()%0A%09\n-// \n %09pen.Wal\n@@ -855,19 +855,16 @@\n riscar%0A%09\n-// \n %09pen.Dow\n@@ -869,19 +869,16 @@\n own()%0A%0A%09\n-// \n %09pen.Lef\n@@ -892,19 +892,16 @@\n / gira%0A%09\n-// \n %7D%0A%0A%09pen.\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-06_16-24-13",
+            "content": "@@ -287,18 +287,18 @@\n osition(\n-10\n+25\n 0, 500) \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-06_16-24-53",
+            "content": "@@ -292,17 +292,17 @@\n on(100, \n-4\n+5\n 00) // m\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-06_16-25-05",
+            "content": "@@ -380,17 +380,17 @@\n en.Walk(\n-3\n+1\n 00)%0A%09%09pe\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-06_16-25-15",
+            "content": "@@ -333,18 +333,16 @@\n  y 500%0A%09\n-//\n pen.SetH\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-06_16-25-23",
+            "content": "@@ -333,16 +333,18 @@\n  y 500%0A%09\n+//\n pen.SetH\n@@ -359,69 +359,39 @@\n 0)%0A%09\n-side := 300.0%0A%09%0A%09for side %3E 10%7B%0A%09%09pen.Walk(side)%0A%09%09side += -5\n+%0A%09for range 4 %7B%0A%09%09pen.Walk(300)\n %0A%09%09p\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-06_16-26-57",
+            "content": "@@ -143,14 +143,14 @@\n Pen(\n-4\n+5\n 00, \n-4\n+5\n 00) \n@@ -293,12 +293,13 @@\n n(10\n+0\n , \n-39\n+40\n 0) /\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-06_16-27-22",
+            "content": "@@ -114,134 +114,8 @@\n %0A%7D%0A%0A\n-fun embuahhh(pen *Pen, dist float64) %7B%0A%09if dist %3C 10 %7B%0A%09%09return%0A%09%7D%0A%09%0A%09pen.Walk(dist)%0A%09pen.Right(90)%0A%09embuahhh(pen, dist-5)%0A%7D%0A%0A\n func\n@@ -356,26 +356,88 @@\n 0)%0A%09\n-embuahhh(pen, 390)\n+side := 300.0%0A%09%0A%09for side %3E 10%7B%0A%09%09pen.Walk(side)%0A%09%09side += -5%0A%09%09pen.Right(90)%0A%09%7D\n %0A%0A%09/\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-06_16-29-58",
+            "content": "@@ -113,17 +113,16 @@\n )%0A%7D%0A%0Afun\n-c\n  embuahh\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-06_16-30-14",
+            "content": "@@ -184,35 +184,8 @@\n %7D%0A%09%0A\n-%09pen.SetLineWidth(dist/20)%0A\n %09pen\n@@ -235,10 +235,9 @@\n ist-\n-20\n+5\n )%0A%7D%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-06_16-31-37",
+            "content": "@@ -203,17 +203,17 @@\n th(dist/\n-3\n+2\n 0)%0A%09pen.\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-06_16-32-01",
+            "content": "@@ -258,17 +258,17 @@\n n, dist-\n-1\n+2\n 0)%0A%7D%0A%0Afu\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-06_16-32-11",
+            "content": "@@ -216,95 +216,56 @@\n pen.\n-Right(90)%0A%09pen.Up()%0A%09pen.Walk(dist)%0A%09embuahhh(pen, dist-10)%0A%09pen.Down()%0A%09pen.Walk(-dist\n+Walk(dist)%0A%09pen.Right(90)%0A%09embuahhh(pen, dist-10\n )%0A%7D%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-06_16-35-58",
+            "content": "@@ -288,24 +288,8 @@\n n()%0A\n-%09pen.Right(-90)%0A\n %09pen\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-06_16-37-15",
+            "content": "@@ -211,24 +211,8 @@\n 30)%0A\n-%09pen.Walk(dist)%0A\n %09pen\n@@ -232,16 +232,32 @@\n en.Up()%0A\n+%09pen.Walk(dist)%0A\n %09embuahh\n@@ -293,34 +293,34 @@\n pen.\n-Walk(-dist)%0A%09pen.Right(-90\n+Right(-90)%0A%09pen.Walk(-dist\n )%0A%7D%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-06_16-39-48",
+            "content": "@@ -293,34 +293,34 @@\n pen.\n-Right(-90)%0A%09pen.Walk(-dist\n+Walk(-dist)%0A%09pen.Right(-90\n )%0A%7D%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-06_16-40-02",
+            "content": "@@ -207,26 +207,16 @@\n ist/30)%0A\n-%09pen.Up()%0A\n %09pen.Wal\n@@ -234,24 +234,34 @@\n n.Right(90)%0A\n+%09pen.Up()%0A\n %09embuahhh(pe\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-06_16-40-24",
+            "content": "@@ -289,21 +289,23 @@\n ()%0A%09pen.\n-Lef\n+Righ\n t(\n+-\n 90)%0A%09pen\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-06_16-40-41",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc embuahhh(pen *Pen, dist float64) {\n\tif dist < 10 {\n\t\treturn\n\t}\n\t\n\tpen.SetLineWidth(dist/30)\n\tpen.Up()\n\tpen.Walk(dist)\n\tpen.Right(90)\n\tembuahhh(pen, dist-10)\n\tpen.Down()\n\tpen.Left(90)\n\tpen.Walk(-dist)\n}\n\nfunc main() {\n\tpen := NewPen(400, 400)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(10, 390) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)\n\tembuahhh(pen, 390)\n\n\t// pen.SetHeading(90)        // coloca o pincel apontando para cima\n\t// pen.Walk(100)             // anda 100 pixels\n\t// pen.Left(30)              // dobra 30 graus para esquerda\n\t// pen.Walk(100)             // anda 100 pixels\n\t// pen.DrawCircle(50)        // desenha um c\u00edrculo de raio 50\n\t// pen.Right(60)             // gira para direita 60 graus\n\t// pen.Walk(150)\n\t// for range 10 {\n\t// \tpen.Up()\n\t// \tpen.Walk(30) // anda sem riscar\n\t// \tpen.Down()\n\n\t// \tpen.DrawCircle(10) //desenha um circulo pequeno\n\n\t// \tpen.Up()\n\t// \tpen.Walk(-30) // volta sem riscar\n\t// \tpen.Down()\n\n\t// \tpen.Left(36) // gira\n\t// }\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "57"
         }
     ]
 }
