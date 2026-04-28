@@ -32,6 +32,21 @@
         },
         {
             "label": "2026-03-14_07-24-43",
+            "content": "@@ -118,140 +118,19 @@\n  + d\n-)%0A%0A        if (fugitivo == 16) %7B%0A            fugitivo = 0;%0A        %7D else if (fugitivo == -1) %7B%0A            fugitivo = 15;%0A        %7D\n+ + 16) %25 16\n %0A%0A  \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-17_20-01-15",
+            "content": "@@ -126,24 +126,31 @@\n        if (f\n+ugitivo\n  == 16) %7B%0A  \n@@ -160,16 +160,23 @@\n        f\n+ugitivo\n  = 0;%0A  \n@@ -189,24 +189,31 @@\n %7D else if (f\n+ugitivo\n  == -1) %7B%0A  \n@@ -223,16 +223,23 @@\n        f\n+ugitivo\n  = 15;%0A \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-17_20-01-27",
+            "content": "@@ -118,19 +118,112 @@\n  + d\n- + 16) %25 16\n+)%0A%0A        if (f == 16) %7B%0A            f = 0;%0A        %7D else if (f == -1) %7B%0A            f = 15;%0A        %7D\n %0A%0A  \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-17_20-01-35",
             "content": "package main\nimport \"fmt\"\nfunc main() {\n    var h, p, f, d int\n    fmt.Scan(&h, &p, &f, &d)\n\n    for {\n        f = (f + d + 16) % 16\n\n        if (f == h) {\n            fmt.Println(\"S\")\n            break\n        }\n        if (f == p) {\n            fmt.Println(\"N\")\n            break\n        }\n    }\n}\n",
             "lines": "19"
         }

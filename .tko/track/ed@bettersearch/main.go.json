@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_13-45-15",
+            "content": "@@ -124,236 +124,27 @@\n  %7B%0A%09\n-low := 0%0A%09high := len(slice)%0A%0A%09for low %3C high %7B%0A%09%09mid := low + (high - low) / 2%0A%0A%09%09if value %3C slice%5Bmid%5D %7B%0A%09%09%09high = mid%0A%09%09%7D else if value %3E slice%5Bmid%5D %7B%0A%09%09%09low = mid%0A%09%09%7D else if value == slice%5Bmid%5D %7B%0A%09%09%09return true, mid%0A%09%09%7D%0A%09%7D%0A\n+_, _ = slice, value\n %0A%09re\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-28_13-56-33",
+            "content": "@@ -155,31 +155,26 @@\n )%0A%0A%09for \n-high - low %3C= 1\n+low %3C high\n  %7B%0A%09%09mid\n@@ -349,58 +349,10 @@\n %09%09%7D%0A\n-%0A%09%09// if high - low %3C= 1 %7B%0A%09%09// %09break%0A%09%09// %7D%0A%09%7D%0A%0A\n+%09%7D\n %0A%0A%09r\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-28_13-59-55",
+            "content": "@@ -153,15 +153,13 @@\n ce)%0A\n-%09res :=\n+%0A%09for\n  hig\n@@ -169,44 +169,15 @@\n  low\n-%0A%0A%09for res %3C= 1 %7B%0A%09%09res = high - low\n+ %3C= 1 %7B\n %0A%09%09m\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-28_14-00-52",
+            "content": "@@ -153,26 +153,62 @@\n ce)%0A\n-%0A%09for low %3C\n+%09res := high - low%0A%0A%09for res %3C= 1 %7B%0A%09%09res =\n  high \n-%7B\n+- low\n %0A%09%09m\n@@ -384,16 +384,19 @@\n %0A%09%09%7D%0A%0A%09%09\n+// \n if high \n@@ -410,16 +410,19 @@\n = 1 %7B%0A%09%09\n+// \n %09break%0A%09\n@@ -422,16 +422,19 @@\n break%0A%09%09\n+// \n %7D%0A%09%7D%0A%0A%0A%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-28_14-01-18",
+            "content": "@@ -152,11 +152,8 @@\n ice)\n- -1\n %0A%0A%09f\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-28_14-02-08",
+            "content": "@@ -351,19 +351,16 @@\n %0A%09%09%7D%0A%0A%09%09\n-// \n if high \n@@ -374,19 +374,16 @@\n = 1 %7B%0A%09%09\n-// \n %09break%0A%09\n@@ -387,11 +387,8 @@\n k%0A%09%09\n-// \n %7D%0A%09%7D\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-28_14-02-29",
+            "content": "@@ -351,16 +351,19 @@\n %0A%09%09%7D%0A%0A%09%09\n+// \n if high \n@@ -377,16 +377,19 @@\n = 1 %7B%0A%09%09\n+// \n %09break%0A%09\n@@ -389,16 +389,19 @@\n break%0A%09%09\n+// \n %7D%0A%09%7D%0A%0A%0A%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-28_14-02-40",
+            "content": "@@ -148,16 +148,19 @@\n n(slice)\n+ -1\n %0A%0A%09for l\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-28_14-03-02",
+            "content": "@@ -348,19 +348,16 @@\n %0A%09%09%7D%0A%0A%09%09\n-// \n if high \n@@ -371,19 +371,16 @@\n = 1 %7B%0A%09%09\n-// \n %09break%0A%09\n@@ -384,11 +384,8 @@\n k%0A%09%09\n-// \n %7D%0A%09%7D\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-28_14-05-05",
+            "content": "@@ -340,29 +340,30 @@\n rue, mid%0A%09%09%7D\n- else\n+%0A%0A%09%09//\n  if high - l\n@@ -374,16 +374,19 @@\n = 1 %7B%0A%09%09\n+// \n %09break%0A%09\n@@ -386,18 +386,20 @@\n break%0A%09%09\n+// \n %7D\n-%0A\n %0A%09%7D%0A%0A%0A%0A%09\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-28_14-06-07",
+            "content": "@@ -290,11 +290,8 @@\n  mid\n- +1\n %0A%09%09%7D\n@@ -349,14 +349,13 @@\n %09%09%7D \n-%0A%09%09%0A%09%09\n+else \n if h\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-28_14-07-00",
+            "content": "@@ -152,11 +152,8 @@\n ice)\n- -1\n %0A%0A%09f\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-28_14-07-16",
+            "content": "@@ -148,16 +148,19 @@\n n(slice)\n+ -1\n %0A%0A%09for l\n@@ -357,19 +357,16 @@\n %7D %0A%09%09%0A%09%09\n-// \n if high \n@@ -380,19 +380,16 @@\n = 1 %7B%0A%09%09\n-// \n %09break%0A%09\n@@ -393,11 +393,8 @@\n k%0A%09%09\n-// \n %7D%0A%0A%09\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-28_14-07-27",
+            "content": "@@ -348,16 +348,64 @@\n mid%0A%09%09%7D \n+%0A%09%09%0A%09%09// if high - low %3C= 1 %7B%0A%09%09// %09break%0A%09%09// %7D\n %0A%0A%09%7D%0A%0A%0A%0A\n@@ -419,19 +419,17 @@\n  false, \n-mid\n+0\n %0A%7D%0A%0Afunc\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-28_14-09-01",
+            "content": "@@ -371,19 +371,19 @@\n  false, \n-low\n+mid\n %0A%7D%0A%0Afunc\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-28_14-09-15",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\tlow := 0\n\thigh := len(slice)\n\n\tfor low < high {\n\t\tmid := low + (high - low) / 2\n\n\t\tif value < slice[mid] {\n\t\t\thigh = mid\n\t\t} else if value > slice[mid] {\n\t\t\tlow = mid +1\n\t\t} else if value == slice[mid] {\n\t\t\treturn true, mid\n\t\t} \n\n\t}\n\n\n\n\treturn false, low\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "lines": "50"
+        }
+    ]
+}

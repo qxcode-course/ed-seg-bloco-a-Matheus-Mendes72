@@ -2,8 +2,13 @@
     "patches": [
         {
             "label": "2026-04-13_15-13-03",
-            "content": "package main\nimport \"fmt\"\n\n// var {\n\n// }\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -24,110 +24,68 @@\n t%22%0A%0A\n+// \n var %7B%0A\n-    n int%0A    usado %5B%5Dbool%0A    atual %5B%5Dint%0A%7D%0A%0Afunc main() %7B%0A    scanf(&n)%0A    usado = make(usado\n+%0A// %7D%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
             "lines": "9"
+        },
+        {
+            "label": "2026-04-27_15-53-17",
+            "content": "package main\nimport \"fmt\"\n\nvar {\n    n int\n    usado []bool\n    atual []int\n}\n\nfunc main() {\n    scanf(&n)\n    usado = make(usado)\n}\n",
+            "lines": "13"
         }
     ]
 }

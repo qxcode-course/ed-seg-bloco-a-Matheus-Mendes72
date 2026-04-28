@@ -1,0 +1,119 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_16-02-52",
+            "content": "@@ -115,99 +115,27 @@\n  %7B%0A%09\n-index := i%0A%09for i := 0; i %3C len(slice); i++ %7B%0A%09%09if value == slice%5Bi%5D %7B%0A%09%09%09index = i%0A%09%09%7D%0A%09%7D%0A\n+_, _ = slice, value\n %0A%09re\n@@ -143,13 +143,9 @@\n urn \n-index\n+0\n %0A%7D%0A%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-28_16-05-54",
+            "content": "@@ -120,17 +120,17 @@\n ndex := \n-0\n+i\n %0A%09for i \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-28_16-06-04",
+            "content": "@@ -126,23 +126,8 @@\n = 0%0A\n-%09inserido := 0%0A\n %09for\n@@ -202,128 +202,12 @@\n %0A%09%09%7D\n- else if value %3C slice%5Bi%5D %7B%0A%09%09%09inserido = i%0A%09%09%7D else %7B%0A%09%09%09inserido = i+1%0A%09%09%7D%0A%09%7D%0A%0A%09if index != 0 %7B%0A%09%09return inserido%0A%09%7D\n %0A%09\n+%7D%0A\n %0A%09re\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-28_16-09-12",
+            "content": "@@ -304,17 +304,17 @@\n f index \n-=\n+!\n = 0 %7B%0A%09%09\n@@ -332,16 +332,17 @@\n rido%0A%09%7D%0A\n+%09\n %0A%09return\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-28_16-10-03",
+            "content": "@@ -120,18 +120,17 @@\n ndex := \n--1\n+0\n %0A%09inseri\n@@ -307,18 +307,17 @@\n ndex == \n--1\n+0\n  %7B%0A%09%09ret\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-28_16-10-21",
+            "content": "@@ -219,109 +219,13 @@\n %09%09%7D \n-%0A%09%09if value %3C slice%5Bi%5D %7B%0A%09%09%09if i-1 %3C 0 %7B%0A%09%09%09%09inserido = 0%0A%09%09%09%7D else %7B%0A%09%09%09%09inserido = i-1%0A%09%09%09%7D%0A%09%09%7D %0A%09%09\n+else \n if v\n@@ -233,9 +233,9 @@\n lue \n-%3E\n+%3C\n  sli\n@@ -243,23 +243,11 @@\n e%5Bi%5D\n-%7B%0A%09%09%09if i+1\n  %7B%0A\n-%09\n %09%09%09i\n@@ -260,17 +260,16 @@\n o = i%0A%09%09\n-%09\n %7D else %7B\n@@ -269,17 +269,16 @@\n  else %7B%0A\n-%09\n %09%09%09inser\n@@ -291,13 +291,8 @@\n i+1%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-28_16-13-06",
+            "content": "@@ -350,22 +350,8 @@\n  i+1\n- == len(slice)\n  %7B%0A%09\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-28_16-13-28",
+            "content": "@@ -313,17 +313,8 @@\n %09%09%7D%0A\n-%09%09%09break%0A\n %09%09%7D \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-28_16-15-37",
+            "content": "@@ -425,25 +425,16 @@\n +1%0A%09%09%09%7D%0A\n-%09%09%09break%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-28_16-16-04",
+            "content": "@@ -215,20 +215,8 @@\n = i%0A\n-%09%09%09continue%0A\n %09%09%7D \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-28_16-17-12",
+            "content": "@@ -213,23 +213,33 @@\n x = i%0A%09%09\n-%7D else \n+%09continue%0A%09%09%7D %0A%09%09\n if value\n@@ -334,21 +334,19 @@\n eak%0A%09%09%7D \n-else \n+%0A%09%09\n if value\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-28_16-17-30",
+            "content": "@@ -235,39 +235,24 @@\n e %3C slice%5Bi%5D\n- && index != -1\n  %7B%0A%09%09%09if i-1\n@@ -352,24 +352,8 @@\n e%5Bi%5D\n- && index != -1 \n %7B%0A%09%09\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-28_16-18-37",
+            "content": "@@ -241,33 +241,33 @@\n ice%5Bi%5D && index \n-=\n+!\n = -1 %7B%0A%09%09%09if i-1\n@@ -369,25 +369,25 @@\n i%5D && index \n-=\n+!\n = -1 %7B%0A%09%09%09if\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-28_16-19-39",
+            "content": "@@ -211,27 +211,29 @@\n dex = i%0A%09%09%7D \n-%0A%09%09\n+else \n if value %3C s\n@@ -339,19 +339,21 @@\n eak%0A%09%09%7D \n-%0A%09%09\n+else \n if value\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-28_16-20-43",
+            "content": "@@ -214,27 +214,24 @@\n  = i%0A%09%09%7D %0A%09%09\n-// \n if value %3C s\n@@ -253,27 +253,24 @@\n x == -1 %7B%0A%09%09\n-// \n %09if i-1 %3C 0 \n@@ -269,27 +269,24 @@\n i-1 %3C 0 %7B%0A%09%09\n-// \n %09%09inserido =\n@@ -290,19 +290,16 @@\n o = 0%0A%09%09\n-// \n %09%7D else \n@@ -294,35 +294,32 @@\n 0%0A%09%09%09%7D else %7B%0A%09%09\n-// \n %09%09inserido = i-1\n@@ -317,35 +317,29 @@\n ido = i-1%0A%09%09\n-// \n %09%7D%0A%09%09\n-// \n %09break%0A%09%09// \n@@ -339,19 +339,13 @@\n k%0A%09%09\n-// \n %7D %0A%09%09\n-// \n if v\n@@ -379,19 +379,16 @@\n  -1 %7B%0A%09%09\n-// \n %09if i+1 \n@@ -401,27 +401,24 @@\n (slice) %7B%0A%09%09\n-// \n %09%09inserido =\n@@ -422,19 +422,16 @@\n o = i%0A%09%09\n-// \n %09%7D else \n@@ -434,19 +434,16 @@\n lse %7B%0A%09%09\n-// \n %09%09inseri\n@@ -457,19 +457,13 @@\n 1%0A%09%09\n-// \n %09%7D%0A%09%09\n-// \n %09bre\n@@ -471,11 +471,8 @@\n k%0A%09%09\n-// \n %7D%0A%09%7D\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-28_16-21-50",
+            "content": "@@ -522,19 +522,16 @@\n  %7D%0A%09%7D%0A%0A%09\n-// \n if index\n@@ -540,19 +540,16 @@\n = -1 %7B%0A%09\n-// \n %09return \n@@ -558,19 +558,16 @@\n serido%0A%09\n-// \n %7D%0A%0A%09retu\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-28_16-25-37",
+            "content": "@@ -124,18 +124,16 @@\n  := -1%0A%09\n-//\n inserido\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-28_16-25-47",
+            "content": "@@ -124,16 +124,18 @@\n  := -1%0A%09\n+//\n inserido\n@@ -221,164 +221,8 @@\n %09%09%7D \n-else %7B%0A%09%09%09if index != -1 %7B%0A%09%09%09%09return index%0A%09%09%09%7D%0A%0A%09%09%09if value %3C slice%5Bi%5D %7B%0A%09%09%09%09if i == 0 %7B%0A%09%09%09%09%09inserido = 0%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09inserido = i-1%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D\n %0A%09%09/\n@@ -528,25 +528,69 @@\n %7D%0A%0A%09\n-%0A%09return inserido\n+// if index == -1 %7B%0A%09// %09return inserido%0A%09// %7D%0A%0A%09return index\n %0A%7D%0A%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-28_16-29-37",
+            "content": "@@ -246,21 +246,28 @@\n 1 %7B%0A%09%09%09%09\n-b\n re\n-ak\n+turn index\n %0A%09%09%09%7D%0A%0A%09\n@@ -682,43 +682,8 @@\n %7D%0A%0A%09\n-if index != -1 %7B%0A%09%09return index%0A%09%7D%0A\n %0A%09re\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-04-28_16-30-49",
+            "content": "@@ -136,18 +136,17 @@\n rido := \n--1\n+0\n %0A%09for i \n@@ -222,16 +222,52 @@\n  else %7B%0A\n+%09%09%09if index != -1 %7B%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A\n %09%09%09if va\n@@ -360,67 +360,13 @@\n %09%09%7D%0A\n+\n %09%09%09%7D%0A\n-%0A%09%09%09if index != -1 %7C%7C inserido != 1 %7B%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A\n %09%09%7D%0A\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-04-28_16-33-08",
+            "content": "@@ -136,17 +136,18 @@\n rido := \n-0\n+-1\n %0A%09for i \n@@ -227,44 +227,8 @@\n e %7B%0A\n-%09%09%09if index != -1 %7B%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A\n %09%09%09i\n@@ -321,21 +321,75 @@\n 1%0A%09%09%09%09%7D%0A\n-\n %09%09%09%7D%0A\n+%0A%09%09%09if index != -1 %7C%7C inserido != 1 %7B%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A\n %09%09%7D%0A%09%09//\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-04-28_16-34-37",
+            "content": "@@ -115,100 +115,156 @@\n  %7B%0A%09\n-low := 0%0A%09high := len(slice)%0A%09pos := -1%0A%0A%09for low %3C high %7B%0A%09%09mid := low + (high - low) / 2%0A%0A\n+index := -1%0A%09inserido := 0%0A%09for i := 0; i %3C len(slice); i++ %7B%0A%09%09if value == slice%5Bi%5D %7B%0A%09%09%09index = i%0A%09%09%7D else %7B%0A%09%09%09if index != -1 %7B%0A%09%09%09%09break%0A%09%09%09%7D%0A%0A%09\n %09%09if\n@@ -274,235 +274,425 @@\n lue \n-==\n+%3C\n  slice%5B\n-mid\n+i\n %5D %7B%0A%09%09%09\n-pos = mid%0A%09%09%09break%0A%09%09%7D else if value %3C slice%5Bmid%5D %7B%0A%09%09%09high = mid%0A%09%09%7D else %7B%0A%09%09%09low = mid + 1%0A%09%09%7D%0A%09%7D%0A%0A%09if pos != -1 %7B%0A%09%09for i := 0; i %3C len(slice); i++ %7B%0A%09%09%09if slice%5Bi%5D == slice%5Bpos%5D %7B%0A%09%09%09%09pos\n+%09if i == 0 %7B%0A%09%09%09%09%09inserido = 0%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09inserido = i-1%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%09// if value %3C slice%5Bi%5D && index == -1 %7B%0A%09%09// %09if i-1 %3C 0 %7B%0A%09%09// %09%09inserido = 0%0A%09%09// %09%7D else %7B%0A%09%09// %09%09inserido = i-1%0A%09%09// %09%7D%0A%09%09// %09break%0A%09%09// %7D %0A%09%09// if value %3E slice%5Bi%5D && index == -1 %7B%0A%09%09// %09if i+1 == len(slice) %7B%0A%09%09// %09%09inserido = i%0A%09%09// %09%7D else %7B%0A%09%09// %09%09inserido\n  = i\n++1\n %0A%09%09\n+// \n %09%7D%0A%09%09\n-%7D%0A%09%09\n+// %09break%0A%09%09// %7D%0A%09%7D%0A%0A%09if index != -1 %7B\n %0A%09%09r\n@@ -701,11 +701,13 @@\n urn \n-pos\n+index\n %0A%09%7D%0A\n@@ -719,11 +719,16 @@\n urn \n-low\n+inserido\n %0A%7D%0A%0A\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-04-28_16-41-12",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc MagicSearch(slice []int, value int) int {\n\tlow := 0\n\thigh := len(slice)\n\tpos := -1\n\n\tfor low < high {\n\t\tmid := low + (high - low) / 2\n\n\t\tif value == slice[mid] {\n\t\t\tpos = mid\n\t\t\tbreak\n\t\t} else if value < slice[mid] {\n\t\t\thigh = mid\n\t\t} else {\n\t\t\tlow = mid + 1\n\t\t}\n\t}\n\n\tif pos != -1 {\n\t\tfor i := 0; i < len(slice); i++ {\n\t\t\tif slice[i] == slice[pos] {\n\t\t\t\tpos = i\n\t\t\t}\n\t\t}\n\t\t\n\t\treturn pos\n\t}\n\n\treturn low\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "lines": "56"
+        }
+    ]
+}
