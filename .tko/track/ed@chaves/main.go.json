@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-30_21-41-42",
+            "content": "@@ -20,15 +20,8 @@\n t (%0A\n-%09%22fmt%22%0A\n )%0A%0Af\n@@ -37,324 +37,6 @@\n ) %7B%0A\n-%09queue := NewQueue%5Bstring%5D()%0A%09for i := 'A'; i %3C= 'P'; i++ %7B%0A%09%09queue.Enqueue(string(i))%0A%09%7D%0A%0A%09for i := 0; i %3C queue.Len(); i++ %7B%0A%09%09var gols1, gols2 int%0A%09%09fmt.Scan(gols1, gols2)%0A%0A%09%09time1 := queue.Dequeue()%0A%09%09time2 := queue.Dequeue()%0A%0A%09%09if gols1 %3E gols2 %7B%0A%09%09%09queue.Enqueue(time1)%0A%09%09%7D else %7B%0A%09%09%09queue.Enqueue(time2)%0A%09%09%7D%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-04-30_22-08-22",
+            "content": "@@ -152,10 +152,19 @@\n i %3C \n-15\n+queue.Len()\n ; i+\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-30_22-08-40",
+            "content": "@@ -352,34 +352,7 @@\n %7D%0A%09%7D\n-%0A%0A%09fmt.Println(queue.value)\n %0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-30_22-09-37",
+            "content": "@@ -369,21 +369,17 @@\n n(queue.\n-Dequeue()\n+value\n )%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-30_22-09-48",
+            "content": "@@ -196,17 +196,15 @@\n can(\n-&\n gols1, \n-&\n gols\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-30_22-14-18",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tqueue := NewQueue[string]()\n\tfor i := 'A'; i <= 'P'; i++ {\n\t\tqueue.Enqueue(string(i))\n\t}\n\n\tfor i := 0; i < 15; i++ {\n\t\tvar gols1, gols2 int\n\t\tfmt.Scan(&gols1, &gols2)\n\n\t\ttime1 := queue.Dequeue()\n\t\ttime2 := queue.Dequeue()\n\n\t\tif gols1 > gols2 {\n\t\t\tqueue.Enqueue(time1)\n\t\t} else {\n\t\t\tqueue.Enqueue(time2)\n\t\t}\n\t}\n\n\tfmt.Println(queue.Dequeue())\n}\n",
+            "lines": "28"
+        }
+    ]
+}

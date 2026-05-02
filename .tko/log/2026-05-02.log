@@ -1,0 +1,17 @@
+2026-05-02 05:58:17, MOVE, v:1, k:ed@polonesa, mode:PICK
+2026-05-02 05:58:23, EXEC, v:1, k:ed@polonesa, mode:FULL, size:84, fail:COMP
+2026-05-02 06:03:15, MOVE, v:1, k:ed@polonesa, mode:EDIT
+2026-05-02 06:08:05, MOVE, v:1, k:ed@polonesa, mode:EDIT
+2026-05-02 06:08:54, EXEC, v:1, k:ed@polonesa, mode:FULL, size:87, fail:COMP
+2026-05-02 06:13:07, EXEC, v:1, k:ed@polonesa, mode:FULL, size:92, fail:COMP
+2026-05-02 06:13:12, EXEC, v:1, k:ed@polonesa, mode:FULL, size:93, fail:COMP
+2026-05-02 06:13:12, MOVE, v:1, k:ed@polonesa, mode:EDIT
+2026-05-02 06:13:34, EXEC, v:1, k:ed@polonesa, mode:FULL, size:93, fail:COMP
+2026-05-02 06:14:08, MOVE, v:1, k:ed@polonesa, mode:PICK
+2026-05-02 06:14:09, EXEC, v:1, k:ed@polonesa, mode:FULL, size:93, fail:COMP
+2026-05-02 06:15:19, EXEC, v:1, k:ed@polonesa, mode:FULL, size:93, fail:COMP
+2026-05-02 06:15:33, EXEC, v:1, k:ed@polonesa, mode:FULL, size:93, fail:COMP
+2026-05-02 06:16:21, EXEC, v:1, k:ed@polonesa, mode:FULL, size:93, fail:COMP
+2026-05-02 06:17:34, EXEC, v:1, k:ed@polonesa, mode:FULL, rate:100, size:85
+2026-05-02 06:17:35, MOVE, v:1, k:ed@polonesa, mode:BACK
+2026-05-02 06:17:50, SELF, v:1, k:ed@polonesa, self:1, rate:100, study:60, concept:1, code:1

@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-30_22-35-54",
+            "content": "@@ -457,25 +457,24 @@\n = i + 1%0A\n-%0A\n         \n %7D%0A    %7D%0A\n@@ -469,101 +469,22 @@\n     \n-%7D%0A\n     \n-%7D%0A\n %0A    \n-if total %3C 0 %7B%0A        fmt.Println(%22-1%22)%0A    %7D else %7B%0A        fmt.Println(start)\n+    %7D\n %0A   \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-30_22-37-50",
+            "content": "@@ -553,20 +553,21 @@\n Println(\n-head\n+start\n )%0A    %7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-30_22-38-01",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var N int\n    fmt.Scan(&N)\n\n    bomba := make([]int, N)\n    distancia := make([]int, N)\n\n    for i := 0; i < N; i++ {\n        fmt.Scan(&bomba[i], &distancia[i])\n    }\n\n    head := 0\n    current := 0\n    total := 0\n\n    for i := 0; i < N; i++ {\n        diferenca := bomba[i] - distancia[i]\n        total += diferenca\n        current += diferenca\n\n        if current < 0 {\n            current = 0\n            head = i + 1\n\n        }\n    }\n\n    if total < 0 {\n        fmt.Println(\"-1\")\n    } else {\n        fmt.Println(head)\n    }\n}\n",
+            "lines": "35"
+        }
+    ]
+}

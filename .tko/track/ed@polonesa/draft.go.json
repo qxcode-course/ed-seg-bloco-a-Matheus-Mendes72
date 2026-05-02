@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-01_13-24-40",
+            "content": "@@ -23,333 +23,53 @@\n mt%22%0A\n-%0Afunc precedencia(op rune) int %7B%0A    switch rune %7B%0A    case '+', '-':%0A        return 1%0A    case '*', '/':%0A        return 2%0A    case '%5E':%0A        return 3%0A    %7D%0A%0A    return 0%0A%7D%0A%0A// func polonesaRev(expressao string) string %7B%0A    %0A// %7D%0A%0Afunc main() %7B%0A    var expressao string%0A    fmt.Scan(&expressao)%0A%0A    fmt.Println(expressao\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-01_13-29-01",
+            "content": "@@ -17,557 +17,13 @@\n ort \n-(%0A    %22fmt%22%0A    %22bufio%22%0A    %22os%22%0A)%0A%0Atype Stack struct %7B%0A    data %5B%5Drune%0A%7D%0A%0Afunc NewStack() *Stack %7B%0A    return &Stack%7Bdata: %5B%5Drune%7B%7D%7D%0A%7D%0A%0Afunc (s *Stack) Push(v rune) %7B%0A    s.data = append(s.data, v)%0A%7D%0A%0Afunc (s *Stack) Pop() rune %7B%0A    if len(s.data) == 0 %7B%0A        return 0%0A    %7D%0A%0A    value := s.data%5Blen(s.data)-1%5D%0A    s.data = s.data%5B:len(s.data)-1%5D%0A    return value%0A%7D%0A%0Afunc (s *Stack) Top() rune %7B%0A    if len(s.data) == 0 %7B%0A        return 0%0A    %7D%0A%0A    return s.data%5Blen(s.data)-1%5D%0A%7D%0A%0Afunc (s *Stack) IsEmpty() bool %7B%0A    return len(s.data) == 0%0A%7D\n+%22fmt%22\n %0A%0Afu\n@@ -63,18 +63,20 @@\n  switch \n-op\n+rune\n  %7B%0A    c\n@@ -200,182 +200,11 @@\n %0A%7D%0A%0A\n-func isOperator(ch rune) bool %7B%0A    return ch == '+' %7C%7C ch == '-' %7C%7C ch == '*' %7C%7C ch == '/' %7C%7C ch == '%5E'%0A%7D%0A%0Afunc isDigit(ch rune) bool %7B%0A    return ch %3E= '0' && ch %3C= '9'%0A%7D%0A%0A\n+// \n func\n@@ -226,22 +226,22 @@\n pressao \n-%5B%5Drune\n+string\n ) string\n@@ -251,487 +251,105 @@\n     \n-operadores := NewStack()%0A    numeros := make(%5B%5Drune, 0)%0A%0A    for i := 0; i %3C len(expressao); i++ %7B%0A        if isDigit(expressao%5Bi%5D) %7B%0A            numeros = append(numeros, expressao%5Bi%5D)%0A            numeros = append(numeros, ' ')%0A        %7D else if isOperador(expressao%5Bi%5D) %7B%0A                %0A        %7D%0A    %7D%0A%7D%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)%0A    scanner.Scan()%0A    expressao := scanner.Text()%0A%0A    res := %5B%5Drune(expressao)%0A    fmt.Println(polonesaRev(res)\n+%0A// %7D%0A%0Afunc main() %7B%0A    var expressao string%0A    fmt.Scan(&expressao)%0A%0A    fmt.Println(expressao\n )%0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-05-02_05-58-23",
+            "content": "@@ -1250,242 +1250,12 @@\n     \n-for !operadores.IsEmpty() && isOperator(operators.Top()) && precedencia(operadores.Top()) %3E= precedencia(expressao%5Bi%5D) %7B%0A                numeros = append(numeros, operadores.Pop)%0A            %7D%0A            operadores.Push(expressao%5Bi%5D)\n+    \n %0A   \n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-05-02_06-08-54",
+            "content": "@@ -1138,32 +1138,75 @@\n , expressao%5Bi%5D)%0A\n+            numeros = append(numeros, ' ')%0A\n         %7D else i\n@@ -1500,143 +1500,8 @@\n    %7D\n-%0A%0A    for !operadores.IsEmpty() %7B%0A        numeros = append(numeros, operadores.Pop())%0A    %7D%0A%0A    fmt.Println(string.Join(numeros, %22 %22))\n %0A%7D%0A%0A\n@@ -1641,16 +1641,28 @@\n ao)%0A    \n+fmt.Println(\n polonesa\n@@ -1669,11 +1669,12 @@\n Rev(res)\n+)\n %0A%7D%0A\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-05-02_06-13-07",
+            "content": "@@ -50,21 +50,8 @@\n os%22%0A\n-    %22string%22%0A\n )%0A%0At\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-05-02_06-13-12",
+            "content": "@@ -57,17 +57,16 @@\n  %22string\n-s\n %22%0A)%0A%0Atyp\n@@ -1581,17 +1581,16 @@\n n(string\n-s\n .Join(nu\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-05-02_06-13-34",
+            "content": "@@ -956,24 +956,31 @@\n ssao %5B%5Drune)\n+ string\n  %7B%0A    opera\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-05-02_06-14-09",
+            "content": "@@ -764,17 +764,17 @@\n  isOpera\n-d\n+t\n or(ch ru\n@@ -1246,17 +1246,17 @@\n  isOpera\n-d\n+t\n or(opera\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-05-02_06-15-19",
+            "content": "@@ -1251,28 +1251,27 @@\n erador(opera\n-d\n+t\n or\n-e\n s.Top()) && \n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-05-02_06-15-33",
+            "content": "@@ -1014,22 +1014,20 @@\n  make(%5B%5D\n-string\n+rune\n , 0)%0A%0A  \n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-05-02_06-16-21",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import (\n@@ -15,16 +15,26 @@\n mport (%0A\n+    %22fmt%22%0A\n     %22buf\n@@ -37,26 +37,16 @@\n %22bufio%22%0A\n-    %22fmt%22%0A\n     %22os%22\n@@ -94,22 +94,20 @@\n  data %5B%5D\n-string\n+rune\n %0A%7D%0A%0Afunc\n@@ -153,22 +153,20 @@\n data: %5B%5D\n-string\n+rune\n %7B%7D%7D%0A%7D%0A%0Af\n@@ -187,22 +187,20 @@\n  Push(v \n-string\n+rune\n ) %7B%0A    \n@@ -247,30 +247,28 @@\n tack) Pop() \n-string\n+rune\n  %7B%0A    if le\n@@ -303,22 +303,26 @@\n urn \n-%22%22\n+0\n %0A    %7D%0A\n+%0A\n     v\n+alue\n  := \n@@ -391,16 +391,20 @@\n return v\n+alue\n %0A%7D%0A%0Afunc\n@@ -421,22 +421,20 @@\n ) Top() \n-string\n+rune\n  %7B%0A    i\n@@ -473,17 +473,17 @@\n urn \n-%22%22\n+0\n %0A    %7D%0A\n+%0A\n     \n@@ -596,19 +596,18 @@\n denc\n-e\n+ia\n (op \n-string\n+rune\n ) in\n@@ -639,16 +639,16 @@\n ase \n-%22+%22, %22-%22\n+'+', '-'\n :%0A  \n@@ -675,16 +675,16 @@\n ase \n-%22*%22, %22/%22\n+'*', '/'\n :%0A  \n@@ -707,19 +707,19 @@\n    case \n-%22%5E%22\n+'%5E'\n :%0A      \n@@ -731,24 +731,25 @@\n urn 3%0A    %7D%0A\n+%0A\n     return 0\n@@ -768,24 +768,19 @@\n pera\n-tor(token string\n+dor(ch rune\n ) bo\n@@ -799,84 +799,69 @@\n urn \n-token\n+ch\n  == \n-%22+%22\n+'+'\n  %7C%7C \n-token\n+ch\n  == \n-%22-%22\n+'-'\n  %7C%7C \n-token\n+ch\n  == \n-%22*%22\n+'*'\n  %7C%7C \n-token\n+ch\n  == \n-%22/%22\n+'/'\n  %7C%7C \n-token\n+ch\n  == \n-%22%5E%22\n+'%5E'\n %0A%7D%0A%0A\n@@ -869,160 +869,146 @@\n unc \n-main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)%0A    scanner.Scan()%0A    line := scanner.Text()%0A    %0A    tokens := strings.Fields(line)%0A    %0A    output\n+isDigit(ch rune) bool %7B%0A    return ch %3E= '0' && ch %3C= '9'%0A%7D%0A%0Afunc polonesaRev(expressao %5B%5Drune) %7B%0A    operadores := NewStack()%0A    numeros\n  := \n@@ -1029,75 +1029,137 @@\n  0)%0A\n+%0A\n     \n-operators := NewStack()\n+for i := 0; i %3C len(expressao); i++ %7B\n %0A    \n-%0A\n     \n-for _, token := range tokens %7B\n+if isDigit(expressao%5Bi%5D) %7B%0A            numeros = append(numeros, expressao%5Bi%5D)\n %0A   \n@@ -1159,24 +1159,31 @@\n i%5D)%0A        \n+%7D else \n if isOperato\n@@ -1184,17 +1184,24 @@\n pera\n-tor(token\n+dor(expressao%5Bi%5D\n ) %7B%0A\n@@ -1214,35 +1214,36 @@\n       for !opera\n-t\n+d\n or\n+e\n s.IsEmpty() && i\n@@ -1252,17 +1252,17 @@\n pera\n-t\n+d\n or(opera\n tors\n@@ -1253,27 +1253,28 @@\n erador(opera\n-t\n+d\n or\n+e\n s.Top()) && \n@@ -1277,27 +1277,8 @@\n  && \n-%0A                  \n prec\n@@ -1286,18 +1286,20 @@\n denc\n-e\n+ia\n (opera\n-t\n+d\n or\n+e\n s.To\n@@ -1319,15 +1319,23 @@\n denc\n-e(token\n+ia(expressao%5Bi%5D\n ) %7B%0A\n@@ -1342,38 +1342,39 @@\n                 \n-output\n+numeros\n  = append(output\n@@ -1367,39 +1367,39 @@\n  append(\n-output\n+numeros\n , opera\n-t\n+d\n or\n+e\n s.Pop\n-()\n )%0A      \n@@ -1427,83 +1427,31 @@\n pera\n-t\n+d\n or\n+e\n s.Push(\n-token)%0A        %7D else %7B%0A            output = append(output, token\n+expressao%5Bi%5D\n )%0A  \n@@ -1460,28 +1460,24 @@\n     %7D%0A    %7D%0A\n-    \n %0A    for !op\n@@ -1479,19 +1479,20 @@\n r !opera\n-t\n+d\n or\n+e\n s.IsEmpt\n@@ -1505,22 +1505,23 @@\n         \n-output\n+numeros\n  = appen\n@@ -1526,24 +1526,26 @@\n end(\n-output\n+numeros\n , opera\n-t\n+d\n or\n+e\n s.Po\n@@ -1555,20 +1555,16 @@\n )%0A    %7D%0A\n-    \n %0A    fmt\n@@ -1589,20 +1589,182 @@\n oin(\n-output, %22 %22)\n+numeros, %22 %22))%0A%7D%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)%0A    scanner.Scan()%0A    expressao := scanner.Text()%0A%0A    res := %5B%5Drune(expressao)%0A    polonesaRev(res\n )%0A%7D%0A\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-05-02_06-17-34",
+            "content": "package main\n\nimport (\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n    \"strings\"\n)\n\ntype Stack struct {\n    data []string\n}\n\nfunc NewStack() *Stack {\n    return &Stack{data: []string{}}\n}\n\nfunc (s *Stack) Push(v string) {\n    s.data = append(s.data, v)\n}\n\nfunc (s *Stack) Pop() string {\n    if len(s.data) == 0 {\n        return \"\"\n    }\n    v := s.data[len(s.data)-1]\n    s.data = s.data[:len(s.data)-1]\n    return v\n}\n\nfunc (s *Stack) Top() string {\n    if len(s.data) == 0 {\n        return \"\"\n    }\n    return s.data[len(s.data)-1]\n}\n\nfunc (s *Stack) IsEmpty() bool {\n    return len(s.data) == 0\n}\n\nfunc precedence(op string) int {\n    switch op {\n    case \"+\", \"-\":\n        return 1\n    case \"*\", \"/\":\n        return 2\n    case \"^\":\n        return 3\n    }\n    return 0\n}\n\nfunc isOperator(token string) bool {\n    return token == \"+\" || token == \"-\" || token == \"*\" || token == \"/\" || token == \"^\"\n}\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n    scanner.Scan()\n    line := scanner.Text()\n    \n    tokens := strings.Fields(line)\n    \n    output := make([]string, 0)\n    operators := NewStack()\n    \n    for _, token := range tokens {\n        if isOperator(token) {\n            for !operators.IsEmpty() && isOperator(operators.Top()) && \n                  precedence(operators.Top()) >= precedence(token) {\n                output = append(output, operators.Pop())\n            }\n            operators.Push(token)\n        } else {\n            output = append(output, token)\n        }\n    }\n    \n    for !operators.IsEmpty() {\n        output = append(output, operators.Pop())\n    }\n    \n    fmt.Println(strings.Join(output, \" \"))\n}\n",
+            "lines": "85"
+        }
+    ]
+}

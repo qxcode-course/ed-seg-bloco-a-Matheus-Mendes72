@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-01_10-13-35",
+            "content": "@@ -18,19 +18,34 @@\n ort (%0A%09%22\n-fmt\n+bufio%22%0A%09%22fmt%22%0A%09%22os\n %22%0A)%0A%0Atyp\n@@ -131,10 +131,8 @@\n l %7B%0A\n-%09%0A\n %09ret\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-01_10-14-04",
+            "content": "@@ -117,138 +117,21 @@\n  %7B%0A%09\n-l, c := startPos.l, startPos.c %0A%0A%09if (l %3C 0 %7C%7C l %3E= len(grid) %7C%7C (c %3C 0 %7C%7C c %3E= len(grid%5B0%5D))) %7B%0A%09%09return false%0A%09%7D%0A%0A%09%0A%0A%09return tru\n+%0A%09return fals\n e%0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-01_10-17-49",
+            "content": "@@ -229,16 +229,17 @@\n lse%0A%09%7D%0A%0A\n+%09\n %0A%0A%09retur\n@@ -349,16 +349,35 @@\n ge nl %7B%0A\n+%09%09grid%5Bi%5D = %5B%5Drune%0A\n %09%09fmt.Sc\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-01_10-18-36",
+            "content": "@@ -233,510 +233,8 @@\n %09%7D%0A%0A\n-%09if grid%5Bl%5D%5Bc%5D != ' ' %7B%0A%09%09return false%0A%09%7D%0A%0A%09stack := NewStack%5BPos%5D()%0A%09stack.Push(startPos)%0A%0A%09for !stack.IsEmpty() %7B%0A%09%09pos := stack.Pop()%0A%0A%09%09if (pos.l %3C 0 %7C%7C pos.l %3E= len(grid)) %7C%7C (pos.c %3C 0 %7C%7C pos.c %3E- len(grid%5B0%5D)) %7B%0A%09%09%09return false%0A%09%09%7D%0A%0A%09%09if grid%5Bpos.l%5D%5Bpos.c%5D != ' ' %7B%0A%09%09%09continue%0A%09%09%7D%0A%0A%09%09grid%5Bpos.l%5D%5Bpos.c%5D = '.'%0A%0A%09%09if pos.l == endPos.l && pos.c == endPos.c %7B%0A%09%09%09return true%0A%09%09%7D%0A%0A%09%09stack.Push(pos.l+1, pos.c)%0A%09%09stack.Push(pos.l, pos.c+1)%0A%09%09stack.Push(pos.l-1, pos.c)%0A%09%09stack.Push(pos.l, pos.c-1)%0A%09%7D\n %0A%0A%09r\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-01_10-39-08",
+            "content": "@@ -318,30 +318,16 @@\n startPos\n-.l, startPos.c\n )%0A%0A%09for \n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-01_10-40-03",
+            "content": "@@ -318,16 +318,30 @@\n startPos\n+.l, startPos.c\n )%0A%0A%09for \n@@ -636,28 +636,24 @@\n %09stack.Push(\n-Pos%7B\n pos.l+1, pos\n@@ -646,33 +646,32 @@\n h(pos.l+1, pos.c\n-%7D\n )%0A%09%09stack.Push(P\n@@ -661,36 +661,32 @@\n c)%0A%09%09stack.Push(\n-Pos%7B\n pos.l, pos.c+1%7D)\n@@ -683,17 +683,16 @@\n  pos.c+1\n-%7D\n )%0A%09%09stac\n@@ -694,28 +694,24 @@\n %09stack.Push(\n-Pos%7B\n pos.l-1, pos\n@@ -712,17 +712,16 @@\n 1, pos.c\n-%7D\n )%0A%09%09stac\n@@ -727,20 +727,16 @@\n ck.Push(\n-Pos%7B\n pos.l, p\n@@ -741,17 +741,16 @@\n  pos.c-1\n-%7D\n )%0A%09%7D%0A%0A%09r\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-01_10-40-51",
+            "content": "@@ -104,19 +104,24 @@\n Pos Pos)\n+ bool\n  %7B%0A\n-\n %09l, c :=\n@@ -215,24 +215,29 @@\n  %7B%0A%09%09return \n+false\n %0A%09%7D%0A%0A%09if gri\n@@ -262,16 +262,21 @@\n %09return \n+false\n %0A%09%7D%0A%0A%09st\n@@ -450,32 +450,37 @@\n %5D)) %7B%0A%09%09%09return \n+false\n %0A%09%09%7D%0A%0A%09%09if grid%5B\n@@ -603,16 +603,20 @@\n %09return \n+true\n %0A%09%09%7D%0A%0A%09%09\n@@ -753,23 +753,28 @@\n 1%7D)%0A%09%7D%0A%0A\n-\n %09return\n+ true\n %0A%7D%0A%0Afunc\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-01_10-44-25",
+            "content": "@@ -415,17 +415,17 @@\n  pos.c %3E\n-=\n+-\n  len(gri\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-01_10-45-28",
+            "content": "@@ -22,32 +22,11 @@\n (%0A%09%22\n-bufio%22%0A    %22fmt%22%0A    %22os\n+fmt\n %22%0A)%0A\n@@ -847,59 +847,25 @@\n %7B%0A%09%09\n-scanner.Scan()%0A    %09grid%5Bi%5D = %5B%5Drune(scanner.Text()\n+fmt.Scan(&grid%5Bi%5D\n )%0A%09%7D\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-01_10-46-56",
+            "content": "@@ -474,115 +474,8 @@\n %09%7D%0A%0A\n-%09%09if grid%5Bpos.l%5D%5Bpos.c%5D == 'I' %7C%7C grid%5Bpos.l%5D%5Bpos.c%5D == 'F' %7B%0A%09%09%09grid%5Bpos.l%5D%5Bpos.c%5D = '.'%0A%09%09%09continue%0A%09%09%7D%0A%0A\n %09%09if\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-05-01_10-50-14",
+            "content": "@@ -886,65 +886,8 @@\n ) %7B%0A\n-%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A%09%0A\n %09var\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-05-01_10-50-58",
+            "content": "@@ -942,31 +942,8 @@\n ()%0A%09\n-nl_nc := scanner.Text()\n %0A%09va\n@@ -965,30 +965,12 @@\n mt.S\n-s\n can\n-f(nl_nc, %22%25d %25d%22, \n+(\n &nl,\n@@ -975,16 +975,17 @@\n l, &nc)%0A\n+%0A\n %09grid :=\n@@ -1009,25 +1009,8 @@\n l)%0A%0A\n-%09// L%C3%AA a gridriz%0A\n %09for\n@@ -1043,17 +1043,20 @@\n .Scan()%0A\n-%09\n+    \n %09grid%5Bi%5D\n@@ -1089,66 +1089,8 @@\n %09%7D%0A%0A\n-%09// Procura posi%C3%A7%C3%B5es de in%C3%ADcio e endPos e conserta para _%0A\n %09var\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-05-01_10-52-38",
+            "content": "@@ -129,13 +129,8 @@\n Pos)\n- bool\n  %7B%0A%09\n@@ -231,29 +231,24 @@\n  %7B%0A%09%09return \n-false\n %0A%09%7D%0A%0A%09if gri\n@@ -273,21 +273,16 @@\n %09return \n-false\n %0A%09%7D%0A%0A%09st\n@@ -456,37 +456,32 @@\n %5D)) %7B%0A%09%09%09return \n-false\n %0A%09%09%7D%0A%0A%09%09if grid%5B\n@@ -715,21 +715,16 @@\n urn \n-false\n %0A%09%09%7D%0A%0A%09%09\n if !\n@@ -723,12 +723,8 @@\n %0A%0A%09%09\n-if !\n stac\n@@ -742,39 +742,35 @@\n pos.l+1, pos.c%7D)\n- %7C%7C\n %0A%09%09\n-!\n stack.Push(Pos%7Bp\n@@ -784,23 +784,19 @@\n os.c+1%7D)\n- %7C%7C\n %0A%09%09\n-!\n stack.Pu\n@@ -822,15 +822,11 @@\n .c%7D)\n- %7C%7C\n %0A%09%09\n-!\n stac\n@@ -856,68 +856,8 @@\n -1%7D)\n- %7B%0A%09%09%09grid%5Bpos.l%5D%5Bpos.c%5D = ' '%0A%09%09%7D else %7B%0A%09%09%09return true%0A%09%09%7D\n %0A%09%7D%0A\n@@ -868,13 +868,8 @@\n turn\n- true\n %0A%7D%0A%0A\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-05-01_10-57-05",
+            "content": "@@ -492,19 +492,16 @@\n %0A%09%09%7D%0A%0A%09%09\n-// \n if grid%5B\n@@ -554,19 +554,16 @@\n 'F' %7B%0A%09%09\n-// \n %09grid%5Bpo\n@@ -582,19 +582,16 @@\n = '.'%0A%09%09\n-// \n %09continu\n@@ -594,19 +594,16 @@\n tinue%0A%09%09\n-// \n %7D%0A%0A%09%09if \n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-05-01_10-57-53",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n    \"fmt\"\n    \"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc search(grid[][]rune, startPos, endPos Pos) bool {\n\tl, c := startPos.l, startPos.c \n\n\tif (l < 0 || l >= len(grid) || (c < 0 || c >= len(grid[0]))) {\n\t\treturn false\n\t}\n\n\tif grid[l][c] != ' ' {\n\t\treturn false\n\t}\n\n\tstack := NewStack[Pos]()\n\tstack.Push(startPos)\n\n\tfor !stack.IsEmpty() {\n\t\tpos := stack.Pop()\n\n\t\tif (pos.l < 0 || pos.l >= len(grid)) || (pos.c < 0 || pos.c >= len(grid[0])) {\n\t\t\treturn false\n\t\t}\n\n\t\t// if grid[pos.l][pos.c] == 'I' || grid[pos.l][pos.c] == 'F' {\n\t\t// \tgrid[pos.l][pos.c] = '.'\n\t\t// \tcontinue\n\t\t// }\n\n\t\tif grid[pos.l][pos.c] != ' ' {\n\t\t\tcontinue\n\t\t}\n\n\t\tgrid[pos.l][pos.c] = '.'\n\n\t\tif pos.l == endPos.l && pos.c == endPos.c {\n\t\t\treturn false\n\t\t}\n\n\t\tif !stack.Push(Pos{pos.l+1, pos.c}) ||\n\t\t!stack.Push(Pos{pos.l, pos.c+1}) ||\n\t\t!stack.Push(Pos{pos.l-1, pos.c}) ||\n\t\t!stack.Push(Pos{pos.l, pos.c-1}) {\n\t\t\tgrid[pos.l][pos.c] = ' '\n\t\t} else {\n\t\t\treturn true\n\t\t}\n\t}\n\n\treturn true\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tnl_nc := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(nl_nc, \"%d %d\", &nl, &nc)\n\tgrid := make([][]rune, nl)\n\n\t// L\u00ea a gridriz\n\tfor i := range nl {\n\t\tscanner.Scan()\n\t\tgrid[i] = []rune(scanner.Text())\n\t}\n\n\t// Procura posi\u00e7\u00f5es de in\u00edcio e endPos e conserta para _\n\tvar startPos, endPos Pos\n\tfor l := range nl {\n\t\tfor c := range nc {\n\t\t\tif grid[l][c] == 'I' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tstartPos = Pos{l, c}\n\t\t\t}\n\t\t\tif grid[l][c] == 'F' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tendPos = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(grid, startPos, endPos)\n\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "96"
+        }
+    ]
+}
