@@ -17,7 +17,7 @@ type Node struct {
 type LList struct {
 	root *Node
 	size int
-}
+}		
 
 func NewLList() *LList {
 	ll := &LList{}

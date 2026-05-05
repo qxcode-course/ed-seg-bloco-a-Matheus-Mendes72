@@ -5,12 +5,63 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"strconv"
 )
 
+type Node struct {
+	value int
+	next *Node
+	prev *Node
+}
+
+type LList struct {
+	head *Node
+	size int
+}
+
+func NewLList() *LList {
+	ll := &LList{}
+	ll.head = &Node{}
+	ll.head.next = ll.head
+	ll.head.prev = ll.head
+	ll.size = 0
+
+	return ll
+}
+
+func (ll *LList) toString() {
+	if ll.size == 0 {
+		fmt.Println("[]")
+		return
+	}
+
+	saida := ""
+	current := ll.head.next
+	for i := 0; i < ll.size; i++ {
+		if i > 0 {
+			saida += ", "
+		}
+
+		saida += strconv.Itoa(current.value)
+		current = current.next
+	}
+	saida += "]"
+
+	fmt.Println(saida)
+}
+
+func (ll *LList) Size() int {
+	return ll.size
+}
+
+func (ll *LList) PushBack(value int) {
+	newNode := &Node{value: value}
+	
+}
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-// 	ll := NewLList()
+	ll := NewLList()
 
 	for {
 		fmt.Print("$")
@@ -29,14 +80,14 @@ func main() {
 
 		switch cmd {
 		case "show":
-			// fmt.Println(ll.String())
+			ll.toString()
 		case "size":
-			// fmt.Println(ll.Size())
+			fmt.Println(ll.Size())
 		case "push_back":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	ll.PushBack(num)
-			// }
+			for _, v := range args[1:] {
+				num, _ := strconv.Atoi(v)
+				ll.PushBack(num)
+			}
 		case "push_front":
 			// for _, v := range args[1:] {
 			// 	num, _ := strconv.Atoi(v)

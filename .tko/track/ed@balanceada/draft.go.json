@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-04_10-41-22",
+            "content": "@@ -724,16 +724,20 @@\n rintln(%22\n+nao \n balancea\n@@ -767,36 +767,32 @@\n    fmt.Println(%22\n-nao \n balanceado%22)%0A   \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-04_10-41-38",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"bufio\"\n    \"os\"\n)\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n    scanner.Scan()\n    input := scanner.Text()\n\n    stack := make([]rune, 0)\n    for _, ch := range input {\n        if ch == '(' || ch == '[' {\n            stack = append(stack, ch)\n        } else if ch == ')' || ch == ']' {\n            if len(stack) == 0 {\n                fmt.Println(\"nao balanceado\")\n                return\n            }\n        }\n\n        topo := stack[len(stack)-1]\n        stack = stack[:len(stack)-1]\n        if (topo == '(' && ch != ')') || (topo == '[' && ch != ']') {\n            fmt.Println(\"nao balanceado\")\n            return\n        }\n    }\n\n    if len(stack) == 0 {\n        fmt.Println(\"balanceado\")\n    } else {\n        fmt.Println(\"nao balanceado\")\n    }\n}\n",
+            "lines": "37"
+        }
+    ]
+}

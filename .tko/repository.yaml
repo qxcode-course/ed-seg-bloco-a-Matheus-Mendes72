@@ -21,7 +21,8 @@ sources:
   writeable: false
   quests: null
   tasks: null
-expanded: []
+expanded:
+- ed@list
 flags:
   inbox: all
   panel: skills
@@ -29,5 +30,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@linear
-selected_index: 6
+selected: ed@editor
+selected_index: 12
