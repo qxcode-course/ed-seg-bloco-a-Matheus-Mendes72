@@ -1,0 +1,25 @@
+2026-05-19 14:06:37, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-19 14:06:44, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:11
+2026-05-19 14:23:51, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-05-19 16:24:44, SELF, v:1, k:ed@subset_sum, self:1, rate:100
+2026-05-19 16:24:51, SELF, v:1, k:ed@subset_sum, self:1, rate:100, code:1
+2026-05-19 16:26:29, SELF, v:1, k:ed@queimada, self:1, rate:100, concept:1
+2026-05-19 16:26:35, SELF, v:1, k:ed@queimada, self:1, rate:100, concept:1, code:1
+2026-05-19 16:26:48, SELF, v:1, k:ed@wordsearch, self:1, rate:100
+2026-05-19 16:26:52, SELF, v:1, k:ed@subset_sum, self:1, rate:100
+2026-05-19 16:26:58, SELF, v:1, k:ed@subset_sum, self:1, rate:100, code:1
+2026-05-19 16:27:03, SELF, v:1, k:ed@wordsearch, self:1, rate:100, code:1
+2026-05-19 16:27:11, SELF, v:1, k:ed@vetbuild, self:1, rate:100, concept:1
+2026-05-19 16:27:26, SELF, v:1, k:ed@vetbuild, self:1, rate:100, concept:1, debug:1
+2026-05-19 16:27:27, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-19 16:28:00, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:100
+2026-05-19 16:28:03, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-19 16:28:20, SELF, v:1, k:ed@chaves, self:1, rate:100, concept:1
+2026-05-19 16:28:20, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-05-19 16:28:21, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-05-19 16:28:28, SELF, v:1, k:ed@chaves, self:1, rate:100, concept:1, code:1
+2026-05-19 16:28:29, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-05-19 16:29:26, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-05-19 16:29:28, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-05-19 16:32:57, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-05-19 16:29:59, MOVE, v:1, k:ed@chaves, mode:EDIT

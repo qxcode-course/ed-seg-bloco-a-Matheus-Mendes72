@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-09_08-09-03",
+            "content": "@@ -23,368 +23,53 @@\n mt%22%0A\n-%0Afunc soma(nums %5B%5Dint, target int) bool %7B%0A    var backtracking func(index, somaCurrent int) bool%0A    %0A%7D%0A%0Afunc main() %7B%0A    var n, target int%0A    fmt.Scan(&n, &target)%0A%0A    nums := make(%5B%5Dint, n)%0A    for i := 0; i %3C n; i++ %7B%0A        fmt.Scan(&nums%5Bi%5D)%0A    %7D%0A%0A    if soma(nums, target) %7B%0A        fmt.Println(%22true%22)%0A    %7D else %7B%0A        fmt.Println(%22false%22)%0A    %7D\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-09_18-02-04",
+            "content": "@@ -24,355 +24,147 @@\n t%22%0A%0A\n-var %7B%0A    n, target int%0A    nums %5B%5Dint%0A%7D%0A%0Afunc backtracking(pos, soma int) bool %7B%0A    if soma == target %7B%0A        return true%0A    %7D%0A%0A    if pos %3E= n %7C%7C soma %3E target %7B%0A        return false%0A    %7D%0A%0A    if backtracking(pos+1, soma + nums%5Bpos%5D) %7B%0A        return true\n+func soma(nums %5B%5Dint, target int) bool %7B%0A    var backtracking func(index, somaCurrent int) bool\n %0A    \n+%0A\n %7D%0A%0A\n-    if backtracking(pos+1, soma) %7B%0A        return true%0A    %7D%0A%7D%0A%0Afunc main() %7B\n+func main() %7B%0A    var n, target int\n %0A   \n@@ -196,16 +196,17 @@\n    nums \n+:\n = make(%5B\n@@ -293,12 +293,20 @@\n oma(\n-0, 0\n+nums, target\n ) %7B%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-09_18-16-33",
+            "content": "@@ -354,26 +354,8 @@\n    %7D\n-%0A%0A    return false\n %0A%7D%0A%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-05-09_18-16-44",
+            "content": "@@ -24,17 +24,17 @@\n t%22%0A%0Avar \n-(\n+%7B\n %0A    n, \n@@ -59,17 +59,17 @@\n s %5B%5Dint%0A\n-)\n+%7D\n %0A%0Afunc b\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-09_18-17-24",
+            "content": "@@ -509,28 +509,20 @@\n %0A    if \n-backtracking\n+soma\n (0, 0) %7B\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-09_18-17-46",
+            "content": "@@ -24,62 +24,77 @@\n t%22%0A%0A\n-func subset_sum(numeros %5B%5Dint, pos int, soma int, alvo\n+var (%0A    n, target int%0A    nums %5B%5Dint%0A)%0A%0Afunc backtracking(pos, soma\n  int\n@@ -117,20 +117,22 @@\n soma == \n-alvo\n+target\n  %7B%0A     \n@@ -168,23 +168,29 @@\n pos \n-== len(numeros)\n+%3E= n %7C%7C soma %3E target\n  %7B%0A \n@@ -227,125 +227,170 @@\n  if \n-subset_sum(numeros, pos+1, soma+numeros%5Bpos%5D, alvo) %7B%0A        return true%0A    %7D%0A%0A%7D%0A%0Afunc main() %7B%0A    var n, alvo int\n+backtracking(pos+1, soma + nums%5Bpos%5D) %7B%0A        return true%0A    %7D%0A%0A    if backtracking(pos+1, soma) %7B%0A        return true%0A    %7D%0A%0A    return false%0A%7D%0A%0Afunc main() %7B\n %0A   \n@@ -408,12 +408,14 @@\n n, &\n-alvo\n+target\n )%0A%0A \n@@ -424,14 +424,10 @@\n  num\n-ero\n s \n-:\n = ma\n@@ -493,11 +493,8 @@\n &num\n-ero\n s%5Bi%5D\n@@ -513,19 +513,25 @@\n  if \n-subset_sum(\n+backtracking(0, 0\n ) %7B%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-24_10-05-17",
+            "content": "@@ -461,27 +461,8 @@\n sum(\n-numeros, 0, 0, alvo\n ) %7B%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-24_10-05-41",
+            "content": "@@ -281,33 +281,16 @@\n %0A    %7D%0A%0A\n-    return false%0A\n %7D%0A%0Afunc \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-24_10-05-53",
+            "content": "@@ -285,83 +285,8 @@\n  %7D%0A%0A\n-    if subset_sum(numeros, pos+1, soma, alvo) %7B%0A        return true%0A    %7D%0A%0A\n     \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-24_10-06-21",
+            "content": "package main\nimport \"fmt\"\n\nfunc subset_sum(numeros []int, pos int, soma int, alvo int) bool {\n    if soma == alvo {\n        return true\n    }\n\n    if pos == len(numeros) {\n        return false\n    }\n\n    if subset_sum(numeros, pos+1, soma+numeros[pos], alvo) {\n        return true\n    }\n\n    if subset_sum(numeros, pos+1, soma, alvo) {\n        return true\n    }\n\n    return false\n}\n\nfunc main() {\n    var n, alvo int\n    fmt.Scan(&n, &alvo)\n\n    numeros := make([]int, n)\n    for i := 0; i < n; i++ {\n        fmt.Scan(&numeros[i])\n    }\n\n    if subset_sum(numeros, 0, 0, alvo) {\n        fmt.Println(\"true\")\n    } else {\n        fmt.Println(\"false\")\n    }\n}\n",
+            "lines": "38"
+        }
+    ]
+}

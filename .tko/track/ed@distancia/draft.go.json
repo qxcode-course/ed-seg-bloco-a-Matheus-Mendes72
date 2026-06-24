@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-15_13-43-25",
+            "content": "@@ -81,9 +81,8 @@\n s%22, \n-&\n seq)\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-05-15_13-43-38",
+            "content": "@@ -45,18 +45,8 @@\n ing%0A\n-    L int%0A\n )%0Afu\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-05-19_14-06-44",
+            "content": "@@ -57,616 +57,47 @@\n t%0A)%0A\n-%0Afunc distancia(posicao int, texto %5B%5Drune, ultima%5B%5Dint) bool %7B%0A    if posicao == len(texto) %7B%0A        return true%0A    %7D%0A%0A    if texto%5Bposicao%5D != '.' %7B%0A        num := int(texto%5Bposicao%5D - '0')%0A%0A        if posicao-ultima%5Bnum%5D %3C= L %7B%0A            return false%0A        %7D%0A%0A        antiga := ultima%5Bnum%5D%0A        ultima%5Bnum%5D = posicao%0A%0A        if distancia(pos+1, texto, ultima) %7B%0A            return true%0A        %7D%0A        ultima%5Bnum%5D = antiga%0A%0A        return false%0A    %7D%0A%7D%0A%0Afunc main() %7B%0A    fmt.Scan(&seq, &L) %0A    %0A    palavra := make(%5B%5Drune(\n+func main() %7B%0A    fmt.Scanf(%22%25s%22, &\n seq)\n-)\n-%0A    ultima := make(%5B%5Dint, L+1)%0A%0A    distancia(0, texto, ultima)%0A\n %0A   \n@@ -114,20 +114,10 @@\n ln(s\n-tring(texto)\n+eq\n )%0A%7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-06-24_12-31-55",
+            "content": "@@ -406,20 +406,16 @@\n ncia(pos\n-icao\n +1, text\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-24_12-32-21",
+            "content": "@@ -650,23 +650,21 @@\n ncia(0, \n-palavra\n+texto\n , ultima\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-24_12-32-36",
+            "content": "@@ -522,33 +522,16 @@\n e%0A    %7D%0A\n-    return false%0A\n %7D%0A%0Afunc \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-24_13-09-01",
+            "content": "@@ -600,16 +600,21 @@\n avra := \n+make(\n %5B%5Drune(s\n@@ -616,16 +616,17 @@\n une(seq)\n+)\n %0A    ult\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-24_13-09-43",
+            "content": "@@ -702,20 +702,18 @@\n (string(\n-palavra\n+texto\n ))%0A%7D%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-24_13-09-51",
+            "content": "@@ -526,366 +526,8 @@\n   %7D%0A\n-%0A    for i := 0; i %3C= L; i++ %7B%0A        if posicao-ultima%5Bi%5D %3E L %7B%0A            texto%5Bposicao%5D = rune(i + '0')%0A            %0A            antiga := texto%5Bi%5D%0A            texto%5Bi%5D = posicao%0A%0A            if distancia(posicao+1, texto, ultima) %7B%0A                return true%0A            %7D%0A%0A            ultima%5Bi%5D = antiga%0A            texto%5Bpos%5D = '.'%0A        %7D%0A    %7D%0A%0A\n     \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-24_13-41-48",
+            "content": "@@ -666,22 +666,21 @@\n tiga := \n-ultima\n+texto\n %5Bi%5D%0A    \n@@ -683,30 +683,29 @@\n             \n-ultima\n+texto\n %5Bi%5D = posica\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-24_13-43-28",
+            "content": "@@ -853,28 +853,24 @@\n    texto%5Bpos\n-icao\n %5D = '.'%0A    \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-24_13-43-38",
+            "content": "@@ -851,11 +851,8 @@\n     \n- //\n  tex\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-24_13-43-51",
+            "content": "@@ -839,32 +839,35 @@\n tiga%0A           \n+ //\n  texto%5Bposicao%5D \n@@ -1015,71 +1015,8 @@\n 1)%0A%0A\n-    for i := 0; i %3C= L; i++ %7B%0A        ultima%5Bi%5D = -1000%0A    %7D%0A%0A\n     \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-24_13-44-43",
+            "content": "package main\nimport \"fmt\"\n\nvar (\n    seq string\n    L int\n)\n\nfunc distancia(posicao int, texto []rune, ultima[]int) bool {\n    if posicao == len(texto) {\n        return true\n    }\n\n    if texto[posicao] != '.' {\n        num := int(texto[posicao] - '0')\n\n        if posicao-ultima[num] <= L {\n            return false\n        }\n\n        antiga := ultima[num]\n        ultima[num] = posicao\n\n        if distancia(posicao+1, texto, ultima) {\n            return true\n        }\n        ultima[num] = antiga\n\n        return false\n    }\n\n    for i := 0; i <= L; i++ {\n        if posicao-ultima[i] > L {\n            texto[posicao] = rune(i + '0')\n            \n            antiga := ultima[i]\n            ultima[i] = posicao\n\n            if distancia(posicao+1, texto, ultima) {\n                return true\n            }\n\n            ultima[i] = antiga\n            texto[posicao] = '.'\n        }\n    }\n\n    return false\n}\n\nfunc main() {\n    fmt.Scan(&seq, &L) \n    \n    palavra := []rune(seq)\n    ultima := make([]int, L+1)\n\n    for i := 0; i <= L; i++ {\n        ultima[i] = -1000\n    }\n\n    distancia(0, palavra, ultima)\n\n    fmt.Println(string(palavra))\n}\n",
+            "lines": "64"
+        }
+    ]
+}

@@ -77,7 +77,47 @@
         },
         {
             "label": "2026-04-13_15-08-49",
-            "content": "package main\nimport \"fmt\"\nimport \"sort\"\n\nfunc backtrack(pos, tamanho int, ref string, usado []bool, atual []rune, resultado []string) []string {\n    if (pos == tamanho) {\n        return append(resultado, string(atual))\n    }\n\n    for i := 0; i < tamanho; i++ {\n        if (!usado[i]) {\n            usado[i] = true\n            atual[pos] = rune(ref[i])\n            \n            resultado = backtrack(pos+1, tamanho, ref, usado, atual, resultado)\n            usado[i] = false\n\n        }\n    }\n\n    return resultado\n}\n\nfunc main() {\n    var ref string\n    fmt.Scan(&ref)\n\n    tamanho := len(ref)\n    usado := make([]bool, tamanho)\n    atual := make([]rune, tamanho)\n    var resultado []string\n\n    resultado = backtrack(0, tamanho, ref, usado, atual, resultado)\n\n    sort.Strings(resultado)\n\n    for _, res := range resultado {\n        fmt.Println(res)\n    }\n}\n",
+            "content": "@@ -23,38 +23,494 @@\n mt%22%0A\n-%0Afunc permutacao() %5B%5Dstring %7B%0A\n+import %22sort%22%0A%0Afunc backtrack(pos, tamanho int, ref string, usado %5B%5Dbool, atual %5B%5Drune, resultado %5B%5Dstring) %5B%5Dstring %7B%0A    if (pos == tamanho) %7B%0A        return append(resultado, string(atual))%0A    %7D%0A%0A    for i := 0; i %3C tamanho; i++ %7B%0A        if (!usado%5Bi%5D) %7B%0A            usado%5Bi%5D = true%0A            atual%5Bpos%5D = rune(ref%5Bi%5D)%0A            %0A            resultado = backtrack(pos+1, tamanho, ref, usado, atual, resultado)%0A            usado%5Bi%5D = false%0A%0A        %7D%0A    %7D%0A%0A    return resultado\n %0A%7D%0A%0A\n@@ -531,23 +531,19 @@\n     var \n-palavra\n+ref\n  string%0A\n@@ -560,17 +560,37 @@\n an(&\n-palavra)%0A\n+ref)%0A%0A    tamanho := len(ref)\n %0A   \n@@ -612,28 +612,23 @@\n %5B%5Dbool, \n-len(palavra)\n+tamanho\n )%0A    at\n@@ -651,50 +651,208 @@\n ne, \n-len(palavra))%0A%0A    resultado = permutacao()\n+tamanho)%0A    var resultado %5B%5Dstring%0A%0A    resultado = backtrack(0, tamanho, ref, usado, atual, resultado)%0A%0A    sort.Strings(resultado)%0A%0A    for _, res := range resultado %7B%0A        fmt.Println(res)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-24_10-58-32",
+            "content": "@@ -22,22 +22,8 @@\n fmt%22\n-%0Aimport %22sort%22\n %0A%0Afu\n@@ -40,83 +40,8 @@\n cao(\n-posicao int, palavra string, usado %5B%5Dbool, atual %5B%5Drune, resultado %5B%5Dstring\n ) %5B%5D\n@@ -213,178 +213,21 @@\n ado \n-:= %5B%5Dstring%7B%7D%0A%0A    resultado = permutacao(0, palavra, usado, atual, resultado)%0A%0A    sort.Strings(resultado)%0A%0A    for _, i := range resultado %7B%0A        fmt.Println(i)%0A    %7D\n+= permutacao()\n %0A%7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-06-24_11-05-56",
+            "content": "@@ -142,100 +142,8 @@\n g %7B%0A\n-    if posicao == len(palavra) %7B%0A        return append(resultado, string(atual))%0A    %7D%0A%0A    \n %0A%7D%0A%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-24_11-07-10",
+            "content": "@@ -234,24 +234,8 @@\n     \n-return resultado\n %0A%7D%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-06-24_11-07-17",
+            "content": "@@ -230,247 +230,8 @@\n  %7D%0A%0A\n-    for i := 0; i %3C len(palavra); i++ %7B%0A        if !usado%5Bi%5D %7B%0A            usado%5Bi%5D = true%0A            atual%5Bi%5D = rune(palavra%5Bi%5D)%0A%0A            resultado = permutacao(posicao+1, palavra, usado, atual, resultado)%0A%0A        %0A        %7D%0A    %7D%0A%0A\n     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-06-24_11-10-40",
+            "content": "@@ -461,34 +461,8 @@\n    %7D\n-%0A%0A        usado%5Bi%5D = false\n %0A   \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-24_11-11-37",
+            "content": "@@ -335,23 +335,17 @@\n   atual%5B\n-posicao\n+i\n %5D = rune\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-24_11-12-37",
+            "content": "@@ -445,24 +445,40 @@\n ltado)%0A%0A    \n+    %0A        %7D%0A%0A\n         usad\n@@ -489,34 +489,16 @@\n  = false\n-        %0A        %7D\n %0A    %7D%0A%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-24_11-14-31",
+            "content": "package main\nimport \"fmt\"\nimport \"sort\"\n\nfunc permutacao(posicao int, palavra string, usado []bool, atual []rune, resultado []string) []string {\n    if posicao == len(palavra) {\n        return append(resultado, string(atual))\n    }\n\n    for i := 0; i < len(palavra); i++ {\n        if !usado[i] {\n            usado[i] = true\n            atual[posicao] = rune(palavra[i])\n\n            resultado = permutacao(posicao+1, palavra, usado, atual, resultado)\n\n            usado[i] = false        \n        }\n    }\n\n    return resultado\n}\n\nfunc main() {\n    var palavra string\n    fmt.Scan(&palavra)\n\n    usado := make([]bool, len(palavra))\n    atual := make([]rune, len(palavra))\n\n    resultado := []string{}\n\n    resultado = permutacao(0, palavra, usado, atual, resultado)\n\n    sort.Strings(resultado)\n\n    for _, i := range resultado {\n        fmt.Println(i)\n    }\n}\n",
             "lines": "40"
         }
     ]

@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-08_19-19-28",
+            "content": "@@ -168,895 +168,25 @@\n  %7B%0A%09\n-if len(word) == 0 %7C%7C len(grid) == 0 %7B%0A%09%09return false%0A%09%7D%0A%0A%09rows, cols := len(grid), len(grid%5B0%5D)%0A%0A%09chars := make(map%5Bbyte%5Dint)%0A%09for i := 0; i %3C rows; i++ %7B%0A%09%09for j := 0; j %3C cols; j++ %7B%0A%09%09%09chars%5Bgrid%5Bi%5D%5Bj%5D%5D++%0A%09%09%7D%0A%09%7D%0A%0A%09for i := 0; i %3C len(word); i++ %7B%0A%09%09if chars%5Bword%5Bi%5D%5D == 0 %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A%0A%09var backtrack func(row, col, index int) bool%0A%09backtrack = func(row, col, index int) bool %7B%0A%09%09if index == len(word) %7B%0A%09%09%09return true%0A%09%09%7D%0A%0A%09%09if row %3C 0 %7C%7C row %3E= rows %7C%7C col %3C 0 %7C%7C col %3E= cols %7C%7C grid%5Brow%5D%5Bcol%5D != word%5Bindex%5D %7B%0A%09%09%09return false%0A%09%09%7D%0A%0A%09%09vis := grid%5Brow%5D%5Bcol%5D%0A%09%09grid%5Brow%5D%5Bcol%5D = '#'%0A%0A%09%09backtrack(row+1, col, index+1)%0A%09%09backtrack(row-1, col, index+1)%0A%09%09backtrack(row, col+1, index+1)%0A%09%09backtrack(row, col-1, index+1)%0A%0A%09%09grid%5Brow%5D%5Bcol%5D = temp%0A%09%09return false%0A%09%7D%0A%0A%09for i := 0; i %3C rows; i++ %7B%0A%09%09for j := 0; j %3C cols; j++ %7B%0A%09%09%09if backtrack(i, j, 0) %7B%0A%09%09%09%09return true%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n+_, _ = grid, word\n %0A%09re\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-09_08-00-28",
+            "content": "@@ -913,19 +913,20 @@\n %5Bcol%5D = \n-vis\n+temp\n %0A%09%09retur\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-05-09_08-00-41",
+            "content": "@@ -763,19 +763,16 @@\n  '#'%0A%0A%09%09\n-if \n backtrac\n@@ -789,35 +789,27 @@\n ol, index+1)\n- %7C%7C%0A       \n+%0A%09%09\n backtrack(ro\n@@ -822,35 +822,27 @@\n ol, index+1)\n- %7C%7C%0A       \n+%0A%09%09\n backtrack(ro\n@@ -863,19 +863,11 @@\n x+1)\n- %7C%7C%0A       \n+%0A%09%09\n back\n@@ -896,36 +896,8 @@\n x+1)\n- %7B%0A        return true%0A    %7D\n %0A%0A%09%09\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-05-09_08-01-34",
+            "content": "@@ -168,83 +168,277 @@\n  %7B%0A%09\n-linha := len(grid)%0A%09coluna := len(grid%5B0%5D)%0A%0A%09if len(word) == 0 %7C%7C len(grid)\n+if len(word) == 0 %7C%7C len(grid) == 0 %7B%0A%09%09return false%0A%09%7D%0A%0A%09rows, cols := len(grid), len(grid%5B0%5D)%0A%0A%09chars := make(map%5Bbyte%5Dint)%0A%09for i := 0; i %3C rows; i++ %7B%0A%09%09for j := 0; j %3C cols; j++ %7B%0A%09%09%09chars%5Bgrid%5Bi%5D%5Bj%5D%5D++%0A%09%09%7D%0A%09%7D%0A%0A%09for i := 0; i %3C len(word); i++ %7B%0A%09%09if chars%5Bword%5Bi%5D%5D\n  == \n@@ -435,32 +435,33 @@\n rd%5Bi%5D%5D == 0 %7B%0A%09%09\n+%09\n return false%0A%09%7D%0A\n@@ -453,24 +453,28 @@\n eturn false%0A\n+%09%09%7D%0A\n %09%7D%0A%0A%09var bus\n@@ -475,28 +475,37 @@\n ar b\n-uscar func(int\n+acktrack func(row, col\n , in\n-t,\n+dex\n  int\n@@ -515,44 +515,41 @@\n ool%0A\n-%0A\n %09b\n-uscar = func(i int, j int\n+acktrack = func(row, col\n , ind\n-ic\n e\n+x\n  int\n@@ -566,34 +566,26 @@\n %09if \n-grid%5Bi%5D%5Bj%5D != word%5Bindice%5D\n+index == len(word)\n  %7B%0A%09\n@@ -589,28 +589,27 @@\n %7B%0A%09%09%09return \n-fals\n+tru\n e%0A%09%09%7D%0A%0A%09%09if \n@@ -612,29 +612,89 @@\n %09if \n-(indice == len(word))\n+row %3C 0 %7C%7C row %3E= rows %7C%7C col %3C 0 %7C%7C col %3E= cols %7C%7C grid%5Brow%5D%5Bcol%5D != word%5Bindex%5D\n  %7B%0A%09\n@@ -694,35 +694,36 @@\n ex%5D %7B%0A%09%09%09return \n-tru\n+fals\n e%0A%09%09%7D%0A%0A%09%09if busc\n@@ -719,125 +719,223 @@\n %0A%0A%09%09\n-if buscar(i\n+vis := grid%5Brow%5D%5Bcol%5D%0A%09%09grid%5Brow%5D%5Bcol%5D = '#'%0A%0A%09%09if backtrack(row\n +1, \n-j\n+col\n , ind\n-ic\n e\n+x\n +1) %7C%7C\n- buscar(i, j+1\n+%0A       backtrack(row-1, col\n , ind\n-ic\n e\n+x\n +1) %7C%7C\n- buscar(i-1, j\n+%0A       backtrack(row, col+1\n , ind\n-ic\n e\n+x\n +1) %7C%7C\n- buscar(i, j\n+%0A       backtrack(row, col\n -1, ind\n-ic\n e\n+x\n +1) %7B%0A\n-%09%09%09\n+        \n retu\n@@ -942,19 +942,60 @@\n rn true%0A\n-%09%09%7D\n+    %7D%0A%0A%09%09grid%5Brow%5D%5Bcol%5D = vis%0A%09%09return false\n %0A%09%7D%0A%0A%09fo\n@@ -1012,13 +1012,12 @@\n i %3C \n-linha\n+rows\n ; i+\n@@ -1045,11 +1045,9 @@\n  col\n-una\n+s\n ; j+\n@@ -1057,14 +1057,20 @@\n %0A%09%09%09\n-buscar\n+if backtrack\n (i, \n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-06-24_10-27-43",
+            "content": "@@ -660,19 +660,16 @@\n ++ %7B%0A%09%09%09\n-if \n buscar(i\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-24_10-28-29",
+            "content": "@@ -594,24 +594,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09return false\n %0A%09%7D%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-24_10-28-47",
+            "content": "@@ -411,80 +411,8 @@\n %09%7D%0A%0A\n-%09%09if i %3C 0 %7C%7C i %3E= linha %7C%7C j %3C 0 %7C%7C j %3E= coluna %7B%0A%09%09%09return false%0A%09%09%7D%0A%0A\n %09%09if\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-06-24_10-29-43",
+            "content": "@@ -673,19 +673,20 @@\n %09return \n-tru\n+fals\n e%0A%09%7D%0A%0A%09f\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-06-24_10-31-02",
+            "content": "@@ -532,49 +532,8 @@\n %09%7D%0A%0A\n-%09%09aux := grid%5Bi%5D%5Bj%5D%0A%0A%09%09grid%5Bi%5D%5Bj%5D = '*'%0A%0A\n %09%09if\n@@ -668,27 +668,8 @@\n %09%7D%0A%0A\n-%09%09grid%5Bi%5D%5Bj%5D = aux%0A\n %09%09re\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-06-24_10-32-01",
+            "content": "@@ -361,51 +361,34 @@\n %09if \n-i %3C 0 %7C%7C i %3E= linha %7C%7C j %3C 0 %7C%7C j %3E= coluna\n+grid%5Bi%5D%5Bj%5D != word%5Bindice%5D\n  %7B%0A%09\n@@ -410,42 +410,57 @@\n %09%09%7D%0A\n-%09%09\n %0A%09%09if \n-grid%5Bi%5D%5Bj%5D != word%5Bindice%5D\n+i %3C 0 %7C%7C i %3E= linha %7C%7C j %3C 0 %7C%7C j %3E= coluna\n  %7B%0A%09\n@@ -524,24 +524,65 @@\n n true%0A%09%09%7D%0A%0A\n+%09%09aux := grid%5Bi%5D%5Bj%5D%0A%0A%09%09grid%5Bi%5D%5Bj%5D = '*'%0A%0A\n %09%09if buscar(\n@@ -705,16 +705,35 @@\n ue%0A%09%09%7D%0A%0A\n+%09%09grid%5Bi%5D%5Bj%5D = aux%0A\n %09%09return\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-06-24_10-32-59",
+            "content": "@@ -356,59 +356,8 @@\n l %7B%0A\n-%09%09if (indice == len(word)) %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%09%0A\n %09%09if\n@@ -403,16 +403,16 @@\n oluna %7B%0A\n+\n %09%09%09retur\n@@ -423,17 +423,19 @@\n lse%0A%09%09%7D%0A\n+%09%09\n %0A\n-\n %09%09if gri\n@@ -481,16 +481,64 @@\n se%0A%09%09%7D%0A%0A\n+%09%09if (indice == len(word)) %7B%0A%09%09%09return true%0A%09%09%7D%0A\n %0A%09%09if bu\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-06-24_10-33-27",
+            "content": "@@ -396,24 +396,26 @@\n rn true%0A%09%09%7D%0A\n+%09%09\n %0A%09%09if i %3C 0 \n@@ -672,28 +672,27 @@\n %7D%0A%0A%09%09return \n-fals\n+tru\n e%0A%09%7D%0A%0A%09for i\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-06-24_10-34-42",
+            "content": "@@ -532,48 +532,8 @@\n %09%7D%0A%0A\n-%09%09aux := grid%5Bi%5D%5Bj%5D%0A%0A%09%09grid%5Bi%5D%5Bj%5D = '*'%0A\n %0A%09%09i\n@@ -649,29 +649,8 @@\n ) %7B%0A\n-%09%09%09grid%5Bi%5D%5Bj%5D = aux%0A%0A\n %09%09%09r\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-06-24_10-36-57",
+            "content": "@@ -686,35 +686,16 @@\n e+1) %7B%0A%09\n-%09%09return true%0A%09%09%7D%0A%0A\n %09%09grid%5Bi\n@@ -705,18 +705,36 @@\n %5D = aux%0A\n+%0A\n %09%09\n+%09return true%0A%09%09%7D%0A\n %0A%09%09retur\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-06-24_10-37-52",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(grid [][]byte, word string) bool {\n\tlinha := len(grid)\n\tcoluna := len(grid[0])\n\n\tif len(word) == 0 || len(grid) == 0 {\n\t\treturn false\n\t}\n\n\tvar buscar func(int, int, int) bool\n\n\tbuscar = func(i int, j int, indice int) bool {\n\t\tif (indice == len(word)) {\n\t\t\treturn true\n\t\t}\n\n\t\tif i < 0 || i >= linha || j < 0 || j >= coluna {\n\t\t\treturn false\n\t\t}\n\n\t\tif grid[i][j] != word[indice] {\n\t\t\treturn false\n\t\t}\n\n\t\taux := grid[i][j]\n\n\t\tgrid[i][j] = '*'\n\n\t\tif buscar(i+1, j, indice+1) || buscar(i, j+1, indice+1) || buscar(i-1, j, indice+1) || buscar(i, j-1, indice+1) {\n\t\t\treturn true\n\t\t}\n\n\t\tgrid[i][j] = aux\n\t\t\n\t\treturn false\n\t}\n\n\tfor i := 0; i < linha; i++ {\n\t\tfor j := 0; j < coluna; j++ {\n\t\t\tif buscar(i, j, 0) {\n\t\t\t\treturn true\n\t\t\t}\n\t\t}\n\t}\n\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []byte(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "71"
+        }
+    ]
+}
