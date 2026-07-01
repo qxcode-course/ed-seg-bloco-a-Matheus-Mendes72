@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-01_15-42-24",
+            "content": "@@ -604,29 +604,8 @@\n %0A%09%7D%0A\n-%09%0A%09return qtd_navios%0A\n %7D%0A%0A/\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-07-01_15-42-36",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// Fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode\nfunc countBattleships(board [][]byte) int {\n\tif len(board) == 0 {\n\t\treturn 0\n\t}\n\n\tlinhas := len(board)\n\tcolunas := len(board[0])\n\n\tqtd_navios := 0\n\tvar dfs func(int, int)\n\tdfs = func(i, j int) {\n\t\tif i < 0 || i >= linhas || j < 0 || j >= colunas {\n\t\t\treturn \n\t\t}\n\n\t\tif board[i][j] != 'X' {\n\t\t\treturn\n\t\t}\n\n\t\tboard[i][j] = 'M'\n\n\t\tdfs(i+1, j)\n\t\tdfs(i-1, j)\n\t\tdfs(i, j+1)\n\t\tdfs(i, j-1)\n\t}\n\n\tfor i := 0; i < linhas; i++ {\n\t\tfor j := 0; j < colunas; j++ {\n\t\t\tif board[i][j] == 'X' {\n\t\t\t\tqtd_navios++\n\t\t\t\tdfs(i, j)\n\t\t\t}\n\t\t}\n\t}\n\t\n\treturn qtd_navios\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\n\tboard := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\n\tresult := countBattleships(board)\n\tfmt.Println(result)\n}\n",
+            "lines": "65"
+        }
+    ]
+}

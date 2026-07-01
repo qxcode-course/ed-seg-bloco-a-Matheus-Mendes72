@@ -10,7 +10,39 @@ import (
 
 // Não modifique a assinatura da função floodFill
 func floodFill(image [][]int, sr int, sc int, color int) [][]int {
+	linhas := len(image)
+	colunas := len(image[0])
 
+	cor_original := image[sr][sc]
+
+	if cor_original == color {
+		return image
+	}
+
+	var dfs func(int, int)
+	dfs = func(i, j int) {
+		if i < 0 || i >= linhas || j < 0 || j >= colunas {
+			return
+		}
+
+		if image[i][j] != cor_original {
+			return
+		}
+
+		image[i][j] = color
+		
+		dfs(i+1, j)
+		dfs(i-1, j)
+		dfs(i, j+1)
+		dfs(i, j-1)
+	}
+
+	dfs(sr, sc)
+	// for i := 0; i < linhas; i++ {
+	// 	for j := 0; j < colunas; j++ {
+	// 		if
+	// 	}
+	// }
 	return image
 }
 
