@@ -24,6 +24,7 @@ func create(parts *[]string) *Node {
 	if len(*parts) == 0 {
 		return nil
 	}
+
 	elem := (*parts)[0]
 	*parts = (*parts)[1:]
 
@@ -31,10 +32,8 @@ func create(parts *[]string) *Node {
 		return nil
 	}
 
-	var value int
-	value, _ = strconv.Atoi(elem)
-
-	node := &Node {
+	value, _ := strconv.Atoi(elem)
+	node := &Node{
 		Value: value,
 	}
 
