@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-01_10-57-11",
+            "content": "@@ -370,18 +370,18 @@\n %09%7D%0A%0A%09ret\n-u\n r\n+u\n n node%0A%7D\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-01_10-57-21",
+            "content": "@@ -687,133 +687,36 @@\n  %7B%0A%09\n-%0A%0A%09return %22%22%0A%7D%0A%0Afunc serialize(node *Node, parts *%5B%5Dstring) %7B%0A%09if node == nil %7B%0A%09%09*parts = append(*parts, %22#%22)%0A%09%09return%0A%09%7D%0A%0A%09\n+// TODO%0A%09_ = root%0A%09return %22%22\n %0A%7D%0A%0A\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-01_11-04-22",
+            "content": "@@ -687,87 +687,20 @@\n  %7B%0A%09\n-parts := %5B%5Dstring%7B%7D%0A%0A%09serialize(root, &parts)%0A%0A%09return strings.Join(parts, %22 %22)\n+%0A%0A%09return %22%22\n %0A%7D%0A%0A\n@@ -807,16 +807,17 @@\n urn%0A%09%7D%0A%0A\n+%09\n %0A%7D%0A%0A// -\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-01_11-05-46",
+            "content": "@@ -874,17 +874,16 @@\n urn%0A%09%7D%0A%0A\n-%09\n %0A%7D%0A%0A// -\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-01_11-06-57",
+            "content": "@@ -879,57 +879,8 @@\n %7D%0A%0A%09\n-*parts = append(*parts, strconv.Itoa(node.Value))\n %0A%7D%0A%0A\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-01_11-09-18",
+            "content": "@@ -928,38 +928,8 @@\n ue))\n-%0A%0A%09serialize(node.Left, parts)\n %0A%7D%0A%0A\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-01_11-09-49",
+            "content": "@@ -959,38 +959,8 @@\n ts)%0A\n-%09serialize(node.Right, parts)%0A\n %7D%0A%0A/\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-01_11-10-13",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc insert(node *Node, value int) *Node {\n\tif node == nil {\n\t\treturn &Node {\n\t\t\tValue: value,\n\t\t}\n\t}\n\n\tif value < node.Value {\n\t\tnode.Left = insert(node.Left, value)\n\t} else if value > node.Value {\n\t\tnode.Right = insert(node.Right, value)\n\t}\n\n\treturn node\n}\n\nfunc BstInsert(values []int) *Node {\n\tvar root *Node\n\n\tfor _, value := range values {\n\t\troot = insert(root, value)\n\t}\n\n\treturn root\n}\n\n// Dica: crie um vetor compartilhado e v\u00e1 preenchendo conforme anda na recurs\u00e3o\n// Depois use o strings.Join para gerar o serial\nfunc Serialize(root *Node) string {\n\tparts := []string{}\n\n\tserialize(root, &parts)\n\n\treturn strings.Join(parts, \" \")\n}\n\nfunc serialize(node *Node, parts *[]string) {\n\tif node == nil {\n\t\t*parts = append(*parts, \"#\")\n\t\treturn\n\t}\n\n\t*parts = append(*parts, strconv.Itoa(node.Value))\n\n\tserialize(node.Left, parts)\n\tserialize(node.Right, parts)\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tvalues := make([]int, 0, len(parts))\n\tfor _, elem := range parts {\n\t\tv, err := strconv.Atoi(elem)\n\t\tif err == nil {\n\t\t\tvalues = append(values, v)\n\t\t}\n\t}\n\troot := BstInsert(values)\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tfmt.Println(Serialize((root)))\n}\n",
+            "lines": "108"
+        }
+    ]
+}

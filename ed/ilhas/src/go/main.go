@@ -9,9 +9,44 @@ import (
 // Não modifique a assinatura da função numIslands
 // Ela é a função que será chamada no LeetCode para resolver o problema
 func numIslands(grid [][]byte) int {
-	//
-	//_ := grid
-	return 0
+	if len(grid) == 0 {
+		return 0
+	}
+
+	linhas := len(grid)
+	colunas := len(grid[0])
+
+	var dfs func(int, int)
+
+	dfs = func(i, j int) {
+		if i < 0 || i >= linhas || j < 0 || j >= colunas {
+			return 
+		}
+
+		if grid[i][j] != '1' {
+			return
+		}
+
+		grid[i][j] = '0'
+
+		dfs(i+1, j)
+		dfs(i-1, j)
+		dfs(i, j+1)
+		dfs(i, j-1)
+	}
+
+	qtd_ilhas := 0 
+
+	for i := 0; i < linhas; i++ {
+		for j := 0; j < colunas; j++ {
+			if grid[i][j] == '1' {
+				qtd_ilhas++
+				dfs(i,j)
+			}
+		}
+	}
+	
+	return qtd_ilhas
 }
 
 // Não modifique a função main
