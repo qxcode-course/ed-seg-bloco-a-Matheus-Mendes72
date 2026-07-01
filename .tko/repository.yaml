@@ -18,10 +18,11 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded: []
+expanded:
+- ed@dfs
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
 audit:

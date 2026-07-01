@@ -286,3 +286,16 @@
 2026-07-01 15:42:36, EXEC, v:1, k:ed@battleship, mode:FULL, rate:100, size:65
 2026-07-01 15:42:37, MOVE, v:1, k:ed@battleship, mode:BACK
 2026-07-01 15:42:42, SELF, v:1, k:ed@battleship, self:1, rate:100, concept:1
+2026-07-01 15:44:19, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-07-01 15:44:32, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-07-01 15:44:51, MOVE, v:1, k:ed@ilhas, mode:DOWN
+2026-07-01 15:44:53, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-07-01 15:45:18, EXEC, v:1, k:ed@ilhas, mode:FULL, size:31, fail:COMP
+2026-07-01 15:47:25, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-07-01 15:47:33, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-07-01 15:44:51, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-01 15:48:00, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-07-01 15:50:52, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:0, size:60
+2026-07-01 15:51:33, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:100, size:64
+2026-07-01 15:51:34, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-07-01 15:51:43, SELF, v:1, k:ed@ilhas, self:1, rate:100, refactor:1

@@ -16,11 +16,11 @@ func numIslands(grid [][]byte) int {
 	linhas := len(grid)
 	colunas := len(grid[0])
 
+	qtd_ilhas := 0
 	var dfs func(int, int)
-
 	dfs = func(i, j int) {
 		if i < 0 || i >= linhas || j < 0 || j >= colunas {
-			return 
+			return
 		}
 
 		if grid[i][j] != '1' {
@@ -35,17 +35,15 @@ func numIslands(grid [][]byte) int {
 		dfs(i, j-1)
 	}
 
-	qtd_ilhas := 0 
-
 	for i := 0; i < linhas; i++ {
 		for j := 0; j < colunas; j++ {
 			if grid[i][j] == '1' {
 				qtd_ilhas++
-				dfs(i,j)
+				dfs(i, j)
 			}
 		}
 	}
-	
+
 	return qtd_ilhas
 }
 
