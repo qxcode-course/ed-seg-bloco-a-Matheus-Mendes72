@@ -11,13 +11,13 @@ func main() {
 	}
 
 	for i := 0; i < 15; i++ {
-		var gols1, gols2 int
-		fmt.Scan(&gols1, &gols2)
+		var MM, NN int
+		fmt.Scan(&MM, &NN)
 
 		time1 := queue.Dequeue()
 		time2 := queue.Dequeue()
 
-		if gols1 > gols2 {
+		if MM > NN {
 			queue.Enqueue(time1)
 		} else {
 			queue.Enqueue(time2)

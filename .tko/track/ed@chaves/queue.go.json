@@ -2,7 +2,22 @@
     "patches": [
         {
             "label": "2026-04-30_21-41-42",
-            "content": "package main\n\nimport (\n\t\"container/list\"\n\t\"fmt\"\n)\n\ntype Queue[T any] struct {\n\titems *list.List\n}\n\nfunc NewQueue[T any]() *Queue[T] {\n\treturn &Queue[T]{items: list.New()}\n}\n\nfunc (q *Queue[T]) Enqueue(item T) {\n\tq.items.PushBack(item)\n}\n\nfunc (q *Queue[T]) Dequeue() T {\n\tif q.items.Len() == 0 {\n\t\tvar zero T\n\t\treturn zero // Return zero value if queue is empty\n\t}\n\tfront := q.items.Front().Value.(T)\n\tq.items.Remove(q.items.Front())\n\treturn front\n}\n\nfunc (q *Queue[T]) IsEmpty() bool {\n\treturn q.items.Len() == 0\n}\n\nfunc (q *Queue[T]) String() string {\n\tvar result string\n\tfor e := q.items.Front(); e != nil; e = e.Next() {\n\t\tresult += fmt.Sprint(e.Value.(T)) + \" \"\n\t}\n\treturn \"[ \" + result + \"]\"\n}\n",
+            "content": "@@ -167,19 +167,16 @@\n w()%7D%0A%7D%0A%0A\n-// \n func (q \n@@ -204,19 +204,16 @@\n em T) %7B%0A\n-// \n %09q.items\n@@ -228,25 +228,19 @@\n k(item)%0A\n-// %7D%0A%0A// \n+%7D%0A%0A\n func (q \n@@ -264,19 +264,16 @@\n e() T %7B%0A\n-// \n %09if q.it\n@@ -289,19 +289,16 @@\n  == 0 %7B%0A\n-// \n %09%09var ze\n@@ -302,19 +302,16 @@\n  zero T%0A\n-// \n %09%09return\n@@ -355,25 +355,19 @@\n s empty%0A\n-// %09%7D%0A// \n+%09%7D%0A\n %09front :\n@@ -394,19 +394,16 @@\n lue.(T)%0A\n-// \n %09q.items\n@@ -427,19 +427,16 @@\n ront())%0A\n-// \n %09return \n@@ -441,25 +441,19 @@\n n front%0A\n-// %7D%0A%0A// \n+%7D%0A%0A\n func (q \n@@ -480,19 +480,16 @@\n  bool %7B%0A\n-// \n %09return \n@@ -511,17 +511,11 @@\n = 0%0A\n-// %7D%0A%0A// \n+%7D%0A%0A\n func\n@@ -547,19 +547,16 @@\n tring %7B%0A\n-// \n %09var res\n@@ -566,19 +566,16 @@\n  string%0A\n-// \n %09for e :\n@@ -618,19 +618,16 @@\n ext() %7B%0A\n-// \n %09%09result\n@@ -664,17 +664,11 @@\n %22 %22%0A\n-// %09%7D%0A// \n+%09%7D%0A\n %09ret\n@@ -691,13 +691,10 @@\n t + %22%5D%22%0A\n-// \n %7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-02_07-30-45",
+            "content": "@@ -163,24 +163,27 @@\n t.New()%7D%0A%7D%0A%0A\n+// \n func (q *Que\n@@ -207,16 +207,19 @@\n em T) %7B%0A\n+// \n %09q.items\n@@ -234,19 +234,25 @@\n k(item)%0A\n-%7D%0A%0A\n+// %7D%0A%0A// \n func (q \n@@ -276,16 +276,19 @@\n e() T %7B%0A\n+// \n %09if q.it\n@@ -304,16 +304,19 @@\n  == 0 %7B%0A\n+// \n %09%09var ze\n@@ -320,16 +320,19 @@\n  zero T%0A\n+// \n %09%09return\n@@ -376,19 +376,25 @@\n s empty%0A\n-%09%7D%0A\n+// %09%7D%0A// \n %09front :\n@@ -421,16 +421,19 @@\n lue.(T)%0A\n+// \n %09q.items\n@@ -457,16 +457,19 @@\n ront())%0A\n+// \n %09return \n@@ -474,19 +474,25 @@\n n front%0A\n-%7D%0A%0A\n+// %7D%0A%0A// \n func (q \n@@ -519,16 +519,19 @@\n  bool %7B%0A\n+// \n %09return \n@@ -549,19 +549,25 @@\n () == 0%0A\n-%7D%0A%0A\n+// %7D%0A%0A// \n func (q \n@@ -595,16 +595,19 @@\n tring %7B%0A\n+// \n %09var res\n@@ -617,16 +617,19 @@\n  string%0A\n+// \n %09for e :\n@@ -672,16 +672,19 @@\n ext() %7B%0A\n+// \n %09%09result\n@@ -717,19 +717,25 @@\n ) + %22 %22%0A\n-%09%7D%0A\n+// %09%7D%0A// \n %09return \n@@ -754,10 +754,13 @@\n t + %22%5D%22%0A\n+// \n %7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-02_07-31-01",
+            "content": "@@ -91,17 +91,16 @@\n .List%0A%7D%0A\n-%09\n %0Afunc Ne\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-02_07-45-15",
+            "content": "package main\n\nimport (\n\t\"container/list\"\n\t\"fmt\"\n)\n\ntype Queue[T any] struct {\n\titems *list.List\n}\n\t\nfunc NewQueue[T any]() *Queue[T] {\n\treturn &Queue[T]{items: list.New()}\n}\n\nfunc (q *Queue[T]) Enqueue(item T) {\n\tq.items.PushBack(item)\n}\n\nfunc (q *Queue[T]) Dequeue() T {\n\tif q.items.Len() == 0 {\n\t\tvar zero T\n\t\treturn zero // Return zero value if queue is empty\n\t}\n\tfront := q.items.Front().Value.(T)\n\tq.items.Remove(q.items.Front())\n\treturn front\n}\n\nfunc (q *Queue[T]) IsEmpty() bool {\n\treturn q.items.Len() == 0\n}\n\nfunc (q *Queue[T]) String() string {\n\tvar result string\n\tfor e := q.items.Front(); e != nil; e = e.Next() {\n\t\tresult += fmt.Sprint(e.Value.(T)) + \" \"\n\t}\n\treturn \"[ \" + result + \"]\"\n}\n",
             "lines": "40"
         }
     ]

@@ -1,12 +1,11 @@
+// Colando o modelo padrão de todas as funções presentes nas questões anteriories
 package main
-
 import (
-    "bufio"
     "fmt"
+    "bufio"
     "os"
     "strings"
 )
-
 type Stack struct {
     data []string
 }
@@ -40,14 +39,16 @@ func (s *Stack) IsEmpty() bool {
 }
 
 func precedence(op string) int {
-    switch op {
-    case "+", "-":
+    if op == "+" || op == "-" {
         return 1
-    case "*", "/":
+    }
+    if op == "*" || op == "/" {
         return 2
-    case "^":
+    }
+    if op == "^" {
         return 3
     }
+
     return 0
 }
 
