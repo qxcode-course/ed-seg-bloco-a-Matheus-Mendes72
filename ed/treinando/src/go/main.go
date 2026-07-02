@@ -16,6 +16,7 @@ func tostr(vet []int) string {
 	if len(vet) == 1 {
 		return strconv.Itoa(vet[0])
 	}
+
 	return strconv.Itoa(vet[0]) + ", " + tostr(vet[1:])
 }
 
@@ -28,19 +29,22 @@ func tostrrev(vet []int) string {
 		return strconv.Itoa(vet[0])
 	}
 
-	vet[0], vet[len(vet)-1] = vet[len(vet)-1], vet[0]
-
+	aux := vet[0]
+	vet[0] = vet[len(vet)-1]
+	vet[len(vet)-1] = aux
+	
 	return strconv.Itoa(vet[0]) + ", " + tostr(vet[1:])
-	//return tostrrev(vet[1 : len(vet) -1])
 }
 
 // reverse: inverte os elementos do slice
 func reverse(vet []int) {
-	i := 0
-	j := len(vet) -1
+	i := 0 
+	j := len(vet)-1
 
 	for i < j {
-		vet[i], vet[j] = vet[j], vet[i]
+		aux := vet[i]
+		vet[i] = vet[j]
+		vet[j] = aux
 		i++
 		j--
 	}
@@ -48,6 +52,11 @@ func reverse(vet []int) {
 
 // sum: soma dos elementos do slice
 func sum(vet []int) int {
+	// soma := 0
+	// for i := 0; i < len(vet); i++ {
+	// 	soma += vet[i]
+	// }
+
 	if len(vet) == 0 {
 		return 0
 	}
@@ -61,10 +70,6 @@ func mult(vet []int) int {
 		return 1
 	}
 
-	if len(vet) == 1 {
-		return vet[0]
-	}
-	
 	return vet[0] * mult(vet[1:])
 }
 
@@ -77,24 +82,23 @@ func min(vet []int) int {
 		return -1
 	}
 
-	var rec func(v []int) (int, int)
-
-	rec = func(v []int) (int, int) {
-		if len(v) == 1 {
-			return v[0], 0
+	var rec_indice func(vet []int) (int, int)
+	rec_indice = func (vet []int) (int, int) {
+		if len(vet) == 1 {
+			return vet[0], 0
 		}
 
-		valMenor, idxMenor := rec(v[1:])
-		if v[0] <= valMenor {
-			return v[0], 0
+		valor_menor, indice_menor := rec_indice(vet[1:])
+		if valor_menor >= vet[0] {
+			return vet[0], 0
 		}
 
-		return valMenor, idxMenor+1
+		return valor_menor, indice_menor+1
 	}
 
-	_, indice := rec(vet)
+	_, indice_menor := rec_indice(vet)
 
-	return indice
+	return indice_menor
 }
 
 func main() {
@@ -134,16 +138,4 @@ func main() {
 			fmt.Println("fail: comando invalido")
 		}
 	}
-	fmt.Println("]")
 }
-
-// func printVec(vet string) {
-// 	fmt.Print("[")
-// 	for i, val := range vet {
-// 		if i > 0 {
-// 			fmt.Print(", ")
-// 		}
-// 		fmt.Print([]int(val))
-// 	}
-// 	fmt.Println("]")
-// }

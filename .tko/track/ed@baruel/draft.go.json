@@ -282,8 +282,48 @@
         },
         {
             "label": "2026-03-20_05-57-00",
-            "content": "package main\nimport \"fmt\"\n// func main() {\n//     qtd_album := 0\n//     qtd_fig := 0\n//     fmt.Scan(&qtd_album, &qtd_fig)\n//     album := make([]int, qtd_fig)\n//     unicos := make(map[int]bool)\n//     repetidos := make([]int, 0, qtd_fig)\n\n//     for i := range album {\n//         fmt.Scan(&album[i])\n//     }\n\n//     for _, fig := range album {\n//         if unicos[fig] {\n//             repetidos = append(repetidos, fig)\n//         } else {\n//             unicos[fig] = true\n//         }\n//     }\n\n//     if len(repetidos) == 0 {\n//         fmt.Print(\"N\")\n//     } else {\n//         for i, valor := range repetidos {\n//             if i != 0 {\n//                 fmt.Print(\" \")\n//             }\n//             fmt.Printf(\"%v\", valor)\n//         }\n//     }\n//     fmt.Println(\"\")\n//     saida := \"\"\n//     for i := 1; i < qtd_album; i++ {\n//         if !unicos[i] {\n//             saida += fmt.Sprintf(\"%v \", i)\n//         }\n//     }\n\n//     if saida == \"\" {\n//         fmt.Println(\"N\")\n//     } else {\n//         fmt.Println(saida[:len(saida)-1])\n//     }\n// }\n\nfunc main() {\n    var qtd_total, baruel int\n    fmt.Scan(&qtd_total, &baruel)\n\n    figurinhas := make(map[int]int)\n    for i := 0; i < baruel; i++ {\n        var val_figur int\n        fmt.Scan(&val_figur)\n        figurinhas[val_figur]++\n    }\n\n    fig_rep := false\n    prim := true\n    for i := 0; i < baruel; i++ {\n        if figurinhas[i] > 1 {\n            for j := 0; j < figurinhas[i]-1; j++ {\n                    if !prim {\n                        fmt.Print(\" \")\n                    }\n                fmt.Print(i)\n                fig_rep = true\n                prim = false\n            }\n        }\n    }\n\n    if !fig_rep {\n        fmt.Print(\"N\")\n    }\n\n    fmt.Println()\n\n    prim = true\n    faltando := false\n    for i := 1; i <= qtd_total; i++ {\n        if figurinhas[i] == 0 {\n            if !prim {\n                fmt.Print(\" \")\n            }\n            fmt.Print(i)\n            faltando = true\n            prim = false\n        }\n    }\n\n    if !faltando {\n        fmt.Print(\"N\")\n    }\n\n    fmt.Println()\n}\n",
+            "content": "@@ -23,56 +23,2060 @@\n mt%22%0A\n-func main() %7B%0A    var qtd_total, qtd_fig int%0A    \n+// func main() %7B%0A//     qtd_album := 0%0A//     qtd_fig := 0%0A//     fmt.Scan(&qtd_album, &qtd_fig)%0A//     album := make(%5B%5Dint, qtd_fig)%0A//     unicos := make(map%5Bint%5Dbool)%0A//     repetidos := make(%5B%5Dint, 0, qtd_fig)%0A%0A//     for i := range album %7B%0A//         fmt.Scan(&album%5Bi%5D)%0A//     %7D%0A%0A//     for _, fig := range album %7B%0A//         if unicos%5Bfig%5D %7B%0A//             repetidos = append(repetidos, fig)%0A//         %7D else %7B%0A//             unicos%5Bfig%5D = true%0A//         %7D%0A//     %7D%0A%0A//     if len(repetidos) == 0 %7B%0A//         fmt.Print(%22N%22)%0A//     %7D else %7B%0A//         for i, valor := range repetidos %7B%0A//             if i != 0 %7B%0A//                 fmt.Print(%22 %22)%0A//             %7D%0A//             fmt.Printf(%22%25v%22, valor)%0A//         %7D%0A//     %7D%0A//     fmt.Println(%22%22)%0A//     saida := %22%22%0A//     for i := 1; i %3C qtd_album; i++ %7B%0A//         if !unicos%5Bi%5D %7B%0A//             saida += fmt.Sprintf(%22%25v %22, i)%0A//         %7D%0A//     %7D%0A%0A//     if saida == %22%22 %7B%0A//         fmt.Println(%22N%22)%0A//     %7D else %7B%0A//         fmt.Println(saida%5B:len(saida)-1%5D)%0A//     %7D%0A// %7D%0A%0Afunc main() %7B%0A    var qtd_total, baruel int%0A    fmt.Scan(&qtd_total, &baruel)%0A%0A    figurinhas := make(map%5Bint%5Dint)%0A    for i := 0; i %3C baruel; i++ %7B%0A        var val_figur int%0A        fmt.Scan(&val_figur)%0A        figurinhas%5Bval_figur%5D++%0A    %7D%0A%0A    fig_rep := false%0A    prim := true%0A    for i := 0; i %3C baruel; i++ %7B%0A        if figurinhas%5Bi%5D %3E 1 %7B%0A            for j := 0; j %3C figurinhas%5Bi%5D-1; j++ %7B%0A                    if !prim %7B%0A                        fmt.Print(%22 %22)%0A                    %7D%0A                fmt.Print(i)%0A                fig_rep = true%0A                prim = false%0A            %7D%0A        %7D%0A    %7D%0A%0A    if !fig_rep %7B%0A        fmt.Print(%22N%22)%0A    %7D%0A%0A    fmt.Println()%0A%0A    prim = true%0A    faltando := false%0A    for i := 1; i %3C= qtd_total; i++ %7B%0A        if figurinhas%5Bi%5D == 0 %7B%0A            if !prim %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A            fmt.Print(i)%0A            faltando = true%0A            prim = false%0A        %7D%0A    %7D%0A%0A    if !faltando %7B%0A        fmt.Print(%22N%22)%0A    %7D%0A%0A    fmt.Println()\n %0A%7D%0A\n",
             "lines": "98"
+        },
+        {
+            "label": "2026-07-02_06-51-20",
+            "content": "@@ -68,479 +68,8 @@\n int%0A\n-    baruel := make(%5B%5Dint, qtd_fig)%0A%0A    fmt.Scan(&qtd_total, &qtd_fig)%0A    for i := 0; i %3C qtd_fig; i++ %7B%0A        fmt.Scan(&baruel%5Bi%5D)%0A    %7D%0A%0A    primeira := true%0A    for i := 0; i %3C= qtd_total; i++ %7B%0A        for j := 0; j %3C baruel%5Bi%5D; j++ %7B%0A            if !primeira %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A            fmt.Print(i)%0A            primeira = false%0A        %7D%0A    %7D%0A%0A    if primeira %7B%0A        fmt.Print(%22N%22)%0A    %7D%0A    fmt.Println()%0A    primeira = true%0A%0A\n     \n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-07-02_07-04-46",
+            "content": "@@ -240,17 +240,17 @@\n or i := \n-1\n+0\n ; i %3C= q\n@@ -286,9 +286,9 @@\n  := \n-1\n+0\n ; j \n@@ -535,11 +535,15 @@\n = true%0A%0A\n+    \n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-02_07-05-12",
+            "content": "@@ -72,30 +72,30 @@\n     \n-fmt.Scan(&qtd_total\n+baruel := make(%5B%5Dint\n , \n-&\n qtd_\n@@ -103,39 +103,35 @@\n ig)%0A\n-    \n %0A    \n-baruel := make(%5B%5Dint\n+fmt.Scan(&qtd_total\n , \n+&\n qtd_\n@@ -236,30 +236,31 @@\n    for i := \n-0\n+1\n ; i %3C\n+=\n  qtd_total; \n@@ -282,17 +282,17 @@\n or j := \n-0\n+1\n ; j %3C ba\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-02_07-06-13",
+            "content": "@@ -99,16 +99,20 @@\n td_fig)%0A\n+    \n %0A    bar\n@@ -134,21 +134,19 @@\n nt, qtd_\n-total\n+fig\n )%0A    fo\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-02_07-06-23",
+            "content": "@@ -139,10 +139,8 @@\n otal\n-+1\n )%0A  \n@@ -246,15 +246,14 @@\n  := \n-1\n+0\n ; i %3C\n-=\n  qtd\n@@ -287,9 +287,9 @@\n  := \n-1\n+0\n ; j \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-02_07-06-55",
+            "content": "@@ -186,67 +186,28 @@\n     \n-var freq int%0A        fmt.Scan(&freq)%0A        baruel%5Bfreq%5D++\n+fmt.Scan(&baruel%5Bi%5D)\n %0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-02_07-09-34",
+            "content": "@@ -582,280 +582,7 @@\n ue%0A%0A\n-    for i := 1; i %3C= qtd_total; i++ %7B%0A        if baruel%5Bi%5D == 0 %7B%0A            if !primeira %7B%0A                fmt.Print(%22 %22)%0A            %7D%0A            fmt.Print(i)%0A            primeira = false%0A        %7D%0A    %7D%0A%0A    if primeira %7B%0A        fmt.Print(%22N%22)%0A    %7D%0A    fmt.Println()\n %0A%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-07-02_07-12-49",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtd_total, qtd_fig int\n    fmt.Scan(&qtd_total, &qtd_fig)\n\n    baruel := make([]int, qtd_total+1)\n    for i := 0; i < qtd_fig; i++ {\n        var freq int\n        fmt.Scan(&freq)\n        baruel[freq]++\n    }\n\n    primeira := true\n    for i := 1; i <= qtd_total; i++ {\n        for j := 1; j < baruel[i]; j++ {\n            if !primeira {\n                fmt.Print(\" \")\n            }\n            fmt.Print(i)\n            primeira = false\n        }\n    }\n\n    if primeira {\n        fmt.Print(\"N\")\n    }\n    fmt.Println()\n    primeira = true\n\n    for i := 1; i <= qtd_total; i++ {\n        if baruel[i] == 0 {\n            if !primeira {\n                fmt.Print(\" \")\n            }\n            fmt.Print(i)\n            primeira = false\n        }\n    }\n\n    if primeira {\n        fmt.Print(\"N\")\n    }\n    fmt.Println()\n}\n",
+            "lines": "45"
         }
     ]
 }

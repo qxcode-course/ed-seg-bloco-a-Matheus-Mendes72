@@ -10,31 +10,46 @@ type Pos struct {
 	l, c int
 }
 
+func getNeig(p Pos) []Pos {
+	return []Pos{{p.l, p.c - 1}, {p.l - 1, p.c}, {p.l, p.c + 1}, {p.l + 1, p.c}}
+}
+
+func inside(grid [][]rune, p Pos) bool {
+	return !(p.l < 0 || p.l >= len(grid) || p.c < 0 || p.c >= len(grid[0]))
+}
+
+func match(grid [][]rune, p Pos, value rune) bool {
+	return inside(grid, p) && grid[p.l][p.c] == value
+}
+
+// Função recursiva que tenta encontrar o caminho do início ao fim
 func search(grid [][]rune, startPos, endPos Pos) bool {
-	l, c := startPos.l, startPos.c
+	linha := startPos.l
+	coluna := startPos.c
 
-	if (l < 0 || l >= len(grid)) || (c < 0 || c >= len(grid[0])) {
+	if linha < 0 || linha >= len(grid) || coluna < 0 || coluna >= len(grid[0]) {
 		return false
 	}
 
-	if grid[l][c] != ' ' {
+	
+	if grid[linha][coluna] != ' ' {
 		return false
 	}
+	
+	grid[linha][coluna] = '.'
+	
+	if linha == endPos.l && coluna == endPos.c {
+		return true
+	}
+	
+	if search(grid, Pos{linha+1, coluna}, endPos) ||
+	search(grid, Pos{linha-1, coluna}, endPos) ||
+	search(grid, Pos{linha, coluna+1}, endPos) ||
+	search(grid, Pos{linha, coluna-1}, endPos) {
+		return true
+	}
 
-	grid[l][c] = '.'
-	
-	if l == endPos.l && c == endPos.c {
-		return true
-	}
-	
-	if search(grid, Pos{l-1, c}, endPos) ||
-	search(grid, Pos{l+1, c}, endPos) ||
-	search(grid, Pos{l, c-1}, endPos) ||
-	search(grid, Pos{l, c+1}, endPos) {
-		return true
-	}
-	
-	grid[l][c] = ' '
+	grid[linha][coluna] = ' '
 
 	return false
 }

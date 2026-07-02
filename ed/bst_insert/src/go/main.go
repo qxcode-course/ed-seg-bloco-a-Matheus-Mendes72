@@ -16,14 +16,14 @@ type Node struct {
 
 func insert(node *Node, value int) *Node {
 	if node == nil {
-		return &Node {
+		return &Node{
 			Value: value,
 		}
 	}
 
-	if value < node.Value {
+	if node.Value > value {
 		node.Left = insert(node.Left, value)
-	} else if value > node.Value {
+	} else if node.Value < value {
 		node.Right = insert(node.Right, value)
 	}
 
