@@ -14,17 +14,17 @@ type Node struct {
 	Right *Node
 }
 
-func insert(node *Node, value int) *Node {
+func Insert(node *Node, value int) *Node {
 	if node == nil {
-		return &Node {
+		return &Node{
 			Value: value,
 		}
 	}
 
 	if value < node.Value {
-		node.Left = insert(node.Left, value)
-	} else if value > node.Value {
-		node.Right = insert(node.Right, value)
+		node.Left = Insert(node.Left, value)
+	} else if value > node.Value{
+		node.Right = Insert(node.Right, value)
 	}
 
 	return node
@@ -34,7 +34,7 @@ func BstInsert(values []int) *Node {
 	var root *Node
 
 	for _, value := range values {
-		root = insert(root, value)
+		root = Insert(root, value)
 	}
 
 	return root
@@ -48,7 +48,7 @@ func BstRemove(node *Node, value int) *Node {
 	if value < node.Value {
 		node.Left = BstRemove(node.Left, value)
 		return node
-	}
+	} 
 
 	if value > node.Value {
 		node.Right = BstRemove(node.Right, value)

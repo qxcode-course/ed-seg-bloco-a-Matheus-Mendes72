@@ -11,13 +11,13 @@ import (
 type Node struct {
 	value int
 	next *Node
-	prev *Node 
+	prev *Node
 }
 
 type LList struct {
 	root *Node
 	size int
-}		
+}
 
 func NewLList() *LList {
 	ll := &LList{}
@@ -25,34 +25,36 @@ func NewLList() *LList {
 	ll.root.next = ll.root
 	ll.root.prev = ll.root
 	ll.size = 0
-	
+
 	return ll
 }
 
-func (ll *LList) Size() int {
-	return ll.size
-}
-
-func (ll *LList) toString() {
-	saida := "" 
+func (ll *LList) String() {
+	saida := ""
 	if ll.size == 0 {
 		fmt.Println("[]")
 		return
 	}
 
 	saida += "["
-	current := ll.root.next
+	aux := ll.root.next
 	for i := 0; i < ll.size; i++ {
 		if i > 0 {
 			saida += ", "
 		}
 
-		saida += strconv.Itoa(current.value)
-		current = current.next
+		saida += strconv.Itoa(aux.value)
+		aux = aux.next
 	}
 	saida += "]"
 
 	fmt.Println(saida)
+
+	return
+}
+
+func (ll *LList) Size() int {
+	return ll.size
 }
 
 func (ll *LList) PushFront(value int) {
@@ -85,6 +87,12 @@ func (ll *LList) PushBack(value int) {
 	ll.size++
 }
 
+func (ll *LList) Clear() {
+	ll.root.next = ll.root
+	ll.root.prev = ll.root
+	ll.size = 0
+}
+
 func (ll *LList) PopFront() {
 	if ll.size == 0 {
 		return
@@ -102,7 +110,6 @@ func (ll *LList) PopFront() {
 func (ll *LList) PopBack() {
 	if ll.size == 0 {
 		return
-
 	}
 
 	last := ll.root.prev
@@ -114,15 +121,9 @@ func (ll *LList) PopBack() {
 	ll.size--
 }
 
-func (ll *LList) Clear() {
-	ll.root.next = ll.root
-	ll.root.prev = ll.root
-	ll.size = 0
-}
-
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-	ll := NewLList()
+ 	ll := NewLList()
 
 	for {
 		fmt.Print("$")
@@ -141,7 +142,7 @@ func main() {
 
 		switch cmd {
 		case "show":
-			ll.toString()
+			ll.String()
 		case "size":
 			fmt.Println(ll.Size())
 		case "push_back":
