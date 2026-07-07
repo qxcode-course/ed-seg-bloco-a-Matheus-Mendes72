@@ -7,8 +7,53 @@
         },
         {
             "label": "2026-04-06_15-31-01",
-            "content": "package main\nimport \"fmt\"\n\nfunc quadrado(n int)  {\n    \n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    quadrado(n)\n}\n",
+            "content": "@@ -45,115 +45,15 @@\n nt) \n-int\n  %7B%0A    \n-if n == 1 %7B%0A        return 1%0A    %7D%0A%0A    fmt.Printf(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = ?%22, n, (n-1), (n-1))\n %0A%7D%0A%0A\n",
             "lines": "13"
+        },
+        {
+            "label": "2026-07-05_10-07-09",
+            "content": "@@ -149,29 +149,16 @@\n  (n-1))%0A\n-    return 1%0A\n %7D%0A%0Afunc \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-07-05_10-09-20",
+            "content": "@@ -67,39 +67,8 @@\n 1 %7B%0A\n-        fmt.Println(%221%5E2 = 1%22)%0A\n     \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-07-05_10-10-20",
+            "content": "@@ -164,10 +164,8 @@\n  = ?\n-%5Cn\n %22, n\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-07-05_10-10-52",
+            "content": "@@ -185,48 +185,8 @@\n -1))\n-%0A%0A    quadrado_anterior := quadrado(n-1)\n %0A   \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-07-05_10-11-41",
+            "content": "@@ -190,11 +190,8 @@\n %0A   \n- //\n  qua\n@@ -232,69 +232,14 @@\n   re\n-sultado := quadrado(n-1) + 2*n + 1%0A    %0A%0A    return resultado\n+turn 1\n %0A%7D%0A%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-07-05_10-13-24",
+            "content": "@@ -274,67 +274,8 @@\n     \n-fmt.Printf(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = ?%5Cn%22, n, (n-1), (n-1))\n %0A%0A  \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-07-05_10-13-51",
+            "content": "@@ -307,18 +307,17 @@\n d + 1 = \n-%25d\n+?\n %5Cn%22, n, \n@@ -332,19 +332,8 @@\n n-1)\n-, resultado\n )%0A%0A \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-07-05_10-14-32",
+            "content": "@@ -260,21 +260,17 @@\n -1) + 2*\n-(n-1)\n+n\n  + 1%0A   \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-07-05_10-15-09",
+            "content": "package main\nimport \"fmt\"\n\nfunc quadrado(n int) int {\n    if n == 1 {\n        fmt.Println(\"1^2 = 1\")\n        return 1\n    }\n\n    fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = ?\\n\", n, (n-1), (n-1))\n\n    // quadrado_anterior := quadrado(n-1)\n    resultado := quadrado(n-1) + 2*(n-1) + 1\n    fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = %d\\n\", n, (n-1), (n-1), resultado)\n\n    return resultado\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    quadrado(n)\n}\n",
+            "lines": "24"
         }
     ]
 }

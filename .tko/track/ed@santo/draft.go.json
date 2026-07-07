@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_10-49-13",
+            "content": "@@ -47,33 +47,10 @@\n loat\n-64 %7B%0A    fmt.Println(n,c)\n+ %7B\n %0A   \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-07-05_10-49-54",
+            "content": "@@ -36,20 +36,16 @@\n cao(n, c\n- int\n ) float6\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-07-05_10-50-01",
+            "content": "@@ -60,390 +60,37 @@\n     \n-%0A    /*%0A    x reais%0A    2x%0A    2x - c%0A    2*(2x-c)%0A    2*(2*(2x-c)) = 4 * (2x-c)%0A%0A    na penultima doacao ele tem o valor de c em dinheiro%0A    se n = 3 e c = 20%0A    n = 2; x = 10 = 30 - 20%0A    n = 1; x = 30 / 2 = 15 = 35 - 20 %0A    n = 0; 35 / 2 = 17.50%0A%0A    F(0) = (F(1) + C) / 2; F(1) = (15 + 20) %0A    */%0A%0A    if n == 0 %7B%0A        return 0%0A    %7D%0A%0A    return (doacao(n-1, c) + c) / 2\n+fmt.Println(n,c)%0A    return 0\n %0A%7D%0A%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-07-05_11-04-34",
+            "content": "@@ -37,23 +37,19 @@\n ao(n, c \n-float64\n+int\n ) float6\n@@ -469,23 +469,19 @@\n ar n, c \n-float64\n+int\n %0A    fmt\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-07-05_11-04-59",
+            "content": "package main\nimport \"fmt\"\n\nfunc doacao(n, c float64) float64 {\n    \n    /*\n    x reais\n    2x\n    2x - c\n    2*(2x-c)\n    2*(2*(2x-c)) = 4 * (2x-c)\n\n    na penultima doacao ele tem o valor de c em dinheiro\n    se n = 3 e c = 20\n    n = 2; x = 10 = 30 - 20\n    n = 1; x = 30 / 2 = 15 = 35 - 20 \n    n = 0; 35 / 2 = 17.50\n\n    F(0) = (F(1) + C) / 2; F(1) = (15 + 20) \n    */\n\n    if n == 0 {\n        return 0\n    }\n\n    return (doacao(n-1, c) + c) / 2\n}\n\nfunc main() {\n    var n, c float64\n    fmt.Scan(&n, &c)\n\n    dinheiro := doacao(n, c)\n\n    fmt.Printf(\"%.2f\\n\", dinheiro)\n}\n",
+            "lines": "36"
+        }
+    ]
+}

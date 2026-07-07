@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_12-38-24",
+            "content": "package main\nimport \"fmt\"\n\nfunc ativos(n, k int) int {\n    if n <= k {\n        return 1\n    }\n\n    return ativos(n/2, k) + ativos(n/2, k)\n}\n\nfunc main() {\n    var n, k int\n    fmt.Scan(&n, &k)\n\n    fmt.Println(ativos(n, k))\n}\n",
+            "lines": "17"
+        }
+    ]
+}

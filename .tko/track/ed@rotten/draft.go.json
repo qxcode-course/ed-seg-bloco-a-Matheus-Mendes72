@@ -1,0 +1,119 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-07_05-53-44",
+            "content": "@@ -76,31 +76,8 @@\n c)%0A%0A\n-    fmt.Println(l, c)%0A%0A\n     \n@@ -243,42 +243,8 @@\n j%5D)%0A\n-            fmt.Print(grid%5Bi%5D%5Bj%5D)%0A\n     \n@@ -255,15 +255,10 @@\n %7D%0A    %7D%0A\n-    %0A\n %7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-07-07_05-54-53",
+            "content": "@@ -283,18 +283,16 @@\n mt.Print\n-ln\n (grid%5Bi%5D\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-07-07_05-55-02",
+            "content": "@@ -23,365 +23,8 @@\n mt%22%0A\n-%0Atype Pos struct %7B%0A    l, c int%0A%7D%0A%0Afunc inside(grid%5B%5D%5B%5D, p Pos) bool %7B%0A    linhas := len(grid)%0A    colunas := len(grid%5B0%5D)%0A%0A    return p.l %3E= 0 && p.l %3C linhas && p.c %3E= 0 && p.c %3C colunas%0A%7D%0A%0Afunc getNeig(p Pos) %5B%5DPos %7B%0A    return %5B%5DPos%7B%0A        %7Bp.l+1, p.c%7D%0A        %7Bp.l-1, p.c%7D%0A        %7Bp.l, p.c+1%7D%0A        %7Bp.l, p.c-1%7D%0A    %7D%0A%7D%0A%0Afunc laranjas() int %7B%0A%0A%7D%0A%0A\n func\n@@ -72,16 +72,39 @@\n l, &c)%0A%0A\n+    fmt.Println(l, c)%0A%0A\n     grid\n@@ -274,17 +274,8 @@\n     \n-%7D%0A    %7D%0A%0A\n     \n@@ -290,18 +290,39 @@\n tln(\n-laranjas())\n+grid%5Bi%5D%5Bj%5D)%0A        %7D%0A    %7D%0A    \n %0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-07-07_06-09-35",
+            "content": "@@ -74,16 +74,12 @@\n grid\n- \n %5B%5D%5B%5D\n-int\n , p \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-07_06-10-54",
+            "content": "@@ -277,25 +277,24 @@\n %7Bp.l+1, p.c%7D\n-,\n %0A        %7Bp.\n@@ -302,17 +302,16 @@\n -1, p.c%7D\n-,\n %0A       \n@@ -323,17 +323,16 @@\n , p.c+1%7D\n-,\n %0A       \n@@ -344,17 +344,16 @@\n , p.c-1%7D\n-,\n %0A    %7D%0A%7D\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-07_06-11-17",
+            "content": "@@ -384,20 +384,8 @@\n t %7B%0A\n-    return 0\n %0A%7D%0A%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-07_06-11-31",
+            "content": "@@ -376,54 +376,15 @@\n jas(\n-grid %5B%5D%5B%5Dint) int %7B%0A    fila := %5B%5DPos%7B%7D%0A%0A    %0A\n+) int %7B\n %0A   \n@@ -658,17 +658,13 @@\n aranjas(\n-grid\n ))%0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-07_06-16-45",
+            "content": "@@ -421,364 +421,8 @@\n     \n-for i := range grid %7B%0A        for j := range grid%5Bi%5D %7B%0A            if grid%5Bi%5D%5Bj%5D == 2 %7B%0A                fila = append(fila, Pos%7Bl, c%7D)%0A                break%0A            %7D%0A        %7D%0A%0A        if len(fila) %3E 0 %7B%0A            break%0A        %7D%0A    %7D%0A%0A    minutos := 0%0A    fmt.Println(fila)%0A%0A    // for len(fila) %3E 0 %7B%0A    //     atual := fila%5B0%5D%0A        %0A    // %7D\n %0A%0A  \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-07_06-24-27",
+            "content": "@@ -549,12 +549,12 @@\n Pos%7B\n-i, j\n+l, c\n %7D)%0A \n@@ -664,19 +664,16 @@\n   %7D%0A%0A   \n- //\n  minutos\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-07-07_06-24-58",
+            "content": "@@ -703,24 +703,27 @@\n n(fila)%0A%0A   \n+ //\n  for len(fil\n@@ -730,24 +730,27 @@\n a) %3E 0 %7B%0A   \n+ //\n      atual :\n@@ -771,71 +771,15 @@\n     \n-fila = fila%5B1:%5D%0A%0A        for _, viz := range getNeig(atual)\n %0A   \n+ //\n  %7D%0A%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-07-07_06-31-23",
+            "content": "@@ -735,19 +735,16 @@\n %0A       \n- //\n  atual :\n@@ -785,19 +785,16 @@\n %0A       \n- //\n  for _, \n@@ -824,36 +824,8 @@\n ual)\n- %7B%0A            %0A        // %7D\n %0A   \n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-07-07_06-31-44",
+            "content": "@@ -664,16 +664,19 @@\n   %7D%0A%0A   \n+ //\n  minutos\n@@ -735,16 +735,19 @@\n %0A       \n+ //\n  atual :\n@@ -784,24 +784,27 @@\n 1:%5D%0A%0A       \n+ //\n  for _, viz \n@@ -845,240 +845,16 @@\n     \n-if !inside(grid, viz) %7B%0A                continue%0A            %7D%0A%0A            if grid%5Bviz.l%5D%5Bviz.c%5D == 1 %7B%0A                grid%5Bviz.l%5D%5Bviz.c%5D = 2%0A                fila = append(fila, viz)%0A                minutos++%0A            %7D\n %0A       \n  %7D%0A \n@@ -841,32 +841,35 @@\n         %0A       \n+ //\n  %7D%0A    %7D%0A%0A    re\n@@ -873,23 +873,17 @@\n  return \n-minutos\n+0\n %0A%7D%0A%0Afunc\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-07-07_06-35-48",
+            "content": "@@ -1074,39 +1074,16 @@\n %0A    %7D%0A%0A\n-    fmt.Println(fila)%0A%0A\n     retu\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-07-07_06-36-18",
+            "content": "@@ -1021,42 +1021,8 @@\n iz)%0A\n-                fmt.Println(fila)%0A\n     \n@@ -1074,16 +1074,38 @@\n %0A    %7D%0A%0A\n+    fmt.Println(fila)%0A\n %0A    ret\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-07-07_06-36-32",
+            "content": "@@ -552,16 +552,38 @@\n %7Bi, j%7D)%0A\n+                break%0A\n         \n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-07-07_06-40-16",
+            "content": "@@ -415,25 +415,8 @@\n os%7B%7D\n-%0A    frescas := 0\n %0A%0A  \n@@ -562,37 +562,32 @@\n           %7D%0A\n-%0A    \n         \n if grid%5Bi%5D%5Bj\n@@ -578,68 +578,37 @@\n     \n-if grid%5Bi%5D%5Bj%5D == 1 %7B%0A                frescas++%0A            %7D\n+%7D%0A%0A        if len(fila) %3E 0 %7B\n %0A   \n@@ -616,38 +616,17 @@\n     \n-%7D%0A\n     \n-%7D%0A%0A    if frescas == 0 %7B\n+break\n %0A   \n@@ -634,16 +634,9 @@\n     \n-return 0\n+%7D\n %0A   \n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-07_06-41-28",
+            "content": "@@ -783,23 +783,8 @@\n a) %3E\n- 0 && frescas %3E\n  0 %7B\n@@ -1039,34 +1039,8 @@\n = 2%0A\n-                frescas--%0A\n     \n@@ -1171,53 +1171,8 @@\n  %7D%0A%0A\n-    if frescas %3E 0 %7B%0A        return -1%0A    %7D%0A\n %0A   \n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-07_06-44-37",
+            "content": "@@ -1136,11 +1136,8 @@\n     \n- //\n  fmt\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-07-07_06-44-59",
+            "content": "@@ -732,24 +732,46 @@\n minutos := 0\n+%0A    fmt.Println(fila)\n %0A%0A    for le\n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-07-07_06-45-08",
+            "content": "@@ -781,53 +781,8 @@\n 0 %7B%0A\n-        for i := 0; i %3C len(fila); i++ %7B%0A    \n     \n@@ -806,28 +806,24 @@\n %5B0%5D%0A        \n-   \n- \n fila = fila%5B\n@@ -827,20 +827,16 @@\n la%5B1:%5D%0A%0A\n-    \n         \n@@ -884,20 +884,16 @@\n         \n- \n-   \n if !insi\n@@ -924,20 +924,16 @@\n         \n-    \n continue\n@@ -941,34 +941,27 @@\n             \n-    %7D%0A%0A   \n+%7D%0A%0A\n             \n@@ -952,33 +952,32 @@\n  %7D%0A%0A            \n- \n if grid%5Bviz.l%5D%5Bv\n@@ -981,36 +981,32 @@\n %5D%5Bviz.c%5D == 1 %7B%0A\n-    \n                 \n@@ -1040,28 +1040,24 @@\n             \n-    \n frescas--%0A  \n@@ -1054,20 +1054,16 @@\n escas--%0A\n-    \n         \n@@ -1111,20 +1111,16 @@\n         \n-    \n // fmt.P\n@@ -1148,20 +1148,16 @@\n         \n-    \n minutos+\n@@ -1162,26 +1162,8 @@\n s++%0A\n-                %7D%0A\n     \n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-07-07_06-49-05",
+            "content": "@@ -1225,34 +1225,50 @@\n                 \n-%7D%0A\n+    minutos++%0A    \n             %7D%0A  \n@@ -1273,33 +1273,25 @@\n             \n-minutos++\n+%7D\n %0A        %7D%0A \n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-07-07_06-49-48",
+            "content": "@@ -1249,30 +1249,24 @@\n       %7D%0A    \n-    %7D%0A\n         minu\n@@ -1267,24 +1267,34 @@\n   minutos++%0A\n+        %7D%0A\n     %7D%0A%0A    i\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-07-07_06-49-59",
+            "content": "package main\nimport \"fmt\"\n\ntype Pos struct {\n    l, c int\n}\n\nfunc inside(grid [][]int, p Pos) bool {\n    linhas := len(grid)\n    colunas := len(grid[0])\n\n    return p.l >= 0 && p.l < linhas && p.c >= 0 && p.c < colunas\n}\n\nfunc getNeig(p Pos) []Pos {\n    return []Pos{\n        {p.l+1, p.c},\n        {p.l-1, p.c},\n        {p.l, p.c+1},\n        {p.l, p.c-1},\n    }\n}\n\nfunc laranjas(grid [][]int) int {\n    fila := []Pos{}\n    frescas := 0\n\n    for i := range grid {\n        for j := range grid[i] {\n            if grid[i][j] == 2 {\n                fila = append(fila, Pos{i, j})\n            }\n\n            if grid[i][j] == 1 {\n                frescas++\n            }\n        }\n    }\n\n    if frescas == 0 {\n        return 0\n    }\n\n    minutos := 0\n\n    for len(fila) > 0 && frescas > 0 {\n        for i := 0; i < len(fila); i++ {\n            atual := fila[0]\n            fila = fila[1:]\n\n            for _, viz := range getNeig(atual) {\n                if !inside(grid, viz) {\n                    continue\n                }\n\n                if grid[viz.l][viz.c] == 1 {\n                    grid[viz.l][viz.c] = 2\n                    frescas--\n                    fila = append(fila, viz)\n                    // fmt.Println(fila)\n                }\n            }\n        }\n        minutos++\n    }\n\n    if frescas > 0 {\n        return -1\n    }\n\n    return minutos\n}\n\nfunc main() {\n    var l, c int\n    fmt.Scan(&l, &c)\n\n    grid := make([][]int, l)\n    for i := 0; i < l; i++ {\n        grid[i] = make([]int, c)\n        \n        for j := 0; j < c; j++ {\n            fmt.Scan(&grid[i][j])\n        }\n    }\n\n    fmt.Println(laranjas(grid))\n}\n",
+            "lines": "88"
+        }
+    ]
+}

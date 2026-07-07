@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_10-19-33",
+            "content": "@@ -100,21 +100,8 @@\n  %7D%0A%0A\n-    return 2%0A\n %7D%0A%0Af\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-07-05_10-19-45",
+            "content": "@@ -20,21 +20,16 @@\n  %22fmt%22%0A%0A\n-func \n Fibonacc\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-07-05_10-19-52",
+            "content": "@@ -116,45 +116,9 @@\n urn \n-Fibonacci(n-1, k) + Fibonacci(n-2, k)\n+2\n %0A%7D%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-07-05_10-21-09",
+            "content": "@@ -116,10 +116,8 @@\n urn \n-k*\n Fibo\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-07-05_10-21-59",
+            "content": "@@ -112,16 +112,18 @@\n  return \n+k*\n Fibonacc\n@@ -134,18 +134,16 @@\n 1, k) + \n-k*\n Fibonacc\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-07-05_10-22-16",
+            "content": "package main\nimport \"fmt\"\n\nfunc Fibonacci(n, k int) int {\n    if n == 1 || n == 2 {\n        return 1\n    }\n\n    return Fibonacci(n-1, k) + k*Fibonacci(n-2, k)\n}\n\nfunc main() {\n    var n, k int\n    fmt.Scan(&n, &k)\n\n    fmt.Println(Fibonacci(n, k))\n}\n",
+            "lines": "17"
+        }
+    ]
+}
